@@ -1,0 +1,182 @@
+@keyframes loading {
+  0% {
+    width: 0%;
+  } 100% {
+    width: 100%;
+  }
+}
+
+#main {
+  width: 100vw;
+  height: 100vh;
+}
+
+#nav {
+  width: 30%;
+  height: 100vh;
+  padding: calc(var(--spacing)*2);
+  background-color: var(--primary);
+}
+#page {
+  width: 70%;
+  height: 100vh;
+}
+
+#nav-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+}
+
+#loading-page {
+  flex-direction: column;
+  z-index: 1000;
+}
+#loading-container {
+  width: 100px;
+  height: 80px;
+  margin: var(--spacing) 0;
+  flex-direction: column;
+  gap: var(--spacing);
+}
+.load {
+  width: 100%;
+  height: 33.33px;
+  background-color: var(--accent);
+  border-radius: 4px;
+}
+.load-bar1 {
+  animation: loading 1s linear infinite;
+  animation-delay: 0.6s;
+}
+.load-bar2 {
+  animation: loading 1s linear infinite;
+  animation-delay: 0.4s;
+}
+.load-bar3 {
+  animation: loading 1s linear infinite;
+  animation-delay: 0.2s;
+}
+
+.primary-button {
+  background-color: var(--accent);
+  font-weight: 500;
+}
+.primary-button * {
+  color: var(--bg);
+}
+.secondary-button {
+  background-color: var(--primary);
+  color: var(--text);
+  border: 4px solid var(--accent);
+  font-weight: 500;
+}
+.back-button {
+  position: absolute;
+  z-index: 1001;
+  border-radius: 50%;
+  padding: calc(var(--spacing)/2);
+}
+.warning-button {
+  background-color: var(--warning);
+}
+
+.card-container {
+  display: grid;
+  gap: var(--spacing);
+  width: 100%;
+  height: 90%;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: 300px;
+  overflow-y: scroll;
+}
+.accordion-container {
+  overflow-y: scroll;
+}
+.characters-card {
+  padding: calc(var(--spacing)/2);
+  border: 2px solid var(--accent);
+  flex-direction: column;
+  justify-content: space-between;
+}
+.books-card {
+  opacity: 0.8;
+  transition: var(--transition);
+  flex-direction: column;
+  justify-content: space-between;
+}
+.books-card:hover {
+  opacity: 1;
+}
+.books-card a {
+  color: var(--accent);
+  text-decoration: underline;
+  font-weight: 500;
+  text-align: center;
+}
+.books-card a:hover {
+  color: var(--text)
+}
+
+.modals {
+  z-index: 999;
+}
+.characters-modals {
+  width: 70%;
+  height: 300px;
+  background-color: var(--primary);
+  box-shadow: var(--shadow);
+  flex-direction: column;
+}
+.characters-modals-content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,1fr);
+  gap: calc(var(--spacing)/2);
+}
+.characters-modals-content p {
+  font-weight: 500;
+  text-align: center;
+}
+.characters-modals-content span {
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.form-container {
+  width: 40%;
+  height: 60%;
+  background-color: var(--primary);
+  flex-direction: column;
+  justify-content: space-around;
+  padding: var(--spacing);
+}
+
+#wiki-container {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+}
+.accordion {
+  width: 100%;
+  height: auto;
+  background-color: var(--primary);
+  padding: var(--spacing);
+}
+.accordion-head {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.accordion-head p {
+  font-size: 2rem;
+  margin: 0 var(--spacing) 0;
+}
+.accordion-body ul li {
+  margin: 0 0 calc(var(--spacing)/2);
+}

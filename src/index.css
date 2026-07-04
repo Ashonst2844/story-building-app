@@ -1,0 +1,89 @@
+:root {
+  /* COLOR */
+  --text: #e4e4e4;
+  --bg: #0c0c0c;
+  --primary: #252525;
+  --accent: #e9c318;
+  --warning: #ff2f2f;
+
+  --spacing: 16px;
+  --transition: all 0.1s ease-in-out;
+  --shadow: 5px 5px 15px rgba(0,0,0,0.8);
+
+  font-size: clamp(14px, 2vw, var(var(--spacing)));
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color-scheme: light dark;
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  color: var(--text);
+  scrollbar-width: none;
+}
+
+body {
+  width: 100vw;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: calc(var(--spacing)*2) 0;
+}
+h2 {
+  font-size: 2rem;
+  margin: 0 0 calc(var(--spacing)*2);
+  text-decoration: underline var(--accent);
+  text-align: center;
+}
+.full-page {
+  width: 100%;
+  height: 100%;
+}
+.float-page {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.8);
+}
+.pages {
+  padding: var(--spacing);
+}
+.page-header {
+  height: calc(10% - calc(var(--spacing)*2));
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button:hover {
+  transition: var(--transition);
+  scale: 0.98;
+  filter: brightness(115%);
+}
+input, textarea, select {
+  width: 100%;
+  height: 50px;
+  padding: calc(var(--spacing)/2);
+}
+textarea {
+  resize: none;
+}
+.button-group {
+  width: 100%;
+  height: auto;
+  gap: calc(var(--spacing)/4);
+  padding: calc(var(--spacing)/4);
+}

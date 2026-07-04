@@ -1,0 +1,89 @@
+{
+  "books": [
+    {
+      "id": 1783146323488,
+      "title": "  New King Of Darkness, Book III: Sins Of Pride",
+      "series": 3,
+      "cover": "http://localhost:5000/upload/1783146323471-Cover-3.jpeg"
+    }
+  ],
+  "characters": [
+    {
+      "id": "1783079753551",
+      "name": "Aarthan Veill",
+      "age": 17,
+      "gender": "male",
+      "faction": "good",
+      "bio": "Karakter utama, Kakak Leill, Pemberani, Selalu penasaran"
+    },
+    {
+      "id": "1783079787423",
+      "name": "Leilly Veill",
+      "age": 13,
+      "gender": "female",
+      "faction": "good",
+      "bio": "Karakter Kedua, Adik Aarth, Lugu"
+    },
+    {
+      "id": "1783079812515",
+      "name": "Joseph Veill",
+      "age": 35,
+      "gender": "male",
+      "faction": "good",
+      "bio": "Ayah Aarth dan Leill, Pekerja Keras"
+    },
+    {
+      "id": "1783079849412",
+      "name": "Tiana Rey Veill",
+      "age": 30,
+      "gender": "female",
+      "faction": "good",
+      "bio": "Ibu Aarth dan Leill, Lembut, Penyayang"
+    },
+    {
+      "id": "1783079882069",
+      "name": "Marcus Feyn",
+      "age": 50,
+      "gender": "male",
+      "faction": "evil",
+      "bio": "Raja Negara Sallemn, Egois, Munafik, Sombong"
+    },
+    {
+      "id": "1783079910248",
+      "name": "Julien",
+      "age": 22,
+      "gender": "male",
+      "faction": "evil",
+      "bio": "Prajurit Kerajaan Feyn, Ambisius, Angkuh,"
+    }
+  ],
+  "wiki": [
+    {
+      "head":"Seven Deadly Sins",
+      "body":[
+        "Envy (Iri Dengki)",
+        "Greed (Keserakahan)",
+        "Pride (Kesombongan)",
+        "Gluttony (Kerakusan)",
+        "Lust (Hawa Nafsu)",
+        "Sloth (Kemalasan)",
+        "Wrath (Kemarahan)"
+      ]
+    },
+    {
+      "head":"Ten God Commandement",
+      "body":[
+        "Thou shalt have no other gods before me (Jangan ada allah lain di hadapan-Ku) => Pemimpin para dewa / Sang Tertinggi (Tanpa bernama dan tidak berbentuk karena adalah zat tertinggi)",
+        "Thou shalt not take the name of the Lord thy God in vain (Jangan menyebut nama Tuhan Allahmu dengan sembarangan) => Ruen -> Dewa kesetiaan / Sang Pemberi Pesan (Menghubungkan Sang Tertinggi dengan dunia dan para dewa)",
+        "Thou shalt not make unto thee any graven image (Jangan membuat bagimu patung yang menyerupai apa pun) => Shee -> Dewi kebaikan / Sang Kebaikan",
+        "Remember the sabbath day, to keep it holy (Kuduskanlah hari Sabat (Ingatlah dan kuduskanlah hari suci)) => Nae -> Dewa kiamat / Sang Pengakhir",
+        "Honour thy father and thy mother. (Hormatilah ayahmu dan ibumu) => Sonne -> Dewa kehidupan / Sang Penghidup & Pencipta Alam Hidup",
+        "Thou shalt not kill (Jangan membunuh) => Ren -> Dewa kematian / Sang Pencabut Nyawa & Pencipta Alam Kematian",
+        "Thou shalt not commit adultery (Jangan berzina) => Sierra -> Dewi cinta / Sang Pengasih",
+        "Thou shalt not steal (Jangan mencuri) => Rene -> Dewi penghukum / Sang Pengadil",
+        "Thou shalt not bear false witness against thy neighbour (Jangan mengucapkan saksi dusta tentang sesamamu) => Nier -> Dewa pengamat / Sang Pencatat",
+        "Thou shalt not covet thy neighbour's house / anything that is thy neighbour's (Jangan mengingini milik sesamamu (Jangan mengingini hak orang lain)) => Morr -> Dewa kejahatan / Sang Kejahatan"
+      ]
+    }
+  ]
+}

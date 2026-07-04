@@ -20,8 +20,7 @@ interface CardsProps {
     link?:string;
 }
 
-function Cards({ use, onClick, id, name, age, gender, faction, bio, title, cover, link }: CardsProps) {
-    console.log(onClick)
+function Cards({ use, id, name, age, gender, faction, bio, title, cover, link }: CardsProps) {
     const [state, setState] = React.useState(false)
 
     const handleDelete = async () => {

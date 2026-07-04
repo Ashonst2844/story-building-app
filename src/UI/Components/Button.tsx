@@ -17,12 +17,15 @@ interface ButtonProps {
 
     //Event Handle
     onClick?:()=>void;
+
+    //URL Props
+    url?:string
 }
 
 function Button(props: ButtonProps) {
     if (props.type=="link") {
         return(
-            <ReactDOM.Link to={props.link}
+            <ReactDOM.Link target={props.url?"_blank":"_self"} to={props.url?props.url:props.link}
             style={{width:props.w,height: props.h ? props.h : "60px", ...props.style}} className={`center button ${
                 props.theme == "primary" ? "primary-button" : "secondary-button" 
             }`}>{props.children}</ReactDOM.Link>

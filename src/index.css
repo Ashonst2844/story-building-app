@@ -1,6 +1,6 @@
 :root {
   /* COLOR */
-  --text: #e4e4e4;
+  --text: #c5c5c5;
   --bg: #0c0c0c;
   --primary: #252525;
   --accent: #e9c318;
@@ -18,6 +18,11 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: "BlackLetters";
+  src: url("/src/assets/fonts/blackletter_ds/BLACEB__.TTF");
 }
 
 * {

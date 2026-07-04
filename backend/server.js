@@ -104,6 +104,12 @@ app.get('/api/wiki', (req, res) => {
     res.json(db.wiki);
 });
 
+// Enp 6. READ ALL NOTES
+app.get('/api/note', (req, res) => {
+    const db = readAPI();
+    res.json(db.admin);
+});
+
 // // 3. UPDATE (Mengubah data karakter berdasarkan ID)
 // app.put('/api/characters/:id', (req, res) => {
 //     const db = readDB();

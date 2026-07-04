@@ -69,7 +69,7 @@
 .secondary-button {
   background-color: var(--primary);
   color: var(--text);
-  border: 4px solid var(--accent);
+  border: 2px solid var(--accent);
   font-weight: 500;
 }
 .back-button {
@@ -154,7 +154,7 @@
   padding: var(--spacing);
 }
 
-#wiki-container {
+.accordion-container {
   width: 100%;
   height: 90%;
   display: flex;
@@ -172,10 +172,10 @@
   height: 80px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .accordion-head p {
   font-size: 2rem;
-  margin: 0 var(--spacing) 0;
 }
 .accordion-body ul li {
   margin: 0 0 calc(var(--spacing)/2);

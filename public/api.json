@@ -1,98 +1,100 @@
 {
-  "books": [
-    {
-      "id": "1783146323488",
-      "title": "  New King Of Darkness, Book III: Sins Of Pride",
-      "series": 3,
-      "cover": "http://localhost:5000/upload/1783146323471-Cover-3.jpeg"
-    }
-  ],
-  "characters": [
-    {
-      "id": "1783079753551",
-      "name": "Aarthan Veill",
-      "age": 17,
-      "gender": "male",
-      "faction": "good",
-      "bio": "Karakter utama, Kakak Leill, Pemberani, Selalu penasaran"
-    },
-    {
-      "id": "1783079787423",
-      "name": "Leilly Veill",
-      "age": 13,
-      "gender": "female",
-      "faction": "good",
-      "bio": "Karakter Kedua, Adik Aarth, Lugu"
-    },
-    {
-      "id": "1783079812515",
-      "name": "Joseph Veill",
-      "age": 35,
-      "gender": "male",
-      "faction": "good",
-      "bio": "Ayah Aarth dan Leill, Pekerja Keras"
-    },
-    {
-      "id": "1783079849412",
-      "name": "Tiana Rey Veill",
-      "age": 30,
-      "gender": "female",
-      "faction": "good",
-      "bio": "Ibu Aarth dan Leill, Lembut, Penyayang"
-    },
-    {
-      "id": "1783079882069",
-      "name": "Marcus Feyn",
-      "age": 50,
-      "gender": "male",
-      "faction": "evil",
-      "bio": "Raja Negara Sallemn, Egois, Munafik, Sombong"
-    },
-    {
-      "id": "1783079910248",
-      "name": "Julien",
-      "age": 22,
-      "gender": "male",
-      "faction": "evil",
-      "bio": "Prajurit Kerajaan Feyn, Ambisius, Angkuh,"
-    }
-  ],
-  "wiki": [
-    {
-      "head":"Seven Deadly Sins",
-      "type":"list",
-      "body":
-        "Envy (Iri Dengki) \n Greed (Keserakahan) \n Pride (Kesombongan) \n Gluttony (Kerakusan) \n Lust (Hawa Nafsu) \n Sloth (Kemalasan) \n Wrath (Kemarahan)"
-    },
-    {
-      "head":"Ten God Commandement",
-      "type":"list",
-      "body":
-        "Thou shalt have no other gods before me (Jangan ada allah lain di hadapan-Ku) => Pemimpin para dewa / Sang Tertinggi (Tanpa bernama dan tidak berbentuk karena adalah zat tertinggi) \n Thou shalt not take the name of the Lord thy God in vain (Jangan menyebut nama Tuhan Allahmu dengan sembarangan) => Ruen -> Dewa kesetiaan / Sang Pemberi Pesan (Menghubungkan Sang Tertinggi dengan dunia dan para dewa) \n Thou shalt not make unto thee any graven image (Jangan membuat bagimu patung yang menyerupai apa pun) => Shee -> Dewi kebaikan / Sang Kebaikan \n Remember the sabbath day, to keep it holy (Kuduskanlah hari Sabat (Ingatlah dan kuduskanlah hari suci)) => Nae -> Dewa kiamat / Sang Pengakhir \n Honour thy father and thy mother. (Hormatilah ayahmu dan ibumu) => Sonne -> Dewa kehidupan / Sang Penghidup & Pencipta Alam Hidup \n Thou shalt not kill (Jangan membunuh) => Ren -> Dewa kematian / Sang Pencabut Nyawa & Pencipta Alam Kematian \n Thou shalt not commit adultery (Jangan berzina) => Sierra -> Dewi cinta / Sang Pengasih \n Thou shalt not steal (Jangan mencuri) => Rene -> Dewi penghukum / Sang Pengadil \n Thou shalt not bear false witness against thy neighbour (Jangan mengucapkan saksi dusta tentang sesamamu) => Nier -> Dewa pengamat / Sang Pencatat \n Thou shalt not covet thy neighbour's house / anything that is thy neighbour's (Jangan mengingini milik sesamamu (Jangan mengingini hak orang lain)) => Morr -> Dewa kejahatan / Sang Kejahatan"
-    },
-    {
-      "head":"Festival",
-      "type":"desc",
-      "body":"Acara besar, seperti pertunjukkan dan Bazzar yang dilakukan oleh kerajaan sebagai simbol kemenangan jika mereka memenangkan sebuah perang."
-    }
-  ],
-  "admin": [
-    {
-      "head":"Core Concepts",
-      "type":"list",
-      "body":
-        "Berfokus pada persaudaraan \n Alasan Karakter Utama ingin merebut tahta adalah karena mendalami tentang kebusukan kerajaan yang semakin dalam semakin kuat dan terlihat kebusukannya. \n Mereka berdua menemukan sebuah simbol yang ternyata adalah sekte jahat penyembah dewa Ke-10, yang dianut keluarga kerajaan \n Aarth dan Leill menemukan Simbol itu saat mereka dikurung di penjara bawah tanah, dan melihat banyak orang yang di penjara mati dihukum dengan bekas simbol itu menutupi punggungnya \n Tujuan Karakter utama : mencari tahu tentang simbol itu, hingga berakhir ia menjadi bagian dari sekte itu, yaitu menjadi raja di benua nya \n Kerajaan Feyn adalah kerajaan yang ekspansif, saat ini sedang berperang dengan Kerajaan lain (Dunefort & Aglea), memperebutkan daerah \n Ending nya Aarth menjadi raja yang lebih jahat dan karakter Leill akan mati mengorbankan diri untuk Aarth \n Festival Arc : Day 1 > Aarth dan Leill pergi melihat-lihat sekitar Festival. Day 2 > Aarth disuruh Bos nya untuk mempersiapkan panggung besar untuk acara besar utama di hari ke tiga. Day 3 > Aarth yang sedang bekerja tiba-tiba berpas-pasan dengan ketiga prajurit dan membunuh mereka bertiga. \n Nanti bab saat pengorbanan Leill judulnya akan adalah 'Aarth Dan Leill!', ibaratkan hasil translate dari 'You And Me!' di Bab VII \n Di Bab 9 (Orimburg Dungeon Arc), Akan menjadi 2 Perspektif (Aarth | Leill)"
-    },
-    {
-      "head":"Forshadowing di (Festival Arc)",
-      "type":"list",
-      "body":
-        "Permainan lembar botol untuk mendapatkan boneka Kelinci (Bukan Foreshadowing) \n Aarth (W) -> Aarth melawan orang lain dalam lomba ala-ala Jousting dan Aarth menang melawan orang yang terlihat lebih kuat. Menandakan Ia akan menang melawan Para Kesatria \n Aarth, Leill & Seorang _Stranger_ (W) -> Mereka berdua bermain permainan 'Catch The Fox' mereka berkerja sama menangkap rubah sebanyak-banyaknya melawan tim lain 3 orang/tim. mengibaratkan Rubah (Aarth, Leill, dan satu orang lagi) akan dikejar oleh Kerajaan Feyn. Dan nanti pas diakhir rubah milik Aarth dan Leill, mati dibunuh para prajurit dan boneka kelinci Leill dirusak sebelum Aarth marah dan membunuh mereka. \n Aarth (W) -> Aarth bermain tebak dadu dan bertaruh menggunakan uangnya, namun diakhir permainan, dia hanya untung 2 keping koin saja. Mengibaratkan dia akan bertaruh untuk bertahan hidup dan akan gambling dengan beberapa kondisi, namun tetap nasibnya selalu ada ada diujung tantuk \n Aarth & Leill (W) -> Aarth dan Leill bermain permainan terakhir, yaitu 'Me & You', jadi permainannya adalah balap gerobak di jalanan berliku dimana satu orang mendorong dengan mata tertutup (Aarth) dan satu lagi berada didalam gerobak memberi intruksi arah untuk yang mendorong (Leill), di permainan ini Leill mengarahkan Aarth dengan benar, namun di garis finish, tiba-tiba ada bongkahan batu besar di tanah dan mereka menabraknya, membuat Leill jatuh terluka, tapi mereka tetap menang. Ini menggambarkan Leill yang selalu menemani Aarth hingga akhir dan dia akan jatuh (mati) saat difinish, namun dengan kakaknya yang menang melawan kerajaan"
-    },
-    {
-      "head":"Perspective di (Orimburg Dungeon Arc)",
-      "type":"desc",
-      "body":"# Aarth \n 1.Aarth dipukuli lalu ditangkap, namun sempat menyuruh Leill pergi agar Leill tidak ditangkap juga,\n 2.Dia dikurung di Penjara Bawah Tanah Orimburg Fortress dengan penjagaan ketat. \n 3.Disini Aarth disiksa, oleh para prajurit lain dan sipir penjara. \n 4.Aarth mencoba untuk melarikan diri dan berhasil berkat bantuan Leill dari atas diluar penjara. \n 5.Selama di bawah tanah dalam Orimburg Forest dia mencuri beberapa perlengkapan (benda seperti peledak) dan juga senjata \n 6.Mereka akhirnya bertemu di gorong-gorong \n 7.Note: Dalam Perspective Aarth akan diketahui juga beberapa sikap buruk dari sang Raja. \n # Leill \n 1.Karena takut dan panik, Leill kabur dari alun-alun kerumahnya. \n 2.Dia memberi tahu Ibu bahwa Aarth ditangkap tapi menyembunyikan alasan ditangkapnya. \n 3.Besoknya Leill meminta bantuan Bos Aarth untuk menjaga Ibunya. \n 4.Dia mencari Aarth seorang diri, dengan menjadi penumpang gelap penjual bahan pokok untuk dikirimkan ke Orimburg Fortress. \n 5.Lalu berhasil menemukan Aarth, dan membantunya dari luar penjara dengan mengendap-endap. \n 6.Hingga berakhir bertemu di gorong-gorong \n # Together \n 1.Aarth dan Leill berhasil bertemu digotong-gorong \n 2.Mereka menemukan banyak jenazah bekas tahanan juga dengan simbol aneh di tubuhnya \n 3.Aarth dan Leill pun berhasil melarikan diri dari sana membawa banyak pertanyaan tentang raja mereka sebenarnya \n # Aftermath \n 1.Karena kabur, kerajaan menjadikan Aarth dan Leill buronan \n 2.karena sulit ditemukan, kerajaan mencari Ibunya sebagai pancingan \n 3.saat Aarth dan Leill kembali ke Orimburg untuk menjemput Ibunya, Aarth dan Leill malah ditahan lagi dan Ibuya dibunuh Dihadapan mereka \n 4.Ending Arc"
-    }
-  ]
+  "result": {
+    "books": [
+      {
+        "id": "1783146323488",
+        "title": "  New King Of Darkness, Book III: Sins Of Pride",
+        "series": 3,
+        "cover": "http://localhost:5000/upload/1783146323471-Cover-3.jpeg"
+      }
+    ],
+    "characters": [
+      {
+        "id": "1783079753551",
+        "name": "Aarthan Veill",
+        "age": 17,
+        "gender": "male",
+        "faction": "good",
+        "bio": "Karakter utama, Kakak Leill, Pemberani, Selalu penasaran"
+      },
+      {
+        "id": "1783079787423",
+        "name": "Leilly Veill",
+        "age": 13,
+        "gender": "female",
+        "faction": "good",
+        "bio": "Karakter Kedua, Adik Aarth, Lugu"
+      },
+      {
+        "id": "1783079812515",
+        "name": "Joseph Veill",
+        "age": 35,
+        "gender": "male",
+        "faction": "good",
+        "bio": "Ayah Aarth dan Leill, Pekerja Keras"
+      },
+      {
+        "id": "1783079849412",
+        "name": "Tiana Rey Veill",
+        "age": 30,
+        "gender": "female",
+        "faction": "good",
+        "bio": "Ibu Aarth dan Leill, Lembut, Penyayang"
+      },
+      {
+        "id": "1783079882069",
+        "name": "Marcus Feyn",
+        "age": 50,
+        "gender": "male",
+        "faction": "evil",
+        "bio": "Raja Negara Sallemn, Egois, Munafik, Sombong"
+      },
+      {
+        "id": "1783079910248",
+        "name": "Julien",
+        "age": 22,
+        "gender": "male",
+        "faction": "evil",
+        "bio": "Prajurit Kerajaan Feyn, Ambisius, Angkuh,"
+      }
+    ],
+    "wikis": [
+      {
+        "head":"Seven Deadly Sins",
+        "type":"list",
+        "body":
+          "Envy (Iri Dengki) \n Greed (Keserakahan) \n Pride (Kesombongan) \n Gluttony (Kerakusan) \n Lust (Hawa Nafsu) \n Sloth (Kemalasan) \n Wrath (Kemarahan)"
+      },
+      {
+        "head":"Ten God Commandement",
+        "type":"list",
+        "body":
+          "Thou shalt have no other gods before me (Jangan ada allah lain di hadapan-Ku) => Pemimpin para dewa / Sang Tertinggi (Tanpa bernama dan tidak berbentuk karena adalah zat tertinggi) \n Thou shalt not take the name of the Lord thy God in vain (Jangan menyebut nama Tuhan Allahmu dengan sembarangan) => Ruen -> Dewa kesetiaan / Sang Pemberi Pesan (Menghubungkan Sang Tertinggi dengan dunia dan para dewa) \n Thou shalt not make unto thee any graven image (Jangan membuat bagimu patung yang menyerupai apa pun) => Shee -> Dewi kebaikan / Sang Kebaikan \n Remember the sabbath day, to keep it holy (Kuduskanlah hari Sabat (Ingatlah dan kuduskanlah hari suci)) => Nae -> Dewa kiamat / Sang Pengakhir \n Honour thy father and thy mother. (Hormatilah ayahmu dan ibumu) => Sonne -> Dewa kehidupan / Sang Penghidup & Pencipta Alam Hidup \n Thou shalt not kill (Jangan membunuh) => Ren -> Dewa kematian / Sang Pencabut Nyawa & Pencipta Alam Kematian \n Thou shalt not commit adultery (Jangan berzina) => Sierra -> Dewi cinta / Sang Pengasih \n Thou shalt not steal (Jangan mencuri) => Rene -> Dewi penghukum / Sang Pengadil \n Thou shalt not bear false witness against thy neighbour (Jangan mengucapkan saksi dusta tentang sesamamu) => Nier -> Dewa pengamat / Sang Pencatat \n Thou shalt not covet thy neighbour's house / anything that is thy neighbour's (Jangan mengingini milik sesamamu (Jangan mengingini hak orang lain)) => Morr -> Dewa kejahatan / Sang Kejahatan"
+      },
+      {
+        "head":"Festival",
+        "type":"desc",
+        "body":"Acara besar, seperti pertunjukkan dan Bazzar yang dilakukan oleh kerajaan sebagai simbol kemenangan jika mereka memenangkan sebuah perang."
+      }
+    ],
+    "admins": [
+      {
+        "head":"Core Concepts",
+        "type":"list",
+        "body":
+          "Berfokus pada persaudaraan \n Alasan Karakter Utama ingin merebut tahta adalah karena mendalami tentang kebusukan kerajaan yang semakin dalam semakin kuat dan terlihat kebusukannya. \n Mereka berdua menemukan sebuah simbol yang ternyata adalah sekte jahat penyembah dewa Ke-10, yang dianut keluarga kerajaan \n Aarth dan Leill menemukan Simbol itu saat mereka dikurung di penjara bawah tanah, dan melihat banyak orang yang di penjara mati dihukum dengan bekas simbol itu menutupi punggungnya \n Tujuan Karakter utama : mencari tahu tentang simbol itu, hingga berakhir ia menjadi bagian dari sekte itu, yaitu menjadi raja di benua nya \n Kerajaan Feyn adalah kerajaan yang ekspansif, saat ini sedang berperang dengan Kerajaan lain (Dunefort & Aglea), memperebutkan daerah \n Ending nya Aarth menjadi raja yang lebih jahat dan karakter Leill akan mati mengorbankan diri untuk Aarth \n Festival Arc : Day 1 > Aarth dan Leill pergi melihat-lihat sekitar Festival. Day 2 > Aarth disuruh Bos nya untuk mempersiapkan panggung besar untuk acara besar utama di hari ke tiga. Day 3 > Aarth yang sedang bekerja tiba-tiba berpas-pasan dengan ketiga prajurit dan membunuh mereka bertiga. \n Nanti bab saat pengorbanan Leill judulnya akan adalah 'Aarth Dan Leill!', ibaratkan hasil translate dari 'You And Me!' di Bab VII \n Di Bab 9 (Orimburg Dungeon Arc), Akan menjadi 2 Perspektif (Aarth | Leill)"
+      },
+      {
+        "head":"Forshadowing di (Festival Arc)",
+        "type":"list",
+        "body":
+          "Permainan lembar botol untuk mendapatkan boneka Kelinci (Bukan Foreshadowing) \n Aarth (W) -> Aarth melawan orang lain dalam lomba ala-ala Jousting dan Aarth menang melawan orang yang terlihat lebih kuat. Menandakan Ia akan menang melawan Para Kesatria \n Aarth, Leill & Seorang _Stranger_ (W) -> Mereka berdua bermain permainan 'Catch The Fox' mereka berkerja sama menangkap rubah sebanyak-banyaknya melawan tim lain 3 orang/tim. mengibaratkan Rubah (Aarth, Leill, dan satu orang lagi) akan dikejar oleh Kerajaan Feyn. Dan nanti pas diakhir rubah milik Aarth dan Leill, mati dibunuh para prajurit dan boneka kelinci Leill dirusak sebelum Aarth marah dan membunuh mereka. \n Aarth (W) -> Aarth bermain tebak dadu dan bertaruh menggunakan uangnya, namun diakhir permainan, dia hanya untung 2 keping koin saja. Mengibaratkan dia akan bertaruh untuk bertahan hidup dan akan gambling dengan beberapa kondisi, namun tetap nasibnya selalu ada ada diujung tantuk \n Aarth & Leill (W) -> Aarth dan Leill bermain permainan terakhir, yaitu 'Me & You', jadi permainannya adalah balap gerobak di jalanan berliku dimana satu orang mendorong dengan mata tertutup (Aarth) dan satu lagi berada didalam gerobak memberi intruksi arah untuk yang mendorong (Leill), di permainan ini Leill mengarahkan Aarth dengan benar, namun di garis finish, tiba-tiba ada bongkahan batu besar di tanah dan mereka menabraknya, membuat Leill jatuh terluka, tapi mereka tetap menang. Ini menggambarkan Leill yang selalu menemani Aarth hingga akhir dan dia akan jatuh (mati) saat difinish, namun dengan kakaknya yang menang melawan kerajaan"
+      },
+      {
+        "head":"Perspective di (Orimburg Dungeon Arc)",
+        "type":"desc",
+        "body":"# Aarth \n 1.Aarth dipukuli lalu ditangkap, namun sempat menyuruh Leill pergi agar Leill tidak ditangkap juga,\n 2.Dia dikurung di Penjara Bawah Tanah Orimburg Fortress dengan penjagaan ketat. \n 3.Disini Aarth disiksa, oleh para prajurit lain dan sipir penjara. \n 4.Aarth mencoba untuk melarikan diri dan berhasil berkat bantuan Leill dari atas diluar penjara. \n 5.Selama di bawah tanah dalam Orimburg Forest dia mencuri beberapa perlengkapan (benda seperti peledak) dan juga senjata \n 6.Mereka akhirnya bertemu di gorong-gorong \n 7.Note: Dalam Perspective Aarth akan diketahui juga beberapa sikap buruk dari sang Raja. \n # Leill \n 1.Karena takut dan panik, Leill kabur dari alun-alun kerumahnya. \n 2.Dia memberi tahu Ibu bahwa Aarth ditangkap tapi menyembunyikan alasan ditangkapnya. \n 3.Besoknya Leill meminta bantuan Bos Aarth untuk menjaga Ibunya. \n 4.Dia mencari Aarth seorang diri, dengan menjadi penumpang gelap penjual bahan pokok untuk dikirimkan ke Orimburg Fortress. \n 5.Lalu berhasil menemukan Aarth, dan membantunya dari luar penjara dengan mengendap-endap. \n 6.Hingga berakhir bertemu di gorong-gorong \n # Together \n 1.Aarth dan Leill berhasil bertemu digotong-gorong \n 2.Mereka menemukan banyak jenazah bekas tahanan juga dengan simbol aneh di tubuhnya \n 3.Aarth dan Leill pun berhasil melarikan diri dari sana membawa banyak pertanyaan tentang raja mereka sebenarnya \n # Aftermath \n 1.Karena kabur, kerajaan menjadikan Aarth dan Leill buronan \n 2.karena sulit ditemukan, kerajaan mencari Ibunya sebagai pancingan \n 3.saat Aarth dan Leill kembali ke Orimburg untuk menjemput Ibunya, Aarth dan Leill malah ditahan lagi dan Ibuya dibunuh Dihadapan mereka \n 4.Ending Arc"
+      }
+    ]
+  }
 }

@@ -19,7 +19,7 @@ interface CharactersProps {
 }
 
 function Characters() {
-    const {data:characters, loading, error} = useFetch<CharactersProps>("http://localhost:5000/api/characters", "none");
+    const {data:characters, loading, error} = useFetch<CharactersProps>("http://localhost:5000/api/characters", false, "characters");
     
     const {onSubmit} = useForm(["name","age","gender","faction","bio"])
     const [showForm,setShowForm] = React.useState(false)

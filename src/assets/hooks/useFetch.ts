@@ -1,6 +1,6 @@
 import React from "react";
 
-export function useFetch<T>(url:string, option:"none"|"sort") {
+export function useFetch<T>(url:string, sort?:boolean, key?:string) {
     const [data, setData] = React.useState<T[] | null>(null);
     const [loading, setLoading] = React.useState<boolean>(true);
     const [error, setError] = React.useState<Error | null>(null);
@@ -10,21 +10,34 @@ export function useFetch<T>(url:string, option:"none"|"sort") {
         fetch(url)
             .then((response) => {
                 if(!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
+                    throw new Error(`${response.status}`);
                 }
                 return response.json();
             })
-            .then((data: T[])=>{
+            .then((data: unknown)=>{
                 if(!ignore) {
-                    if(option === "sort") {
-                        const sortedData = [...data].sort((a, b) => {
+
+                    const resObj = data as Record<string, unknown>;
+
+                    let extractedData: unknown;
+                    if (key && resObj.result && typeof resObj.result === 'object') {
+                        const resultPayload = resObj.result as Record<string, unknown>;
+                        extractedData = resultPayload[key];
+                    } else if (key && resObj[key]) {
+                        extractedData = resObj[key];
+                    } else {
+                        extractedData = data;
+                    }
+
+                    if(sort && Array.isArray(extractedData)) {
+                        const sortedData = [...extractedData].sort((a, b) => {
                             const itemA = a as { series: number };
                             const itemB = b as { series: number };
                             return itemA.series - itemB.series;
                         });
                         setData(sortedData)
                     } else {
-                        setData(data)
+                        setData(extractedData as T[])
                     }
                     setLoading(false)
                 }
@@ -37,7 +50,7 @@ export function useFetch<T>(url:string, option:"none"|"sort") {
         return () => {
             ignore = true;
         }
-    },[url,option])
+    },[url,sort])
 
     return {data, loading, error};
 }

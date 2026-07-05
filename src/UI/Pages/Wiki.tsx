@@ -11,7 +11,7 @@ interface WikiProps {
 }
 
 function Wiki() {
-    const {data:wikis, loading, error} = useFetch<WikiProps>("http://localhost:5000/api/wiki","none")
+    const {data:wikis, loading, error} = useFetch<WikiProps>("http://localhost:5000/api/wikis",false,"wikis")
     if(loading){
         return <Loading message="Loading Wiki..."/>
     } else if(error) {

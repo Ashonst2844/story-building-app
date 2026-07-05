@@ -36,39 +36,35 @@ const writeAPI = (data) => {
 
 // API ENDPOINT
 
-// Enp 0. UPLOAD FILE
+// UPLOAD FILE
 app.post('/api/upload', upload.single('image'), (req, res) => {
   const fileUrl = req.file ? `http://localhost:${PORT}/upload/${req.file.filename}` : ""
   res.status(200).json({ message: 'Sukses!', url: fileUrl });
 });
 
-// Enp 1. CREATE BOOK
-app.post('/api/books', (req, res) => {
-    const db = readAPI();
-    const newBook = {
-        id: Date.now(),
-        ...req.body
-    };
-
-    db.books.push(newBook);
-    writeAPI(db);
-
-    res.status(201).json({ message: 'Adding Book Successfully!', data: newBook });
-});
-
-// Enp 2. READ ALL BOOKS
-app.get('/api/books', (req, res) => {
-    const db = readAPI();
-    res.json(db.books);
-});
-
-// Enp 2. READ ALL CHARACTERS
+// READ CHARACTERS
 app.get('/api/characters', (req, res) => {
     const db = readAPI();
-    res.json(db.characters);
+    res.json(db.result.characters);
 });
 
-// Enp 3. CREATE CHARACTER
+// READ BOOKS
+app.get('/api/books', (req, res) => {
+    const db = readAPI();
+    res.json(db.result.books);
+});
+// READ WIKIS
+app.get('/api/wikis', (req, res) => {
+    const db = readAPI();
+    res.json(db.result.wikis);
+});
+// READ ADMIN NOTES
+app.get('/api/notes', (req, res) => {
+    const db = readAPI();
+    res.json(db.result.admins);
+});
+
+// CREATE CHARACTER
 app.post('/api/characters', (req, res) => {
     const db = readAPI();
     const newCharacter = {
@@ -76,38 +72,40 @@ app.post('/api/characters', (req, res) => {
         ...req.body
     };
     
-    db.characters.push(newCharacter);
+    db.result.characters.push(newCharacter);
     writeAPI(db);
     
     res.status(201).json({ message: 'Adding Characters Succesfully!', data: newCharacter });
 });
 
-// Enp 4. DELETE CHARACTER
+// CREATE BOOK
+app.post('/api/books', (req, res) => {
+    const db = readAPI();
+    const newBook = {
+        id: Date.now(),
+        ...req.body
+    };
+
+    db.result.books.push(newBook);
+    writeAPI(db);
+
+    res.status(201).json({ message: 'Adding Book Successfully!', data: newBook });
+});
+
+// DELETE CHARACTER
 app.delete('/api/characters/:id', (req, res) => {
     const db = readAPI();
     const { id } = req.params;
-    const initialLength = db.characters.length;
+    const initialLength = db.result.characters.length;
 
-    db.characters = db.characters.filter(char => char.id.toString() !== id.toString());
+    db.result.characters = db.result.characters.filter(char => char.id.toString() !== id.toString());
 
-    if (db.characters.length === initialLength) {
+    if (db.result.characters.length === initialLength) {
         return res.status(404).json({ message: 'Character Not Found!' });
     }
 
     writeAPI(db);
     res.json({ message: 'Character Deleted!' });
-});
-
-// Enp 5. READ ALL WIKI
-app.get('/api/wiki', (req, res) => {
-    const db = readAPI();
-    res.json(db.wiki);
-});
-
-// Enp 6. READ ALL NOTES
-app.get('/api/note', (req, res) => {
-    const db = readAPI();
-    res.json(db.admin);
 });
 
 // // 3. UPDATE (Mengubah data karakter berdasarkan ID)

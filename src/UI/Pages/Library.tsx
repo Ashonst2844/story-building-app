@@ -20,7 +20,7 @@ interface BooksProps {
 function Library() {
     const [image, setImage] = React.useState<File|undefined>(undefined)
 
-    const {data:books, loading, error} = useFetch<BooksProps>("http://localhost:5000/api/books", "sort");
+    const {data:books, loading, error} = useFetch<BooksProps>("http://localhost:5000/api/books", true, "books");
 
     const {onSubmit,uploadLoading} = useForm(["title","series","cover"])
     const [showForm,setShowForm] = React.useState(false)

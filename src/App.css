@@ -122,12 +122,15 @@
 .modals {
   z-index: 999;
 }
-.characters-modals {
-  width: 70%;
-  height: 300px;
+.modal-box {
   background-color: var(--primary);
   box-shadow: var(--shadow);
   flex-direction: column;
+  padding: calc(var(--spacing)*2);
+}
+.characters-modals {
+  width: 70%;
+  height: 300px;
 }
 .characters-modals-content {
   width: 100%;
@@ -143,6 +146,10 @@
 .characters-modals-content span {
   text-transform: uppercase;
   color: var(--accent);
+}
+.books-modals {
+  width: 60%;
+  height: 400px;
 }
 
 .form-container {
@@ -181,9 +188,10 @@
   margin: 0 0 calc(var(--spacing)/2);
 }
 
-#timeline * {
+#timeline div {
   overflow-y: scroll;
   height: 100%;
+  padding: var(--spacing);
 }
 #timeline-button-container {
   width: 30%;
@@ -197,7 +205,7 @@
   border-left: 4px solid var(--accent);
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: column;
   transition: var(--transition);
 }

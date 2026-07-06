@@ -5,7 +5,7 @@ import React from "react";
 
 interface CardsProps {
     //Main Props
-    use: "characters"|"timelines"|"books";
+    use: "characters"|"books";
     onClick?:()=>void;
     //Character Props
     id?:string;
@@ -15,12 +15,15 @@ interface CardsProps {
     faction?:string;
     bio?:string;
     //Book Props
-    title?:string;
     cover?:string;
     link?:string;
+    title?:string;
+    genres?:string[];
+    synopsys?:string;
 }
 
-function Cards({ use, id, name, age, gender, faction, bio, title, cover, link }: CardsProps) {
+function Cards({ use, id, name, age, gender, faction, bio, title, cover, link, genres, synopsys }: CardsProps) {
+    const isAdmin = import.meta.env.DEV
     const [state, setState] = React.useState(false)
 
     const handleDelete = async () => {
@@ -49,12 +52,14 @@ function Cards({ use, id, name, age, gender, faction, bio, title, cover, link }:
                 <h3>{name}</h3>
                 <img src="/src/assets/icons/human.svg"/>
                 <div className="button-group center">
-                    <Button onClick={()=>setState(true)} theme="primary" w="70%" h="40px" type="button">
+                    <Button onClick={()=>setState(true)} theme="primary" w={isAdmin?"70%":"100%"} h="40px" type="button">
                         <p>Details</p>
                     </Button>
-                    <Button onClick={handleDelete} theme="warning"  w="30%" h="40px" type="button">
-                        <img style={{rotate:"45deg", width:"20px"}} src="/src/assets/icons/plus.svg"/>
-                    </Button>
+                    {isAdmin && (
+                        <Button onClick={handleDelete} theme="warning"  w="30%" h="40px" type="button">
+                            <img style={{rotate:"45deg", width:"20px"}} src="/src/assets/icons/plus.svg"/>
+                        </Button>
+                    )}
                 </div>
                 <Modals isOpen={state} onClose={()=>setState(false)} use={use} 
                 name={name} 
@@ -67,10 +72,16 @@ function Cards({ use, id, name, age, gender, faction, bio, title, cover, link }:
     } else if (use==="books") {
         return(
             <div className={`center ${use}-card`}>
-                <img className="full-page" src={`/public/Images/Cover/${cover}`} alt={title} />
+                <img className="full-page" src={`/public/Images/Cover/${cover}`} alt={title} onClick={
+                    () => setState(true)
+                } />
                 <a href={link || "#"} target="_blank" rel="noopener noreferrer">
                     {title}
                 </a>
+                <Modals isOpen={state} onClose={()=>setState(false)} use={use}
+                title={title}
+                genres={genres}
+                synopsys={synopsys}/>
             </div>
         )
     }

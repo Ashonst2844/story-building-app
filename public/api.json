@@ -4,50 +4,59 @@
       {
         "id":1,
         "title":"Era Penciptaan",
+        "description":"Zaman di mana sebuah dunia baru terbentuk, hasil dari kehancuran mutlak dunia sebelumnya. Di zaman ini, tak ada teknologi dan ilmu pengetahuan, bahkan populasi manusia di zaman ini hanya kurang dari setengah juta saja. membuat ini menjadi zaman yang sangat sepi. Oleh karena itu, kondisi alam di saat ini masih sangat terjaga, pepohonan dan hewan terlihat sangat eksotis. Di zaman ini semua orang bertahan hidup dengan cara berburu dan tinggal secara nomaden (berpindah-pindah tempat) dan perlahan mempelajari teknik dan teknologi baru untuk bertahan hidup.",
         "time_range":"0 - 300",
         "related_novel":[]
       },
       {
         "id":2,
         "title":"Era Sihir / Mitos",
+        "description":"Tujuh komet jatuh menghantam bumi ke tujuh tempat berbeda. Terdapat kekuatan magis yang menetap di dalam komet-komet itu, dan perlahan mempengaruhi seluruh alam. Membuat pohon menjadi 'hidup' dan membuat beberapa tempat menjadi tempat yang seperti di dunia mimpi, semua orang juga mulai mencoba untuk menyentuh kekuatan magis, ada yang berhasil menguasai sihir dan menggunakannya untuk suatu hal yang baik, namun naasnya lebih banyak orang yang menggunakan kekuatan besar ini untuk sesuatu yang jahat, yaitu menguasi semua sihir dari ketujuh komet itu dan menjadi seorang penguasa dunia.",
         "time_range":"300 - 900",
         "related_novel":[]
       },
       {
         "id":3,
         "title":"Era Kerajaan",
+        "description":"Di Era ini, seseorang mengalahkan kekuatan sihir itu dan mulai meghilangkan semua kekuatan itu lalu melarangnya, bahkan menghukum mati mereka yang memiliki kekuatan itu. Dia meleburkan dan merahasiakan ke tujuh inti komet yang berisi kekuatan sebesar itu. Karena sudah tak ada lagi kekuatan sihir, semua negara kini banyak yang memisahkan diri dan membuat kerajaan di berbagai  belahan negara, dan membuat milite mereka sendiri karena dengan tidak adanya sihir, tidak ada juga pertahanan yang dapat melindaungi mereka dari orang lain. Orang-orang disini juga sudah mulai berdagang sehingga membentuk kekuatan sosial yang cukup kuat.",
         "time_range":"900 - 1600",
         "related_novel":["New King Of Darknes, Book III: Sins Of Pride"]
       },
       {
         "id":4,
         "title":"Era Revolusi",
+        "description":"Setelah tahta salah satu kerajaan di suatu negara diduduki oleh seorang tirani, seluruh dunia menjadi kacau dengan segala kebijakannya, dia mempengaruhi semua kerajaan yang lain sehingga menjadi sama seperti dirinya. Kekacauan besar sering terjadi dimana-mana, Sangat lelah ditindas dan di adu domba oleh para penguasa, akhirnya mereka bersatu untuk menggulingkan semua raja, dan merombak total sistem pemerintahannya, hal ini juga didampingi dengan kemajuan teknologi mereka, karena salah satu fondasi utama teknologi kini sudah ditemukan, yaitu listrik.",
         "time_range":"1600 - 2000",
         "related_novel":[]
       },
       {
         "id":5,
         "title":"Era Modern",
+        "description":"Sistem pemerintahan zaman ini sudah sangat rapi dan terstruktur, dan zaman juga sudah maju, listrik dan internet sudah menjadi salah satu kebutuhan pokok manusia saat ini, kemajuan teknologi sedang menjadi fokus utama untuk dikembangkan. Ini adalah zaman dimana sedikit sekali orang tidak mampu, bahkan hampir tidak ada.",
         "time_range":"2000 - 2300",
         "related_novel":[]
       },
       {
         "id":6,
         "title":"Era Futuristik",
+        "description":"Teknologi sudah sangat maju, bahkan sebuah perusahaan menemukan kembali inti komet sihir yang telah disembunyikan seribu tahun yang lalu. Para ilmuan menggabungkan  Teknologi yang sangat maju dengan kekuatan sihir yang sangat kuat, membuat zaman ini menjadi puncak dari kemajuan peradaban di bumi. Namun sayangnya orang-orang jahat masih tetaplah ada dan membuat teknologi ditambah sihir itu untuk menguasai dunia, dan menjadi bumi menjadi permainannya.",
         "time_range":"2300 - 3000",
         "related_novel":[]
       },
       {
         "id":7,
         "title":"Era Apokaliptik",
-        "time_range":"3000 - Masih Berlangsung...",
+        "description":"Kemajuan di Era sebelumnya perlahan menghancurkan seluruh alam di bumi. Kemudian Ia murka dan balik mengahncurkan peradaban manusia dengan memberi mereka ribuan bencana, penyakit menular tersebar dimana, tanaman dan hewan menjadi langka menyebabkan kelaparan dimana-mana, kini  kembali ke zaman batu namun dengan kondisi alam yang lebih jahat dari pada sebelumnya, mengharuskan mereka melawan dunia, keserakan, dan juga ego mereka masing-masing.",
+        "time_range":"3000 - Sekarang...",
         "related_novel":[]
       }
     ],
     "books": [
       {
         "id": "1783146323488",
-        "title": "  New King Of Darkness, Book III: Sins Of Pride",
+        "title": "New King Of Darkness, Book III: Sins Of Pride",
+        "genres": ["Fiksi Sejarah","Fantasi Gelap","Misteri"],
+        "synopsys": "Kisah kakak-beradik yang tinggal di sebuah kerajaan yang makmur dan sejahtera, hingga suatu hari menemukan sesuatu yang tak terduga membuat mereka berdua penasaran dan mencari tahu lebih dalam, hingga hal itu berpusat pada apa yang mereka agung-agungkan, yaitu sang raja.",
         "series": 3,
         "cover": "1783146323471-Cover-3.jpeg"
       }
@@ -113,7 +122,7 @@
         "head":"Ten God Commandement",
         "type":"list",
         "body":
-          "Thou shalt have no other gods before me (Jangan ada allah lain di hadapan-Ku) => Pemimpin para dewa / Sang Tertinggi (Tanpa bernama dan tidak berbentuk karena adalah zat tertinggi) \n Thou shalt not take the name of the Lord thy God in vain (Jangan menyebut nama Tuhan Allahmu dengan sembarangan) => Ruen -> Dewa kesetiaan / Sang Pemberi Pesan (Menghubungkan Sang Tertinggi dengan dunia dan para dewa) \n Thou shalt not make unto thee any graven image (Jangan membuat bagimu patung yang menyerupai apa pun) => Shee -> Dewi kebaikan / Sang Kebaikan \n Remember the sabbath day, to keep it holy (Kuduskanlah hari Sabat (Ingatlah dan kuduskanlah hari suci)) => Nae -> Dewa kiamat / Sang Pengakhir \n Honour thy father and thy mother. (Hormatilah ayahmu dan ibumu) => Sonne -> Dewa kehidupan / Sang Penghidup & Pencipta Alam Hidup \n Thou shalt not kill (Jangan membunuh) => Ren -> Dewa kematian / Sang Pencabut Nyawa & Pencipta Alam Kematian \n Thou shalt not commit adultery (Jangan berzina) => Sierra -> Dewi cinta / Sang Pengasih \n Thou shalt not steal (Jangan mencuri) => Rene -> Dewi penghukum / Sang Pengadil \n Thou shalt not bear false witness against thy neighbour (Jangan mengucapkan saksi dusta tentang sesamamu) => Nier -> Dewa pengamat / Sang Pencatat \n Thou shalt not covet thy neighbour's house / anything that is thy neighbour's (Jangan mengingini milik sesamamu (Jangan mengingini hak orang lain)) => Morr -> Dewa kejahatan / Sang Kejahatan"
+          "Thou shalt have no other gods before me (Jangan ada allah lain di hadapan-Ku) \n Thou shalt not take the name of the Lord thy God in vain (Jangan menyebut nama Tuhan Allahmu dengan sembarangan) \n Thou shalt not make unto thee any graven image (Jangan membuat bagimu patung yang menyerupai apa pun) \n Remember the sabbath day, to keep it holy (Kuduskanlah hari Sabat (Ingatlah dan kuduskanlah hari suci)) \n Honour thy father and thy mother. (Hormatilah ayahmu dan ibumu) \n Thou shalt not kill (Jangan membunuh) \n Thou shalt not commit adultery (Jangan berzina) \n Thou shalt not steal (Jangan mencuri) \n Thou shalt not bear false witness against thy neighbour (Jangan mengucapkan saksi dusta tentang sesamamu) \n Thou shalt not covet thy neighbour's house / anything that is thy neighbour's (Jangan mengingini milik sesamamu (Jangan mengingini hak orang lain))"
       },
       {
         "head":"Festival",
@@ -138,6 +147,11 @@
         "head":"Perspective di (Orimburg Dungeon Arc)",
         "type":"desc",
         "body":"# Aarth \n 1.Aarth dipukuli lalu ditangkap, namun sempat menyuruh Leill pergi agar Leill tidak ditangkap juga,\n 2.Dia dikurung di Penjara Bawah Tanah Orimburg Fortress dengan penjagaan ketat. \n 3.Disini Aarth disiksa, oleh para prajurit lain dan sipir penjara. \n 4.Aarth mencoba untuk melarikan diri dan berhasil berkat bantuan Leill dari atas diluar penjara. \n 5.Selama di bawah tanah dalam Orimburg Forest dia mencuri beberapa perlengkapan (benda seperti peledak) dan juga senjata \n 6.Mereka akhirnya bertemu di gorong-gorong \n 7.Note: Dalam Perspective Aarth akan diketahui juga beberapa sikap buruk dari sang Raja. \n # Leill \n 1.Karena takut dan panik, Leill kabur dari alun-alun kerumahnya. \n 2.Dia memberi tahu Ibu bahwa Aarth ditangkap tapi menyembunyikan alasan ditangkapnya. \n 3.Besoknya Leill meminta bantuan Bos Aarth untuk menjaga Ibunya. \n 4.Dia mencari Aarth seorang diri, dengan menjadi penumpang gelap penjual bahan pokok untuk dikirimkan ke Orimburg Fortress. \n 5.Lalu berhasil menemukan Aarth, dan membantunya dari luar penjara dengan mengendap-endap. \n 6.Hingga berakhir bertemu di gorong-gorong \n # Together \n 1.Aarth dan Leill berhasil bertemu digotong-gorong \n 2.Mereka menemukan banyak jenazah bekas tahanan juga dengan simbol aneh di tubuhnya \n 3.Aarth dan Leill pun berhasil melarikan diri dari sana membawa banyak pertanyaan tentang raja mereka sebenarnya \n # Aftermath \n 1.Karena kabur, kerajaan menjadikan Aarth dan Leill buronan \n 2.karena sulit ditemukan, kerajaan mencari Ibunya sebagai pancingan \n 3.saat Aarth dan Leill kembali ke Orimburg untuk menjemput Ibunya, Aarth dan Leill malah ditahan lagi dan Ibuya dibunuh Dihadapan mereka \n 4.Ending Arc"
+      },
+      {
+        "head":"The Ten Gods",
+        "type":"list",
+        "body":"Dewa ke-1 : Pemimpin para dewa / Sang Tertinggi (Tanpa bernama dan tidak berbentuk karena adalah zat tertinggi) \n Dewa ke-2 : Ruen, Dewa kesetiaan / Sang Pemberi Pesan (Menghubungkan Sang Tertinggi dengan dunia dan para dewa) \n Dewa ke-3 : Shee, Dewi kebaikan / Sang Kebaikan \n Dewa ke-4 : Nae, Dewa kiamat / Sang Pengakhir \n Dewa ke-5 : Sonne, Dewa kehidupan / Sang Penghidup & Pencipta Alam Hidup \n Dewa ke-6 : Ren, Dewa kematian / Sang Pencabut Nyawa & Pencipta Alam Kematian \n Dewea ke-7 : Sierra, Dewi cinta / Sang Pengasih \n Dewa ke-8 : Rene, Dewi penghukum / Sang Pengadil \n Dewa ke-9 : Nier, Dewa pengamat / Sang Pencatat \n Dewa ke-10 : Morr, Dewa kejahatan / Sang Kejahatan"
       }
     ]
   }

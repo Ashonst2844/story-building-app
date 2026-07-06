@@ -15,9 +15,12 @@ interface BooksProps {
     cover:string;
     link:string;
     series:number;
+    genres:string[];
+    synopsys:string;
 }
 
 function Library() {
+    const isAdmin = import.meta.env.DEV
     const [image, setImage] = React.useState<File|undefined>(undefined)
 
     const {data:books, loading, error} = useFetch<BooksProps>("books", true);
@@ -35,16 +38,26 @@ function Library() {
             <h2 className="page-header">SINS SAGA BOOK COLLECTION</h2>
             <div id="book-container" className="card-container">
                 {books?.map((book)=>(
-                    <Cards key={book.id} use="books" title={book.title} cover={book.cover} link={book.link} />
+                    <Cards key={book.id} use="books" 
+                    title={book.title} 
+                    cover={book.cover} 
+                    link={book.link} 
+                    genres={book.genres}
+                    synopsys={book.synopsys}/>
+                    
                 ))}
-                <Button onClick={()=>setShowForm(true)} w="100%" h="300px" type="button" theme="secondary">
-                    <img src="/src/assets/icons/plus.svg"/>
-                </Button>
+                {isAdmin && (
+                    <Button onClick={()=>setShowForm(true)} w="100%" h="300px" type="button" theme="secondary">
+                        <img src="/src/assets/icons/plus.svg"/>
+                    </Button>
+                )}
             </div>
             <Forms isOpen={showForm} onClose={()=>setShowForm(false)} id="create-book" onSubmit={(e)=>onSubmit(e, "http://localhost:5000/api/books", image)}>
                 <Forms.Input type="text" name="title" placeholder="Title:" required/>
                 <Forms.Input type="number" name="series" placeholder="Series:" required/>
                 <Forms.Input type="text" name="link" placeholder="Link (https://www.wattpad.com/story/) :" required/>
+                <Forms.Input type="text" name="genres" placeholder="Genres (Separate With Commas (,)) :" required/>
+                <Forms.Input type="textarea" name="synopsys" placeholder="Synopsys :" required/>
                 <Forms.Input type="file" name="cover" onFileChange={(image)=>setImage(image)} required/>
             </Forms>
         </div>

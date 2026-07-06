@@ -11,6 +11,7 @@ interface NotesProps {
 }
 
 function Notes() {
+    const isAdmin = import.meta.env.DEV
     const {data:notes, loading, error} = useFetch<NotesProps>("notes", false)
 
     if(loading){
@@ -19,14 +20,21 @@ function Notes() {
         return <Error message={error.message}/>
     }
     return(
-        <div id="notes" className="full-page pages">
-            <h2 className="page-header">ADMIN NOTES</h2>
-            <div id="note-container" className="accordion-container">
-                {notes.map((note,index)=>(
-                    <Accordion key={index} use="notes" type={note.type} head={note.head} body={note.body}/>
-                ))}
+        <>
+            {!isAdmin && (
+                <div className="full-page pages center">
+                    <h1>Developers Only!</h1>
+                </div>
+            )}
+            <div id="notes" className="full-page pages" style={{display:isAdmin?"block":"none"}}>
+                <h2 className="page-header" >ADMIN NOTES</h2>
+                <div id="note-container" className="accordion-container">
+                    {notes.map((note,index)=>(
+                        <Accordion key={index} use="notes" type={note.type} head={note.head} body={note.body}/>
+                    ))}
+                </div>
             </div>
-        </div>
+        </>
     )
 }
 export default Notes

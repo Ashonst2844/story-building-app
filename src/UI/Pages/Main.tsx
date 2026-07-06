@@ -15,7 +15,7 @@ function Main() {
             <div id="page">
                 <ReactDOM.Routes>
                     <ReactDOM.Route path="*" element={<Home/>}/>
-                    <ReactDOM.Route path="timeline" element={<Timeline/>}/>
+                    <ReactDOM.Route path="timeline/*" element={<Timeline/>}/>
                     <ReactDOM.Route path="library" element={<Library/>}/>
                     <ReactDOM.Route path="characters" element={<Characters/>}/>
                     <ReactDOM.Route path="wiki" element={<Wiki/>}/>

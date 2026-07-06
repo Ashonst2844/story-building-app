@@ -92,3 +92,26 @@ textarea {
   gap: calc(var(--spacing)/4);
   padding: calc(var(--spacing)/4);
 }
+.badge-group {
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: calc(var(--spacing)/2);
+  margin: var(--spacing) 0;
+}
+.badges {
+  width: auto;
+  height: 40px;
+  padding: calc(var(--spacing)/4) calc(var(--spacing)/2);
+  background-color: var(--accent);
+  border-radius: 20px;
+}
+.badges:hover {
+  scale: 1.1;
+  filter: brightness(115%);
+  box-shadow: var(--shadow);
+}
+.badges * {
+  color: black;
+  font-weight: 500;
+}

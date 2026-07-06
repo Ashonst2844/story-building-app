@@ -7,10 +7,9 @@ export function useFetch<T>(key:string, sort?:boolean) {
 
     const API_URL = !import.meta.env.DEV ? `http://localhost:5000/api/${key}` : "/public/api.json"
 
-    console.log(API_URL)
-
     React.useEffect(() => {
         let ignore = false;
+        
         fetch(API_URL)
             .then((response) => {
                 if(!response.ok) {
@@ -55,6 +54,7 @@ export function useFetch<T>(key:string, sort?:boolean) {
             ignore = true;
         }
     },[API_URL,key,sort])
+
 
     return {data, loading, error};
 }

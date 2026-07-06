@@ -1,8 +1,9 @@
 import Button from "./Button";
+import Badge from "./Badge";
 
 interface ModalsProps{
     // Main Props
-    use: "characters";
+    use: "characters" | "books";
     isOpen: boolean;
     onClose: ()=>void;
 
@@ -12,16 +13,21 @@ interface ModalsProps{
     gender?:string;
     faction?:string;
     bio?:string;
+
+    // Book Props
+    title?:string;
+    genres?:string[];
+    synopsys?:string;
 }
 
-function Modals({ use, isOpen, onClose, name, age, gender, faction, bio }: ModalsProps) {
+function Modals({ use, isOpen, onClose, name, age, gender, faction, bio, title, genres, synopsys }: ModalsProps) {
 
     if (use === "characters") {
         return(
             <>
                 {isOpen && (
                     <div className="modals center float-page">
-                        <div className={`${use}-modals center`}>
+                        <div className={`${use}-modals modal-box center`}>
                             <h2>{name}</h2>
                             <div className={`${use}-modals-content`}>
                                 <p>Age: <span>{age ?? "-"}</span></p>
@@ -35,6 +41,27 @@ function Modals({ use, isOpen, onClose, name, age, gender, faction, bio }: Modal
                 )}
             </>
         )   
+    } else if (use === "books") {
+        return(
+            <>
+                {
+                    isOpen && (
+                        <div className="modals center float-page">
+                            <div className={`${use}-modals modal-box center`}>
+                                <h2>{title}</h2>
+                                <div className="badge-group center">
+                                    {genres.map((genre,index)=>(
+                                        <Badge key={index} name={genre}/>
+                                    ))}
+                                </div>
+                                <p style={{textAlign:"justify"}}>"{synopsys}"</p>
+                            </div>
+                            <Button onClick={onClose} type="back-button" theme="primary" w="60px" posX="20px" posY="20px"/>
+                        </div>
+                    )
+                }
+            </>
+        )
     }
     return null;
 }

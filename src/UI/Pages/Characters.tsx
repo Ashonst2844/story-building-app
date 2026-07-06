@@ -19,6 +19,8 @@ interface CharactersProps {
 }
 
 function Characters() {
+    const isAdmin = import.meta.env.DEV
+
     const {data:characters, loading, error} = useFetch<CharactersProps>("characters", false);
     
     const {onSubmit} = useForm(["name","age","gender","faction","bio"])
@@ -42,9 +44,11 @@ function Characters() {
                     faction={character.faction} 
                     bio={character.bio}/>
                 ))}
-                <Button onClick={()=>setShowForm(true)} w="100%" h="300px" type="button" theme="secondary">
-                    <img src="/src/assets/icons/plus.svg"/>
-                </Button>
+                {isAdmin && (
+                    <Button onClick={()=>setShowForm(true)} w="100%" h="300px" type="button" theme="secondary">
+                        <img src="/src/assets/icons/plus.svg"/>
+                    </Button>
+                )}
             </div>
             <Forms isOpen={showForm} onClose={()=>setShowForm(false)} id="create-character" onSubmit={(e)=>onSubmit(e, "http://localhost:5000/api/characters")}>
                 <Forms.Input type="text" name="name" placeholder="Name:" required/>

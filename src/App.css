@@ -180,3 +180,39 @@
 .accordion-body ul li {
   margin: 0 0 calc(var(--spacing)/2);
 }
+
+#timeline * {
+  overflow-y: scroll;
+  height: 100%;
+}
+#timeline-button-container {
+  width: 30%;
+  background-color: var(--primary);
+  padding: var(--spacing);
+}
+#timeline-content-container {
+  width: 70%;
+}
+.times-button {
+  border-left: 4px solid var(--accent);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  transition: var(--transition);
+}
+.times-button:hover * {
+  font-size: 1.2em;
+  color: var(--accent);
+}
+.times-button::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  top: 50%;
+  left: -10px;
+  background-color: var(--accent);
+}

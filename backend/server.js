@@ -53,15 +53,23 @@ app.get('/api/books', (req, res) => {
     const db = readAPI();
     res.json(db.result.books);
 });
+
 // READ WIKIS
 app.get('/api/wikis', (req, res) => {
     const db = readAPI();
     res.json(db.result.wikis);
 });
+
 // READ ADMIN NOTES
 app.get('/api/notes', (req, res) => {
     const db = readAPI();
-    res.json(db.result.admins);
+    res.json(db.result.notes);
+});
+
+// READ TIMELINES
+app.get('/api/timelines', (req, res) => {
+    const db = readAPI();
+    res.json(db.result.timelines);
 });
 
 // CREATE CHARACTER

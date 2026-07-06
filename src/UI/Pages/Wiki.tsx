@@ -1,5 +1,5 @@
 import Loading from "../Components/Loading";
-import Error from "./Error";
+import Error from "../Components/Error";
 import Accordion from "../Components/Accordion";
 
 import { useFetch } from "../../assets/hooks/useFetch";
@@ -11,7 +11,7 @@ interface WikiProps {
 }
 
 function Wiki() {
-    const {data:wikis, loading, error} = useFetch<WikiProps>("http://localhost:5000/api/wikis",false,"wikis")
+    const {data:wikis, loading, error} = useFetch<WikiProps>("wikis",false)
     if(loading){
         return <Loading message="Loading Wiki..."/>
     } else if(error) {

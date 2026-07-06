@@ -1,13 +1,17 @@
 import React from "react";
 
-export function useFetch<T>(url:string, sort?:boolean, key?:string) {
+export function useFetch<T>(key:string, sort?:boolean) {
     const [data, setData] = React.useState<T[] | null>(null);
     const [loading, setLoading] = React.useState<boolean>(true);
     const [error, setError] = React.useState<Error | null>(null);
 
+    const API_URL = !import.meta.env.DEV ? `http://localhost:5000/api/${key}` : "/public/api.json"
+
+    console.log(API_URL)
+
     React.useEffect(() => {
         let ignore = false;
-        fetch(url)
+        fetch(API_URL)
             .then((response) => {
                 if(!response.ok) {
                     throw new Error(`${response.status}`);
@@ -50,7 +54,7 @@ export function useFetch<T>(url:string, sort?:boolean, key?:string) {
         return () => {
             ignore = true;
         }
-    },[url,sort])
+    },[API_URL,key,sort])
 
     return {data, loading, error};
 }

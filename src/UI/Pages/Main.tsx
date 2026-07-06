@@ -1,5 +1,6 @@
 import Navigation from "../Components/Navigation";
 import Home from "./Home";
+import Timeline from "./Timeline";
 import Characters from "./Characters";
 import Library from "./Library";
 import Wiki from "./Wiki";
@@ -14,6 +15,7 @@ function Main() {
             <div id="page">
                 <ReactDOM.Routes>
                     <ReactDOM.Route path="*" element={<Home/>}/>
+                    <ReactDOM.Route path="timeline" element={<Timeline/>}/>
                     <ReactDOM.Route path="library" element={<Library/>}/>
                     <ReactDOM.Route path="characters" element={<Characters/>}/>
                     <ReactDOM.Route path="wiki" element={<Wiki/>}/>

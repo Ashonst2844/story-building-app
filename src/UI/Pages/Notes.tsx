@@ -1,5 +1,5 @@
 import Loading from "../Components/Loading";
-import Error from "./Error";
+import Error from "../Components/Error";
 import Accordion from "../Components/Accordion";
 
 import { useFetch } from "../../assets/hooks/useFetch";
@@ -11,7 +11,7 @@ interface NotesProps {
 }
 
 function Notes() {
-    const {data:notes, loading, error} = useFetch<NotesProps>("http://localhost:5000/api/notes", false, "notes")
+    const {data:notes, loading, error} = useFetch<NotesProps>("notes", false)
 
     if(loading){
         return <Loading message="Loading Notes..."/>

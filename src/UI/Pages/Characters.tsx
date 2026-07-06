@@ -1,7 +1,7 @@
 import Cards from "../Components/Cards";
 import Button from "../Components/Button";
 import Loading from "../Components/Loading";
-import Error from "./Error";
+import Error from "../Components/Error";
 import Forms from "../Components/Forms";
 
 import { useFetch } from "../../assets/hooks/useFetch";
@@ -19,7 +19,7 @@ interface CharactersProps {
 }
 
 function Characters() {
-    const {data:characters, loading, error} = useFetch<CharactersProps>("http://localhost:5000/api/characters", false, "characters");
+    const {data:characters, loading, error} = useFetch<CharactersProps>("characters", false);
     
     const {onSubmit} = useForm(["name","age","gender","faction","bio"])
     const [showForm,setShowForm] = React.useState(false)

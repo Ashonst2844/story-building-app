@@ -1,7 +1,7 @@
 import Button from "../Components/Button";
 import Cards from "../Components/Cards";
 import Loading from "../Components/Loading";
-import Error from "./Error";
+import Error from "../Components/Error";
 import Forms from "../Components/Forms";
 
 import { useFetch } from "../../assets/hooks/useFetch";
@@ -20,7 +20,7 @@ interface BooksProps {
 function Library() {
     const [image, setImage] = React.useState<File|undefined>(undefined)
 
-    const {data:books, loading, error} = useFetch<BooksProps>("http://localhost:5000/api/books", true, "books");
+    const {data:books, loading, error} = useFetch<BooksProps>("books", true);
 
     const {onSubmit,uploadLoading} = useForm(["title","series","cover"])
     const [showForm,setShowForm] = React.useState(false)

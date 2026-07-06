@@ -67,7 +67,7 @@ function Cards({ use, id, name, age, gender, faction, bio, title, cover, link }:
     } else if (use==="books") {
         return(
             <div className={`center ${use}-card`}>
-                <img className="full-page" src={cover || "/src/assets/icons/book.svg"} alt={title} />
+                <img className="full-page" src={`/public/Images/Cover/${cover}`} alt={title} />
                 <a href={link || "#"} target="_blank" rel="noopener noreferrer">
                     {title}
                 </a>

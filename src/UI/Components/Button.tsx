@@ -1,15 +1,15 @@
 import * as ReactDOM from "react-router-dom"
-import React from "react";
 
 interface ButtonProps {
     //Global Button Props
     type: "link" | "button" | "submit" | "back-button";
     link?:string;
-    theme: "primary" | "secondary" | "warning";
+    theme?: "primary" | "secondary" | "warning";
     w:string;
     h?:string;
     children?:React.ReactNode;
     style?:React.CSSProperties
+    forTimes?:boolean;
     
     //Back Button Props
     posX?:string;
@@ -27,7 +27,7 @@ function Button(props: ButtonProps) {
         return(
             <ReactDOM.Link target={props.url?"_blank":"_self"} to={props.url?props.url:props.link}
             style={{width:props.w,height: props.h ? props.h : "60px", ...props.style}} className={`center button ${
-                props.theme == "primary" ? "primary-button" : "secondary-button" 
+                props.forTimes ? "times-button" : props.theme == "primary" ? "primary-button" : "secondary-button" 
             }`}>{props.children}</ReactDOM.Link>
         )
     } else if (props.type=="back-button") {

@@ -3,6 +3,7 @@ import Button from "../Components/Button";
 import Loading from "../Components/Loading";
 import Error from "../Components/Error";
 import Forms from "../Components/Forms";
+import Heading from "../Components/Heading";
 
 import { useFetch } from "../../assets/hooks/useFetch";
 import { useForm } from "../../assets/hooks/useForm"
@@ -26,6 +27,8 @@ function Characters() {
     const {onSubmit} = useForm(["name","age","gender","faction","bio"])
     const [showForm,setShowForm] = React.useState(false)
 
+    const [searchQ, setSearchQ] = React.useState("")
+
     if(loading) {
         return <Loading message="Loading Characters..."/>
     } else if (error) {
@@ -33,12 +36,17 @@ function Characters() {
     }
     return(
         <div id="characters" className="full-page pages">
-            <h2 className="page-header">SINS SAGA CHARACTERS</h2>
+            <Heading use="character" value={searchQ} 
+            onChange={(e)=>setSearchQ(e.target.value)} 
+            onSubmit={(e)=>{
+                e.preventDefault() 
+                setSearchQ(searchQ)
+            }} />
             <div id="character-container" className="card-container">
-                {characters?.map((character)=>(
+                {characters?.map(character => character.name.toLowerCase().startsWith(searchQ) && (
                     <Cards key={character.id} use="characters" 
                     id={character.id}
-                    name={character.name} 
+                    name={character.name}
                     age={character.age} 
                     gender={character.gender} 
                     faction={character.faction} 

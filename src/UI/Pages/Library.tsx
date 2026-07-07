@@ -3,6 +3,7 @@ import Cards from "../Components/Cards";
 import Loading from "../Components/Loading";
 import Error from "../Components/Error";
 import Forms from "../Components/Forms";
+import Heading from "../Components/Heading";
 
 import { useFetch } from "../../assets/hooks/useFetch";
 import { useForm } from "../../assets/hooks/useForm";
@@ -27,6 +28,7 @@ function Library() {
 
     const {onSubmit,uploadLoading} = useForm(["title","series","cover"])
     const [showForm,setShowForm] = React.useState(false)
+    const [searchQ, setSearchQ] = React.useState("")
 
     if(loading || uploadLoading) {
         return <Loading message="Loading Books..."/>
@@ -35,9 +37,14 @@ function Library() {
     }
     return(
         <div id="library" className="full-page pages">
-            <h2 className="page-header">SINS SAGA BOOK COLLECTION</h2>
+            <Heading use="books" value={searchQ} 
+            onChange={(e)=>setSearchQ(e.target.value)} 
+            onSubmit={(e)=>{
+                e.preventDefault() 
+                setSearchQ(searchQ)
+            }} />
             <div id="book-container" className="card-container">
-                {books?.map((book)=>(
+                {books?.map(book=>book.title.toLowerCase().startsWith(searchQ) && (
                     <Cards key={book.id} use="books" 
                     title={book.title} 
                     cover={book.cover} 

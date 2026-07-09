@@ -54,7 +54,7 @@ function Characters() {
                 ))}
                 {isAdmin && (
                     <Button onClick={()=>setShowForm(true)} w="100%" h="300px" type="button" theme="secondary">
-                        <img src="/src/assets/icons/plus.svg"/>
+                        <img src="/Images/Icons/plus.svg"/>
                     </Button>
                 )}
             </div>

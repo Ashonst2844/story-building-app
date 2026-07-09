@@ -35,7 +35,7 @@ function Button(props: ButtonProps) {
     } else if (props.type=="back-button") {
         return(
             <button style={{right: props.posX, top: props.posY, width: props.w, height: props.h ? props.h : "60px"}} className={`center button back-button secondary-button`} onClick={props.onClick}>
-                <img style={{rotate:"180deg"}} className="full-page" src="/src/assets/icons/arrow.svg" alt="Back" />
+                <img style={{rotate:"180deg"}} className="full-page" src="/Images/Icons/arrow.svg" alt="Back" />
             </button>
         )
     } else {

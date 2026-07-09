@@ -50,14 +50,14 @@ function Cards({ use, id, name, age, gender, faction, bio, title, cover, link, g
         return(
             <div className={`center ${use}-card`}>
                 <h3>{name}</h3>
-                <img src="/src/assets/icons/human.svg"/>
+                <img src="/Images/Icons/human.svg"/>
                 <div className="button-group center">
                     <Button onClick={()=>setState(true)} theme="primary" w={isAdmin?"70%":"100%"} h="40px" type="button">
                         <p>Details</p>
                     </Button>
                     {isAdmin && (
                         <Button onClick={handleDelete} theme="warning"  w="30%" h="40px" type="button">
-                            <img style={{rotate:"45deg", width:"20px"}} src="/src/assets/icons/plus.svg"/>
+                            <img style={{rotate:"45deg", width:"20px"}} src="/Images/Icons/plus.svg"/>
                         </Button>
                     )}
                 </div>
@@ -72,7 +72,7 @@ function Cards({ use, id, name, age, gender, faction, bio, title, cover, link, g
     } else if (use==="books") {
         return(
             <div className={`center ${use}-card`}>
-                <img className="full-page" src={`/public/Images/Cover/${cover}`} alt={title} onClick={
+                <img className="full-page" src={`/Images/Cover/${cover}`} alt={title} onClick={
                     () => setState(true)
                 } />
                 <a href={link || "#"} target="_blank" rel="noopener noreferrer">

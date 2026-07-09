@@ -14,7 +14,7 @@ function Heading(props: HeadingProps) {
         <form onSubmit={props.onSubmit} className="search-bar center">
             <input type="text" placeholder={`Find ${props.use} :`} value={props.value} onChange={props.onChange}/>
             <Button w="10%" h="100%" theme="secondary" type="button">
-                <img style={{width:"30px"}} src="/src/assets/icons/magnifier.svg"/>
+                <img style={{width:"30px"}} src="/Images/Icons/magnifier.svg"/>
             </Button>
         </form>
     </div> 

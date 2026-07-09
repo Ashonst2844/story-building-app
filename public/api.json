@@ -1,5 +1,171 @@
 {
   "result": {
+    "worlds": [
+      {
+        "era":"0-300",
+        "map":[]
+      },
+      {
+        "era":"300-900",
+        "map":[]
+      },
+      {
+        "era":"900-1600",
+        "map":[
+          {
+            "continent": "Sallemn",
+            "description": "Benua yang dikuasai oleh satu The Great King dari keluarga Feyn, benua ini sangat kuat dan juga makmur dibawah kuasa sang raja.",
+            "country": [
+              {
+                "name" : "Vearland",
+                "description" : "Merupakan negara indah dengan populasi warga paling sedikit di Benua Sallemn.",
+                "place" : ["Vearland Village", "Orimburg Fortress"]
+              },
+              {
+                "name" : "Feyn Kingdom",
+                "description" : "Wilayah terbesar, karena ini merupakan negara bagian pusat, dimana 80% penduduknya adalah prajurit dan juga bangsawan, sehingga membuat Benua Sallemn menjadi benua dengan militer terkuat kedua.",
+                "place" : [""]
+              },
+              {
+                "name" : "Hillbrim",
+                "description" : "Wilayah terbesar, karena ini merupakan negara bagian pusat, dimana 80% penduduknya adalah prajurit dan juga bangsawan, sehingga membuat Benua Sallemn menjadi benua dengan militer terkuat kedua.",
+                "place" : [""]
+              },
+              {
+                "name" : "Gloom Forest",
+                "description" : "Sebuah hutan hujan yang menjadi sumber penghasilan dari warga Vearland yang merupakan seorang tukang kayu.",
+                "place" : [""]
+              },
+              {
+                "name" : "Neori Coast",
+                "description" : "Terdapat sebuah desa dengan populasi yang cukup banyak yang kebanyakan wargamya berprofesi sebagai nelayan.",
+                "place" : [""]
+              }
+            ]
+          },
+          {
+            "continent": "Aglea",
+            "description":"Benua yang paling kaya akan sumber daya, namun dengan  berjalannya waktu, para raja semakin tidak kompeten dalam mempertahankan wilayahnya, sehingga menjadi sangat lemah.",
+            "country": [
+              {
+                "name" : "Finnichë Kingdom",
+                "description" : "Negara yang menjadi pusat benua Aglea, dan juga pusat militer.",
+                "place" : [""]
+              },
+              {
+                "name" : "Brickstone",
+                "description" : "Negara perbukitan yang kaya akan besi dan mineral lain",
+                "place" : [""]
+              },
+              {
+                "name" : "Turin Coast",
+                "description" : "Sebuah pesisir pantai yang sangat indah dengan sumber daya pangan yang sangat banyak",
+                "place" : [""]
+              },
+              {
+                "name" : "Wallhund",
+                "description" : "merupakan negara dengan banyak desa, yang kebanyakan merupakan para pedagang.",
+                "place" : [""]
+              },
+              {
+                "name" : "Tonark",
+                "description" : "Padang rumput yang sangat luas, memiliki pemandangan paling di muka bumi.",
+                "place" : [""]
+              }
+            ]
+          },
+          {
+            "continent": "Dunefort",
+            "description": "Merupakan benua yang seluruh datarannya merupakan Padang pasir yang tandus.",
+            "country": [
+              {
+                "name":"Al-Ashifa",
+                "description":"Merupakan Padang tandus, dengan sedikit titik oasis yang kemudian menjadi wilayah pedesaan kecil.",
+                "place":[""]
+              },
+              {
+                "name":"Tawarri Fortress",
+                "description":"Pusat kerajaan, dan juga pusat militer. Walaupun memiliki hanya sedikit prajurit, namun kekuatan 1 prajurit mereka setara dengan 2 prajurit di negara Sallemn.",
+                "place":[""]
+              },
+              {
+                "name":"Siran",
+                "description":"Seluruh negara ini di isi oleh pasir, dan menjadi tempat paling panas dan tandus.",
+                "place":[""]
+              }
+            ]
+          },
+          {
+            "continent": "Undore",
+            "description":"Negara yang cukup luas, namun negara ini terbagi menjadi dua beberapa ratus tahun yang lalu, karena leluhur mereka yang merupakan kakak beradik, yang memperebutkan kekuasaan hanya karena prinsip yang berbeda.",
+            "country": [
+              {
+                "name":"Vallendore",
+                "description":"Dikuasai oleh raja yang lebih menekankan untuk menjalin kerja sama dengan benua lain agar mereka tak memiliki musuh.",
+                "place":[""]
+              },
+              {
+                "name":"Norina",
+                "description":"Memiliki prinsp yang sangat individualis dan lebih memilih memproduksi lebih banyak militer untuk pertahanan.",
+                "place":[""]
+              }
+            ]
+          },
+          {
+            "continent": "Rodden",
+            "description": "Benua terkuat yang sangat ditakuti oleh benua lainnya, semua negara di benua ini merupakan tempat pelatihan militer, bahkan hanya satu negara saja yang berisi desa.",
+            "country": [
+              {
+                "name": "Coldspike",
+                "description": "Tempat pelatihan militer yang berfokus pada pertahanan.",
+                "place":[""]
+              },
+              {
+                "name": "Rusthill",
+                "description": "Merupakan satu-satunya negara yang berisi desa yang berfungsi sebagai produsen senjata militer terbesar.",
+                "place":[""]
+              },
+              {
+                "name": "Tyranthall",
+                "description": "Pusat desa yang sangat besar dan megah, satu raja absolut berkuasa disini tak ada yang berani dengannya walaupun banyak kebijakan buruk yang ia ciptakan.",
+                "place":[""]
+              },
+              {
+                "name": "Gorgon",
+                "description": "Desa pelatihan militer yang berfokus pada divisi offensive, menjadikannya negara yang sangat mengerikan untuk ditinggali oleh warga biasa.",
+                "place":[""]
+              },
+              {
+                "name": "Undersea",
+                "description": "Negara yang sangat kosong karena setiap Minggunya tempat ini selalu tenggelam oleh laut yang dingin.",
+                "place":[""]
+              }
+            ]
+          },
+          {
+            "continent": "Northwill",
+            "description": "Seluruh benua ini ditutupi oleh salju tebal, yang tidak memungkinkan seseorang untuk menetap dan tinggal di benua ini.",
+            "country":[""]
+          }
+        ]
+      },
+      {
+        "era":"160-2000",
+        "map":[]
+      },
+      {
+        "era":"2000-2300",
+        "map":[]
+      },
+      {
+        "era":"2300-3000",
+        "map":[]
+      },
+      {
+        "era":"3000-Sekarang",
+        "map":[]
+      }
+    ],
     "timelines": [
       {
         "id":1,

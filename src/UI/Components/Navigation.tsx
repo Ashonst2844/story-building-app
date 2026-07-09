@@ -2,7 +2,7 @@ import Button from "./Button"
 
 const content = [
     {title:"home", path:""},
-    {title:"worlds", path:"worlds"},
+    {title:"world", path:"world"},
     {title:"timelines", path:"timeline"},
     {title:"characters", path:"characters"},
     {title:"library", path:"library"},

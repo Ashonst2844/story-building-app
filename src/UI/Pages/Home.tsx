@@ -7,7 +7,7 @@ function Home() {
             <p style={{fontStyle:"italic", textAlign:"center"}}>"Tujuh dosa, Tujuh manusia, dan tujuh kisah tragis dalam dunia fantasi <br /> yang dibungkus dengan kelam nya moralitas manusia."</p>
             <p style={{margin:"calc(var(--spacing)*2) 0", color:"var(--accent)", fontWeight:"600"}}>- Masagus Ahmad Ramadhan -</p>
             <div className="button-group center">
-                <Button style={{color:"black"}} type="link" theme="primary" w="30%" url="https://www.wattpad.com/user/MasagusAhmadRamadhan">Check My Wattpad!</Button>
+                <Button style={{color:"black"}} type="link" theme="main" w="30%" url="https://www.wattpad.com/user/MasagusAhmadRamadhan">Check My Wattpad!</Button>
                 <Button type="link" theme="secondary" w="60px" url="https://www.instagram.com/msgs_adra?igsh=anJraGtoZDBvM2V1">
                     <img style={{width:"40px"}} src="/src/assets/icons/instagram.svg"/>
                 </Button>

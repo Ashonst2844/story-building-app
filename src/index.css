@@ -65,8 +65,8 @@ h2 {
 .pages {
   padding: var(--spacing);
 }
-.page-header {
-  height: calc(10% - calc(var(--spacing)*2));
+.header {
+  height: 20%;
 }
 .center {
   display: flex;
@@ -125,4 +125,9 @@ textarea {
 .search-bar input {
   width: 90%;
   height: 100%;
+}
+.images {
+  overflow: auto;
+  display: block;
+  text-align: center;
 }

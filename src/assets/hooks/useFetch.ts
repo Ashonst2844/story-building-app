@@ -46,7 +46,6 @@ export function useFetch<T>(key:string, sort?:boolean) {
                 }
             })
             .catch((error)=>{
-                console.error("Failed To Take Data: ", error)
                 setError(error)
                 setLoading(false)
             })

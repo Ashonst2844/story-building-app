@@ -72,6 +72,12 @@ app.get('/api/timelines', (req, res) => {
     res.json(db.result.timelines);
 });
 
+// READ WORLDS
+app.get('/api/worlds', (req, res) => {
+    const db = readAPI();
+    res.json(db.result.worlds);
+});
+
 // CREATE CHARACTER
 app.post('/api/characters', (req, res) => {
     const db = readAPI();

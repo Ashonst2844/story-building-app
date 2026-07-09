@@ -5,7 +5,10 @@ export function useFetch<T>(key:string, sort?:boolean) {
     const [loading, setLoading] = React.useState<boolean>(true);
     const [error, setError] = React.useState<Error | null>(null);
 
-    const API_URL = !import.meta.env.DEV ? `http://localhost:5000/api/${key}` : "/public/api.json"
+    // Prefer an explicit production API base (`VITE_API_BASE`).
+    // In dev use localhost backend; when no base provided in production, fall back to the static `/api.json`.
+    const API_BASE = import.meta.env.VITE_API_BASE ?? (import.meta.env.DEV ? 'http://localhost:5000' : '');
+    const API_URL = API_BASE ? `${API_BASE.replace(/\/$/, '')}/api/${key}` : '/api.json';
 
     React.useEffect(() => {
         let ignore = false;

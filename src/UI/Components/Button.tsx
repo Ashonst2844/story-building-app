@@ -24,8 +24,10 @@ interface ButtonProps {
 
 function Button(props: ButtonProps) {
     if (props.type=="link") {
+        const to = props.url ?? props.link ?? "/";
+        const target = props.url ? "_blank" : "_self";
         return(
-            <ReactDOM.Link target={props.url?"_blank":"_self"} to={props.url?props.url:props.link}
+            <ReactDOM.Link target={target} to={to}
             style={{width:props.w,height: props.h ? props.h : "60px", ...props.style}} className={`center button ${
                 props.forNav ? "navs-button" : props.theme == "main" ? "main-button" : props.theme == "primary" ? "primary-button" : "secondary-button" 
             }`}>{props.children}</ReactDOM.Link>

@@ -10,7 +10,7 @@
   --transition: all 0.1s ease-in-out;
   --shadow: 5px 5px 15px rgba(0,0,0,0.8);
 
-  font-size: clamp(14px, 2vw, var(var(--spacing)));
+  font-size: clamp(14px, 2vw, var(--spacing));
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color-scheme: light dark;
   background: var(--bg);

@@ -29,7 +29,7 @@ function Notes() {
             <div id="notes" className="full-page pages" style={{display:isAdmin?"block":"none"}}>
                 <h2 className="page-header" >ADMIN NOTES</h2>
                 <div id="note-container" className="accordion-container">
-                    {notes.map((note,index)=>(
+                    {(notes ?? []).map((note,index)=>(
                         <Accordion key={index} use="notes" type={note.type} head={note.head} body={note.body}/>
                     ))}
                 </div>

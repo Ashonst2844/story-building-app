@@ -21,7 +21,7 @@ function Wiki() {
         <div id="wiki" className="full-page pages">
             <h2 className="page-header">SINS SAGA WIKI / ENCYCLOPEDIA</h2>
             <div id="wiki-container" className="accordion-container">
-                {wikis.map((wiki,index)=>(
+                {(wikis ?? []).map((wiki,index)=>(
                     <Accordion key={index} use="wiki" type={wiki.type} head={wiki.head} body={wiki.body}/>
                 ))}
             </div>

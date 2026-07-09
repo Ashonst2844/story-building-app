@@ -27,7 +27,7 @@ function Input({type,required,placeholder,name,lists,onChange,onFileChange}:Inpu
     if(type==="list") {
         return(
             <select name={name} required={required}>
-                {lists.map((list, index)=> (
+                {(lists ?? []).map((list, index)=> (
                     <option key={index} value={list}>{list.toUpperCase()}</option>
                 ))}
             </select>

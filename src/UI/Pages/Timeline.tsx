@@ -24,7 +24,7 @@ function Timeline() {
     return(
         <div id="timeline" className="full-page pages center">
             <div id="timeline-button-container">
-                {timelines.map((time)=>(
+                {(timelines ?? []).map((time)=>(
                     <Button link={`/timeline/`+time.id.toString()} key={time.id} type="link" w="100%" h="25%" forNav>
                         <h3>{time.title}</h3>
                         <p>{time.time_range}</p>
@@ -33,7 +33,7 @@ function Timeline() {
             </div>
             <div id="timeline-content-container">
                 <ReactDOM.Routes>
-                    {timelines.map((time)=>(
+                    {(timelines ?? []).map((time)=>(
                         <ReactDOM.Route key={time.id} path={`/${time.id.toString()}`} element={
                             <div className="times-content">
                                 <h1>{time.title}</h1>

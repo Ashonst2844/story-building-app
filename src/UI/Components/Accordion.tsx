@@ -25,7 +25,7 @@ function Accordion({use,type,head,body}:AccordionProps) {
                 <div style={{display:open?"block":"none"}} className="accordion-body">
                     <ul style={{listStyle:type==="list"?"number":"none", padding:"calc(var(--spacing)*2)"}}>
                         {
-                            body.split('\n').map((list,index)=>{
+                            (body ?? '').split('\n').map((list,index)=>{
                                 const clean = list.trim()
                                 if (clean.startsWith("#")) {
                                     const content  = clean.replace(/^#\s*/, '');

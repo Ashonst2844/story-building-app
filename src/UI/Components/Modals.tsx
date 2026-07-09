@@ -50,7 +50,7 @@ function Modals({ use, isOpen, onClose, name, age, gender, faction, bio, title, 
                             <div className={`${use}-modals modal-box center`}>
                                 <h2>{title}</h2>
                                 <div className="badge-group center">
-                                    {genres.map((genre,index)=>(
+                                    {(genres ?? []).map((genre,index)=>(
                                         <Badge key={index} name={genre}/>
                                     ))}
                                 </div>

@@ -18,7 +18,7 @@ function Accordion({use,type,head,body}:AccordionProps) {
             <div className="accordion-head">
                 <p>{head.toUpperCase()}</p>
                 <Button onClick={()=>open?isOpen(false):isOpen(true)} type="button" theme="secondary" w="40px" h="40px">
-                    <img style={{width:"100%", rotate:open?"90deg":"0deg", transform:"translateX(-25%)"}} src="/Images/icons/caret.svg" />
+                    <img style={{width:"100%", rotate:open?"90deg":"0deg", transform:"translateX(-25%)"}} src="/Images/Icons/caret.svg" />
                 </Button>
             </div>
             {open &&

@@ -82,7 +82,7 @@ function Chapters() {
             </Button>
             <Forms isOpen={showForm} onClose={()=>setShowForm(false)} id="add-chapter" onSubmit={handleAddChapter}> 
                 <Forms.Input type="list" name="target" lists={
-                    books.map((book)=>book.title)
+                    books?.map((book)=>book.title)
                 } required/>
                 <Forms.Input type="text" name="name" placeholder="Chapter Name:" required/>
             </Forms>

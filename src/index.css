@@ -131,3 +131,6 @@ textarea {
   display: block;
   text-align: center;
 }
+.done {
+  background-color: var(--accent) !important;
+}

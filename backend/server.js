@@ -106,6 +106,24 @@ app.post('/api/books', (req, res) => {
     res.status(201).json({ message: 'Adding Book Successfully!', data: newBook });
 });
 
+// ADD CHAPTERS
+app.post('/api/books/:id/chapters', (req, res) => {
+    const db = readAPI();
+    const { id } = req.params;
+    const book = db.result.books.find(b => b.id && b.id.toString() === id.toString());
+
+    if (!book) {
+        return res.status(404).json({ message: 'Book Not Found!' });
+    }
+
+    const newChapter = { ...req.body };
+    if (!Array.isArray(book.chapters)) book.chapters = [];
+    book.chapters.push(newChapter);
+    writeAPI(db);
+
+    res.status(201).json({ message: 'Adding New Chapter Successfully!', data: newChapter });
+});
+
 // DELETE CHARACTER
 app.delete('/api/characters/:id', (req, res) => {
     const db = readAPI();

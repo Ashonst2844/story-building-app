@@ -1,6 +1,6 @@
 import React from "react";
 
-export function useForm(inputs:string[]) {
+export function useForm(inputs:string[], defaultValues?: Record<string,unknown>) {
     const [input, setInput] = React.useState<Record<string,unknown>>({})
     const [uploadLoading, isLoading] = React.useState(false)
 
@@ -30,7 +30,9 @@ export function useForm(inputs:string[]) {
             }
 
             const formData = new FormData(form)
-            const resultForm: Record<string,unknown> = {}
+            const resultForm: Record<string,unknown> = {
+                ...defaultValues
+            }
 
             inputs.forEach(input => {
                 const value = formData.get(input)

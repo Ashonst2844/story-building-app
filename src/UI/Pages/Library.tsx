@@ -26,7 +26,9 @@ function Library() {
 
     const {data:books, loading, error} = useFetch<BooksProps>("books", true);
 
-    const {onSubmit,uploadLoading} = useForm(["title","series","cover"])
+    const {onSubmit,uploadLoading} = useForm(["title","series","cover"], {
+        chapters:[]
+    })
     const [showForm,setShowForm] = React.useState(false)
     const [searchQ, setSearchQ] = React.useState("")
 

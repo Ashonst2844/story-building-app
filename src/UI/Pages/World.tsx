@@ -71,6 +71,8 @@ function World() {
                                             <>
                                                 <h3 style={{margin:"var(--spacing) 0"}}>{country.name}</h3>
                                                 <p>{country.description}</p>
+                                                <span style={{margin:"calc(var(--spacing)/2) 0", fontWeight:"700", display:"block"}}>Discovered Place :</span>
+                                                <p style={{fontStyle:"italic"}}>{country.place?.filter(Boolean).length > 0 ? country.place.filter(Boolean).join(", ") : "No place discovered, yet"}</p>
                                             </>
                                         ))}
                                     </div>

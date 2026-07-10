@@ -8,7 +8,8 @@ interface ButtonProps {
     w:string;
     h?:string;
     children?:React.ReactNode;
-    style?:React.CSSProperties
+    style?:React.CSSProperties;
+    className?:string;
     forNav?:boolean;
     
     //Back Button Props
@@ -30,11 +31,11 @@ function Button(props: ButtonProps) {
             <ReactDOM.Link target={target} to={to}
             style={{width:props.w,height: props.h ? props.h : "60px", ...props.style}} className={`center button ${
                 props.forNav ? "navs-button" : props.theme == "main" ? "main-button" : props.theme == "primary" ? "primary-button" : "secondary-button" 
-            }`}>{props.children}</ReactDOM.Link>
+            } ${props.className}`}>{props.children}</ReactDOM.Link>
         )
     } else if (props.type=="back-button") {
         return(
-            <button style={{right: props.posX, top: props.posY, width: props.w, height: props.h ? props.h : "60px"}} className={`center button back-button secondary-button`} onClick={props.onClick}>
+            <button style={{right: props.posX, top: props.posY, width: props.w, height: props.h ? props.h : "60px"}} className={`center button back-button secondary-button ${props.className}`} onClick={props.onClick}>
                 <img style={{rotate:"180deg"}} className="full-page" src="/Images/Icons/arrow.svg" alt="Back" />
             </button>
         )
@@ -43,7 +44,7 @@ function Button(props: ButtonProps) {
             <button type={props.type} style={{width:props.w,height: props.h ? props.h : "60px", ...props.style}} className={`center button ${
                 props.theme == "primary" ? "primary-button" : 
                 props.theme == "secondary" ? "secondary-button" : "warning-button"
-            }`} onClick={props.onClick}>{props.children}</button>
+            } ${props.className}`} onClick={props.onClick}>{props.children}</button>
         )
     }
 }

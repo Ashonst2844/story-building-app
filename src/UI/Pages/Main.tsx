@@ -6,6 +6,7 @@ import Characters from "./Characters";
 import Library from "./Library";
 import Wiki from "./Wiki";
 import Notes from "./Notes";
+import Chapters from "./Chapters";
 
 import * as ReactDOM from "react-router-dom"
 
@@ -22,6 +23,7 @@ function Main() {
                     <ReactDOM.Route path="characters" element={<Characters/>}/>
                     <ReactDOM.Route path="wiki" element={<Wiki/>}/>
                     <ReactDOM.Route path="notes" element={<Notes/>}/>
+                    <ReactDOM.Route path="chapters" element={<Chapters/>}/>
                 </ReactDOM.Routes>
             </div>
         </div>

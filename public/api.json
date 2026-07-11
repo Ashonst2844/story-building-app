@@ -314,6 +314,10 @@
           {
             "name": "Benteng Orimburg",
             "status": false
+          },
+          {
+            "name": "Pencarian Dimulai",
+            "status": false
           }
         ]
       }
@@ -366,6 +370,14 @@
         "gender": "male",
         "faction": "evil",
         "bio": "Prajurit Kerajaan Feyn, Ambisius, Angkuh,"
+      },
+      {
+        "id": "1783697262084",
+        "name": "George",
+        "age": 47,
+        "gender": "male",
+        "faction": "good",
+        "bio": "Bos Aarth dan Ayahnya, Ramah, Pemberani, Dermawan, Suka menolong"
       }
     ],
     "wikis": [

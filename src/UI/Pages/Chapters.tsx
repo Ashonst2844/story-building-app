@@ -37,7 +37,7 @@ function Chapters() {
         }
 
         try {
-            const newChapter = { name, status: true }
+            const newChapter = { name, status: false }
             const res = await fetch(`http://localhost:5000/api/books/${book.id}/chapters`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },

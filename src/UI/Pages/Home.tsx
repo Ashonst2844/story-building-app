@@ -1,4 +1,5 @@
 import Button from "../Components/Button";
+import Image from "../Components/Image";
 
 function Home() {
     return(
@@ -9,7 +10,9 @@ function Home() {
             <div className="button-group center">
                 <Button style={{color:"black"}} type="link" theme="main" w="30%" url="https://www.wattpad.com/user/MasagusAhmadRamadhan">Check My Wattpad!</Button>
                 <Button type="link" theme="secondary" w="60px" url="https://www.instagram.com/msgs_adra?igsh=anJraGtoZDBvM2V1">
-                    <img style={{width:"40px"}} src="/Images/Icons/instagram.svg"/>
+                    <Image type="icon" name="instagram" style={{
+                        width:"50%"
+                    }}/>
                 </Button>
             </div>
         </div>

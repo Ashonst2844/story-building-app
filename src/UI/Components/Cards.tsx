@@ -1,5 +1,6 @@
 import Button from "./Button";
 import Modals from "./Modals";
+import Image from "./Image";
 
 import React from "react";
 
@@ -50,14 +51,17 @@ function Cards({ use, id, name, age, gender, faction, bio, title, cover, link, g
         return(
             <div className={`center ${use}-card`}>
                 <h3>{name}</h3>
-                <img src="/Images/Icons/human.svg"/>
+                <Image type="icon" name="human"/>
                 <div className="button-group center">
                     <Button onClick={()=>setState(true)} theme="primary" w={isAdmin?"70%":"100%"} h="40px" type="button">
                         <p>Details</p>
                     </Button>
                     {isAdmin && (
                         <Button onClick={handleDelete} theme="warning"  w="30%" h="40px" type="button">
-                            <img style={{rotate:"45deg", width:"20px"}} src="/Images/Icons/plus.svg"/>
+                            <Image type="icon" name="plus" style={{
+                                rotate:"45deg",
+                                width:"50%"
+                            }}/>
                         </Button>
                     )}
                 </div>
@@ -72,9 +76,7 @@ function Cards({ use, id, name, age, gender, faction, bio, title, cover, link, g
     } else if (use==="books") {
         return(
             <div className={`center ${use}-card`}>
-                <img className="full-page" src={`/Images/Cover/${cover}`} alt={title} onClick={
-                    () => setState(true)
-                } />
+                <Image type="normal" name={cover} src={`Images/Cover/${cover}`} style={{width:"100%"}} onClick={()=>setState(true)}/>
                 <Modals isOpen={state} onClose={()=>setState(false)} use={use}
                 title={title}
                 genres={genres}

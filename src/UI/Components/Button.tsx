@@ -1,3 +1,5 @@
+import Image from "./Image";
+
 import * as ReactDOM from "react-router-dom"
 
 interface ButtonProps {
@@ -36,7 +38,9 @@ function Button(props: ButtonProps) {
     } else if (props.type=="back-button") {
         return(
             <button style={{right: props.posX, top: props.posY, width: props.w, height: props.h ? props.h : "60px"}} className={`center button back-button secondary-button ${props.className}`} onClick={props.onClick}>
-                <img style={{rotate:"180deg"}} className="full-page" src="/Images/Icons/arrow.svg" alt="Back" />
+                <Image type="icon" name="arrow" style={{
+                    rotate:"180deg"
+                }}/>
             </button>
         )
     } else {

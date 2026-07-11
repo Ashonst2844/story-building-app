@@ -23,6 +23,9 @@
 @font-face {
   font-family: "BlackLetters";
   src: url("/src/assets/fonts/blackletter_ds/BLACEB__.TTF");
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
@@ -122,10 +125,6 @@ textarea {
   gap: calc(var(--spacing)/2);
   margin: var(--spacing) 0;
 }
-.search-bar input {
-  width: 90%;
-  height: 100%;
-}
 .images {
   overflow: auto;
   display: block;
@@ -151,9 +150,15 @@ textarea {
   pointer-events: none;
   opacity: 0.7;
 }
-
 body:has(.button:hover) #cursor {
   width: 30px;
   height: 30px;
   opacity: 1;
+}
+
+.maps {
+  transition: var(--spacing);
+  display: inline-block;
+  vertical-align: center;
+  max-width: none;
 }

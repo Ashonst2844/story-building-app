@@ -4,6 +4,7 @@ import Loading from "../Components/Loading";
 import Error from "../Components/Error";
 import Forms from "../Components/Forms";
 import Heading from "../Components/Heading";
+import Image from "../Components/Image";
 
 import { useFetch } from "../../assets/hooks/useFetch";
 import { useForm } from "../../assets/hooks/useForm";
@@ -57,7 +58,9 @@ function Library() {
                 ))}
                 {isAdmin && (
                     <Button onClick={()=>setShowForm(true)} w="100%" h="300px" type="button" theme="secondary">
-                        <img src="/Images/Icons/plus.svg"/>
+                        <Image type="icon" name="plus" style={{
+                            width:"50%"
+                        }}/>
                     </Button>
                 )}
             </div>

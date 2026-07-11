@@ -3,6 +3,7 @@ import ChapterList from "../Components/ChapterList";
 import Button from "../Components/Button";
 import Forms from "../Components/Forms";
 import Error from "../Components/Error";
+import Image from "../Components/Image";
 
 import { useFetch } from "../../assets/hooks/useFetch";
 import React from "react";
@@ -78,7 +79,9 @@ function Chapters() {
                 bottom:"20px",
                 right:"20px"
             }}>
-                <img style={{width:"70%"}} src="/Images/Icons/plus.svg"/>
+                <Image type="icon" name="plus" style={{
+                    width:"50%"
+                }} />
             </Button>
             <Forms isOpen={showForm} onClose={()=>setShowForm(false)} id="add-chapter" onSubmit={handleAddChapter}> 
                 <Forms.Input type="list" name="target" lists={

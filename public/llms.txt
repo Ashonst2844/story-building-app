@@ -1,0 +1,6 @@
+# Story Building - THE SINS SAGA
+
+An interactive web application for world-building, managing historical timelines, eras, and chapters of The Sins Saga story.
+
+## Navigation
+- [Home](https://story-building-ashonst2844s-projects.vercel.app/)

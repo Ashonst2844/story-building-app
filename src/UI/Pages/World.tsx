@@ -54,7 +54,7 @@ function World() {
                         </div>
                         <ReactDOM.Routes>
                             <ReactDOM.Route path={'era-globe'} element={
-                                <Image w="70%" h="100%" src={`/Images/Map/${world.era}/globe.jpeg`} zoom/>
+                                <Image type="map" name={world.era} w="70%" h="100%" src={`/Images/Map/${world.era}/globe.jpeg`} zoom/>
                             }/>
                             {world.map.map((continent)=> 
                                 <ReactDOM.Route path={`${continent.continent}`} element={
@@ -62,9 +62,9 @@ function World() {
                                         <div className="continent-header center">
                                             <h1 style={{
                                                 color:"white"}}>{continent.continent.toUpperCase()}</h1>
-                                            <img style={{
+                                            <Image type="normal" name={continent.continent} src={`/Images/Map/${world.era}/${continent.continent.toLowerCase()}.webp`} style={{
                                                 width:"30%"
-                                            }} src={`/Images/Map/${world.era}/${continent.continent.toLowerCase()}.webp`} />
+                                            }}/>
                                         </div>
                                         <p style={{fontStyle:"italic"}}>"{continent.description}"</p>
                                         {continent.country.map((country)=>(

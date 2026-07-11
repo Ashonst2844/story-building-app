@@ -3,10 +3,16 @@ import Button from "./Button";
 import React from "react";
 
 interface ImageProps {
-    w:string;
-    h:string;
+    type:"normal"|"icon"|"map";
+    w?:string;
+    h?:string;
     zoom?:boolean;
-    src:string
+    name:string;
+    src?:string;
+    style?:React.CSSProperties;
+    className?:string;
+
+    onClick?:()=>void;
 }
 
 function Image(props: ImageProps) {
@@ -22,15 +28,22 @@ function Image(props: ImageProps) {
         setScale(1)
     }
 
-    return <div className="images" style={{width:props.w, height:props.h}}>
-        <img style={{width:`calc(100% * ${scale})`, transition:"var(--transition)", display:"inline-block", verticalAlign:"center", maxWidth:"none"}} src={props.src}/>
-        {props.zoom && (
-            <div className="zoom-group">
-                <Button onClick={zoomIn} w="50px" h="50px" type="button" theme="primary">+</Button>
-                <Button onClick={reset} w="50px" h="50px" type="button" theme="primary">R</Button>
-                <Button onClick={zoomOut} w="50px" h="50px" type="button" theme="primary">-</Button>
-            </div>
-        )}
-    </div>
+    return props.type === "map" ? (
+        <div className="images" style={{width:props.w, height:props.h}}>
+            <img style={{width:`calc(100% * ${scale})`}} className="maps" src={props.src} alt={props.name}/>
+            
+            {props.zoom && (
+                <div className="zoom-group">
+                    <Button onClick={zoomIn} w="50px" h="50px" type="button" theme="primary">+</Button>
+                    <Button onClick={reset} w="50px" h="50px" type="button" theme="primary">R</Button>
+                    <Button onClick={zoomOut} w="50px" h="50px" type="button" theme="primary">-</Button>
+                </div>
+            )}
+        </div>
+    ) : props.type === "icon" ? (
+        <img src={`/Images/Icons/${props.name}.svg`} style={{width:"100%", ...props.style}} alt={props.name} className={props.className}/>
+    ) : (
+        <img src={props.src} alt={props.name} style={props.style} onClick={props.onClick}/>
+    )
 }
 export default Image;

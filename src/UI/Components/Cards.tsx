@@ -76,7 +76,7 @@ function Cards({ use, id, name, age, gender, faction, bio, title, cover, link, g
     } else if (use==="books") {
         return(
             <div className={`center ${use}-card`}>
-                <Image type="normal" name={cover} src={`Images/Cover/${cover}`} style={{width:"100%"}} onClick={()=>setState(true)}/>
+                <Image type="normal" name={cover ?? ""} src={cover ? `Images/Cover/${cover}` : ""} style={{width:"100%"}} onClick={()=>setState(true)}/>
                 <Modals isOpen={state} onClose={()=>setState(false)} use={use}
                 title={title}
                 genres={genres}

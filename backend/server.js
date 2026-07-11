@@ -124,6 +124,34 @@ app.post('/api/books/:id/chapters', (req, res) => {
     res.status(201).json({ message: 'Adding New Chapter Successfully!', data: newChapter });
 });
 
+// UPDATE CHAPTER STATUS
+app.put('/api/books/:bookId/chapters/:chapterIndex', (req, res) => {
+    const db = readAPI();
+    const { bookId, chapterIndex } = req.params;
+    const book = db.result.books.find(b => b.id && b.id.toString() === bookId.toString());
+
+    if (!book) {
+        return res.status(404).json({ message: 'Book Not Found!' });
+    }
+
+    const index = Number(chapterIndex);
+    if (Number.isNaN(index) || index < 0) {
+        return res.status(400).json({ message: 'Invalid chapter index.' });
+    }
+
+    if (!Array.isArray(book.chapters) || index >= book.chapters.length) {
+        return res.status(404).json({ message: 'Chapter Not Found!' });
+    }
+
+    book.chapters[index] = {
+        ...book.chapters[index],
+        ...req.body
+    };
+
+    writeAPI(db);
+    res.json({ message: 'Chapter updated successfully!', data: book.chapters[index] });
+});
+
 // DELETE CHARACTER
 app.delete('/api/characters/:id', (req, res) => {
     const db = readAPI();

@@ -75,13 +75,11 @@ function Cards({ use, id, name, age, gender, faction, bio, title, cover, link, g
                 <img className="full-page" src={`/Images/Cover/${cover}`} alt={title} onClick={
                     () => setState(true)
                 } />
-                <a href={link || "#"} target="_blank" rel="noopener noreferrer">
-                    {title}
-                </a>
                 <Modals isOpen={state} onClose={()=>setState(false)} use={use}
                 title={title}
                 genres={genres}
-                synopsys={synopsys}/>
+                synopsys={synopsys}
+                url={link}/>
             </div>
         )
     }

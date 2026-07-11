@@ -66,8 +66,8 @@ function Chapters() {
                     <h3>{book.title}</h3>
                     <hr style={{border:"1px solid var(--accent)"}}/>
                     <div className="chapter-box">
-                        {book?.chapters.map((chap,index)=>(
-                            <ChapterList key={index} index={index} name={chap.name} status={chap.status}/>
+                        {book?.chapters.map((chap, index)=>(
+                            <ChapterList key={`${book.id}-${index}`} bookId={book.id || ""} index={index} name={chap.name} status={chap.status}/>
                         ))}
                     </div>
                 </div>

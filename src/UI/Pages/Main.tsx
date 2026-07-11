@@ -9,14 +9,14 @@ import Notes from "./Notes";
 import Chapters from "./Chapters";
 
 import * as ReactDOM from "react-router-dom"
-import {useRef, useEffect} from 'react'
+import { useRef, useEffect } from 'react'
 
 function Main() {
 
-    const cursorRef = useRef(null);
+    const cursorRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
-        const handleMouseMove = (e) => {
+        const handleMouseMove = (e: MouseEvent) => {
             if (cursorRef.current) {
                 cursorRef.current.style.transform =
                     `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;

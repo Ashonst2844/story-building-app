@@ -1,0 +1,76 @@
+/* Tablet */
+@media (max-width:1023px) {
+    :root {
+        font-size: 12px;
+        --spacing: 12px;
+    }
+    .phone-mode {
+        display: block;
+    }
+    .desktop-mode {
+        display: none;
+    }
+    #nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100% !important;
+        height: 60px !important;
+        padding: 0 !important;
+        z-index: 500;
+    }
+    #nav h2 {
+        display: none;
+    }
+    #nav-container {
+        height: 100%;
+        width: 200% !important;
+        flex-direction: row !important;
+        gap: 0 !important;
+    }
+    #nav-container .button {
+        width: 10% !important;
+    }
+    #page {
+        width: 100% !important;
+    }
+    .card-container {
+        grid-template-columns: repeat(2,1fr) !important;
+        grid-template-rows: 600px !important;
+    }
+    .characters-card {
+        height: 600px !important;
+    }
+    .modal-box {
+        padding: var(--spacing) !important;
+    }
+    .characters-modals {
+        width: 90% !important;
+    }
+    .form-container {
+        width: 90% !important;
+    }
+}
+/* Mobile */
+@media (max-width:768px) {
+    :root {
+        font-size: 10px;
+        --spacing: 5px;
+    }
+    .card-container {
+        grid-template-rows: 300px !important;
+    }
+    .characters-card {
+        height: 300px !important;
+    }
+    #world-tab {
+        height: 80px;
+        padding: 0px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    #world-tab .button {
+        height: 50% !important;
+        width: 25% !important;
+    }
+}

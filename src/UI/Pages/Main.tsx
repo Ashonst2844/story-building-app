@@ -9,27 +9,8 @@ import Notes from "./Notes";
 import Chapters from "./Chapters";
 
 import * as ReactDOM from "react-router-dom"
-import { useRef, useEffect } from 'react'
 
 function Main() {
-
-    const cursorRef = useRef<HTMLDivElement | null>(null);
-
-    useEffect(() => {
-        const handleMouseMove = (e: MouseEvent) => {
-            if (cursorRef.current) {
-                cursorRef.current.style.transform =
-                    `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
-            }
-        };
-
-        document.addEventListener("mousemove", handleMouseMove);
-
-        return () => {
-            document.removeEventListener("mousemove", handleMouseMove);
-        };
-    }, []);
-
 
     return(
         <div id="main" className="center">
@@ -46,7 +27,6 @@ function Main() {
                     <ReactDOM.Route path="chapters" element={<Chapters/>}/>
                 </ReactDOM.Routes>
             </div>
-            <div id="cursor" ref={cursorRef}/>
         </div>
     )
 }

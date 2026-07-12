@@ -1,4 +1,5 @@
 import Button from "./Button"
+import Image from "./Image"
 
 const content = [
     {title:"home", path:"", type:"all"},
@@ -20,9 +21,15 @@ function Navigation() {
             <div id="nav-container">
                 {content.map((page, index) => {
                     if(page.type==="all") {
-                        return <Button key={index} w="100%" theme="primary" type="link" link={`/${page.path}`}><p>{page.title.toUpperCase()}</p></Button>
+                        return <Button key={index} theme="primary" type="link" link={`/${page.path}`}>
+                            <Image className="phone-mode" style={{width:"25%"}} type="icon" name={page.title.replace(/\s+/g, "")}/>
+                            <p className="desktop-mode">{page.title.toUpperCase()}</p>
+                        </Button>
                     } else if(isAdmin) { 
-                        return <Button key={index} w="100%" theme="primary" type="link" link={`/${page.path}`}><p>{page.title.toUpperCase()}</p></Button>
+                        return <Button key={index} theme="primary" type="link" link={`/${page.path}`}>
+                            <Image className="phone-mode" style={{width:"25%"}} type="icon" name={page.title.replace(/\s+/g, "")}/>
+                            <p className="desktop-mode">{page.title.toUpperCase()}</p>
+                        </Button>
                     } 
                 })}
             </div>

@@ -7,7 +7,7 @@ interface ButtonProps {
     type: "link" | "button" | "submit" | "back-button";
     link?:string;
     theme?: "main" | "primary" | "secondary" | "warning";
-    w:string;
+    w?:string;
     h?:string;
     children?:React.ReactNode;
     style?:React.CSSProperties;
@@ -31,7 +31,7 @@ function Button(props: ButtonProps) {
         const target = props.url ? "_blank" : "_self";
         return(
             <ReactDOM.Link target={target} to={to}
-            style={{width:props.w,height: props.h ? props.h : "60px", ...props.style}} className={`center button ${
+            style={{width:props.w ,height: props.h ? props.h : "60px", ...props.style}} className={`center button ${
                 props.forNav ? "navs-button" : props.theme == "main" ? "main-button" : props.theme == "primary" ? "primary-button" : "secondary-button" 
             } ${props.className}`}>{props.children}</ReactDOM.Link>
         )

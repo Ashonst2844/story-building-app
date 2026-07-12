@@ -106,6 +106,34 @@ app.post('/api/books', (req, res) => {
     res.status(201).json({ message: 'Adding Book Successfully!', data: newBook });
 });
 
+// CREATE WIKI
+app.post('/api/wikis', (req, res) => {
+    const db = readAPI();
+    const newWikis = {
+        id: Date.now(),
+        ...req.body
+    };
+
+    db.result.wikis.push(newWikis);
+    writeAPI(db);
+
+    res.status(201).json({ message: 'Adding Wiki Successfully!', data: newWikis });
+});
+
+// CREATE NOTES
+app.post('/api/notes', (req, res) => {
+    const db = readAPI();
+    const newNote = {
+        id: Date.now(),
+        ...req.body
+    };
+
+    db.result.notes.push(newNote);
+    writeAPI(db);
+
+    res.status(201).json({ message: 'Adding Note Successfully!', data: newNote });
+});
+
 // ADD CHAPTERS
 app.post('/api/books/:id/chapters', (req, res) => {
     const db = readAPI();
@@ -167,23 +195,6 @@ app.delete('/api/characters/:id', (req, res) => {
     writeAPI(db);
     res.json({ message: 'Character Deleted!' });
 });
-
-// // 3. UPDATE (Mengubah data karakter berdasarkan ID)
-// app.put('/api/characters/:id', (req, res) => {
-//     const db = readDB();
-//     const { id } = req.params;
-//     const index = db.characters.findIndex(char => char.id === id);
-
-//     if (index === -1) {
-//         return res.status(404).json({ message: 'Karakter tidak ditemukan' });
-//     }
-
-//     // Perbarui data dengan mempertahankan ID lama
-//     db.characters[index] = { id, ...req.body };
-//     writeDB(db);
-
-//     res.json({ message: 'Karakter berhasil diperbarui!', data: db.characters[index] });
-// });
 
 app.listen(PORT, () => {
     console.log(`Server Running in... : http://localhost:${PORT}`);

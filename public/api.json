@@ -319,6 +319,14 @@
           {
             "name": "Pencarian Dimulai",
             "status": false
+          },
+          {
+            "name": "Bayangan Tuhan",
+            "status": false
+          },
+          {
+            "name": "Bertaruh Di Balik Bayangan",
+            "status": false
           }
         ]
       }
@@ -379,23 +387,56 @@
         "gender": "male",
         "faction": "good",
         "bio": "Bos Aarth dan Ayahnya, Ramah, Pemberani, Dermawan, Suka menolong"
+      },
+      {
+        "id": "1783774182492",
+        "name": "Hector Lane",
+        "age": 30,
+        "gender": "male",
+        "faction": "evil",
+        "bio": "Jendral terbaik kerajaan Feyn di Sallemn, Dingin, Sadis, Sangat Loyal"
+      },
+      {
+        "id": "1783786332982",
+        "name": "Sam",
+        "age": 28,
+        "gender": "male",
+        "faction": "evil",
+        "bio": "Prajurti Penjaga Orimburg, Sangat patuh"
+      },
+      {
+        "id": "1783786381300",
+        "name": "Carter",
+        "age": 31,
+        "gender": "male",
+        "faction": "evil",
+        "bio": "Kakak Julien, Sangat sayang dengan adiknya, pedendam"
       }
     ],
     "wikis": [
       {
+        "id": 1784641999836,
         "head": "Seven Deadly Sins",
         "type": "list",
         "body": "Envy (Iri Dengki) \n Greed (Keserakahan) \n Pride (Kesombongan) \n Gluttony (Kerakusan) \n Lust (Hawa Nafsu) \n Sloth (Kemalasan) \n Wrath (Kemarahan)"
       },
       {
+        "id": 1783847799836,
         "head": "Ten God Commandement",
         "type": "list",
         "body": "Thou shalt have no other gods before me (Jangan ada allah lain di hadapan-Ku) \n Thou shalt not take the name of the Lord thy God in vain (Jangan menyebut nama Tuhan Allahmu dengan sembarangan) \n Thou shalt not make unto thee any graven image (Jangan membuat bagimu patung yang menyerupai apa pun) \n Remember the sabbath day, to keep it holy (Kuduskanlah hari Sabat (Ingatlah dan kuduskanlah hari suci)) \n Honour thy father and thy mother. (Hormatilah ayahmu dan ibumu) \n Thou shalt not kill (Jangan membunuh) \n Thou shalt not commit adultery (Jangan berzina) \n Thou shalt not steal (Jangan mencuri) \n Thou shalt not bear false witness against thy neighbour (Jangan mengucapkan saksi dusta tentang sesamamu) \n Thou shalt not covet thy neighbour's house / anything that is thy neighbour's (Jangan mengingini milik sesamamu (Jangan mengingini hak orang lain))"
       },
       {
+        "id": 1783898999836,
         "head": "Festival",
         "type": "desc",
         "body": "Acara besar, seperti pertunjukkan dan Bazzar yang dilakukan oleh kerajaan sebagai simbol kemenangan jika mereka memenangkan sebuah perang."
+      },
+      {
+        "id": 1783841999836,
+        "head": "Feyn's Lineage",
+        "type": "desc",
+        "body": "Keluarga Feyn adalah bangsawan yang pertama kali memperkenalkan sistem pemerintahan berbentuk Kerajaan ke seluruh dunia. Keluarga ini dikenal dan dihormati oleh seluruh kerajaan karena pada sekitar abad ke-9 keluarga ini bersama sekutunya mengubah zaman, dari yang sebelumnya Zaman Sihir menjadi Zaman Kerajaan, oleh karena itu, kerajaan yang dikuasai oleh keluarga sangat melarang keras praktik ilmu sihir, kecuali satu Raja."
       }
     ],
     "notes": [

@@ -114,6 +114,7 @@
 }
 .books-card img {
   transition: var(--transition);
+  width: 100% !important;
 }
 .books-card img:hover {
   scale: 1.2;

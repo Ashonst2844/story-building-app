@@ -26,8 +26,8 @@ function Timeline() {
             <div id="timeline-button-container">
                 {(timelines ?? []).map((time)=>(
                     <Button link={`/timeline/`+time.id.toString()} key={time.id} type="link" w="100%" h="150px" forNav>
-                        <h3>{time.title}</h3>
-                        <p>{time.time_range}</p>
+                        <h3 style={{fontSize:"0.9rem"}}>{time.title}</h3>
+                        <p className="desktop-mode">{time.time_range}</p>
                     </Button>
                 ))}
             </div>

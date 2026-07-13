@@ -43,18 +43,18 @@ function World() {
                 <ReactDOM.Route path={`/${world.era}/*`} element={
                     <div className="world-box">
                         <div key={i} id="continent-button-container">
-                            <Button link={`/world/${world.era}/era-globe`} type="link" w="100%" h="25%" forNav>
+                            <Button link={`/world/${world.era}/era-globe`} type="link" h="150px" forNav>
                                 Globe
                             </Button>
                             {world.map.map((continent, j)=> (
-                                <Button link={`/world/${world.era}/`+continent.continent.toString()} key={j} type="link" w="100%" h="25%" forNav>
+                                <Button link={`/world/${world.era}/`+continent.continent.toString()} key={j} type="link" w="100%" h="150px" forNav>
                                     {continent.continent}
                                 </Button>
                             ))}
                         </div>
                         <ReactDOM.Routes>
                             <ReactDOM.Route path={'era-globe'} element={
-                                <Image type="map" name={world.era} w="70%" h="100%" src={`/Images/Map/${world.era}/globe.jpeg`} zoom/>
+                                <Image type="map" name={world.era} w="100%" h="100%" src={`/Images/Map/${world.era}/globe.jpeg`} zoom/>
                             }/>
                             {world.map.map((continent)=> 
                                 <ReactDOM.Route path={`${continent.continent}`} element={

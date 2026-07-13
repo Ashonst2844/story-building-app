@@ -6,11 +6,11 @@
   --accent: #e9c318;
   --warning: #ff2f2f;
 
-  --spacing: 16px;
+  --spacing: 12px;
   --transition: all 0.3s ease-in-out;
   --shadow: 5px 5px 15px rgba(0,0,0,0.8);
 
-  font-size: 16px;
+  font-size: 12px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color-scheme: light dark;
   background: var(--bg);

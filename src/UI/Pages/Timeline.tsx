@@ -25,7 +25,7 @@ function Timeline() {
         <div id="timeline" className="full-page pages center">
             <div id="timeline-button-container">
                 {(timelines ?? []).map((time)=>(
-                    <Button link={`/timeline/`+time.id.toString()} key={time.id} type="link" w="100%" h="25%" forNav>
+                    <Button link={`/timeline/`+time.id.toString()} key={time.id} type="link" w="100%" h="150px" forNav>
                         <h3>{time.title}</h3>
                         <p>{time.time_range}</p>
                     </Button>

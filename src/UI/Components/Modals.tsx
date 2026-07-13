@@ -55,7 +55,7 @@ function Modals({ use, isOpen, onClose, name, age, gender, faction, bio, title, 
                                 ))}
                             </div>
                             <p style={{textAlign:"justify", margin:"var(--spacing) 0"}}>"{synopsys}"</p>
-                            <Button type="link" w="300px" theme="primary" url={url}>Read This Book!</Button>
+                            <Button type="link" w="100%" theme="primary" url={url}>Read This Book!</Button>
                         </div>
                         <Button onClick={onClose} type="back-button" theme="primary" w="60px" posX="20px" posY="20px"/>
                     </div>

@@ -48,25 +48,26 @@ function Modals(props: ModalsProps) {
                             </>
                         ) : props.use==="books" ? (
                             <>
-                                <h2>{props.title}</h2>
+                                <h2>{props.title ?? ""}</h2>
                                 <div className="badge-group center">
                                     {(props.genres ?? []).map((genre,index)=>(
                                         <Badge key={index} name={genre}/>
                                     ))}
                                 </div>
-                                <p style={{textAlign:"justify", margin:"var(--spacing) 0"}}>"{props.synopsys}"</p>
-                                <Button type="link" w="100%" theme="primary" url={props.url}>Read This Book!</Button>
+                                <p style={{textAlign:"justify", margin:"var(--spacing) 0"}}>{`"${props.synopsys ?? ""}"`}</p>
+                                <Button type="link" w="100%" theme="primary" url={props.url ?? ""}>Read This Book!</Button>
                             </>
                         ) : ""}
                     </div>
                     {props.use==="books" && (
                         <div className="second-modal-box">
-                            {props.chapters.map((chap,index)=>{
+                            {(props.chapters ?? []).map((chap,index)=>{
                                 if(chap.status) {
-                                    return <ChapterList BookId={props.BookId} index={index} name={chap.name} status={chap.status}/>
+                                    return <ChapterList BookId={props.BookId ?? ""} index={index} name={chap.name} status={chap.status}/>
                                 } else if(isAdmin) {
-                                    return <ChapterList BookId={props.BookId} index={index} name={chap.name} status={chap.status}/>
+                                    return <ChapterList BookId={props.BookId ?? ""} index={index} name={chap.name} status={chap.status}/>
                                 }
+                                return null;
                             })}
                         </div>
                     )}

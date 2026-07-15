@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "./Button";
 
 interface ChapterListProps {
-    BookId: string;
+    BookId: string | number;
     index: number;
     name: string;
     status: boolean;
@@ -37,7 +37,7 @@ function ChapterList(props: ChapterListProps) {
 
     return (
         <div className="chapter-list" title={props.name}>
-            <Button onClick={isAdmin?handleState:null} style={{ color: "white" }} type="button" h="100%" theme="primary" className={state ? "primary-button" : "secondary-button"}>
+            <Button onClick={isAdmin ? () => { void handleState(); } : undefined} style={{ color: "white" }} type="button" h="100%" theme="primary" className={state ? "primary-button" : "secondary-button"}>
                 Chp.{props.index}
             </Button>
         </div>

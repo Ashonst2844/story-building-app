@@ -9,7 +9,6 @@ const content = [
     {title:"library", path:"library", type:"all"},
     {title:"wiki", path:"wiki", type:"all"},
     {title:"admin notes", path:"notes", type:"admin"},
-    {title:"book chapters", path:"chapters", type:"admin"},
 ]
 
 function Navigation() {
@@ -23,12 +22,12 @@ function Navigation() {
                     if(page.type==="all") {
                         return <Button key={index} theme="primary" type="link" link={`/${page.path}`}>
                             <Image className="phone-mode" style={{width:"25%"}} type="icon" name={page.title.replace(/\s+/g, "")}/>
-                            <p className="desktop-mode">{page.title.toUpperCase()}</p>
+                            <p style={{color:"var(--primary)"}} className="desktop-mode">{page.title.toUpperCase()}</p>
                         </Button>
                     } else if(isAdmin) { 
                         return <Button key={index} theme="primary" type="link" link={`/${page.path}`}>
                             <Image className="phone-mode" style={{width:"25%"}} type="icon" name={page.title.replace(/\s+/g, "")}/>
-                            <p className="desktop-mode">{page.title.toUpperCase()}</p>
+                            <p style={{color:"var(--primary)"}} className="desktop-mode">{page.title.toUpperCase()}</p>
                         </Button>
                     } 
                 })}

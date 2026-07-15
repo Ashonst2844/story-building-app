@@ -1,5 +1,11 @@
 import Button from "./Button";
 import Badge from "./Badge";
+import ChapterList from "./ChapterList";
+
+interface ChapterProps {
+    name:string;
+    status:boolean;
+}
 
 interface ModalsProps{
     // Main Props
@@ -15,54 +21,59 @@ interface ModalsProps{
     bio?:string;
 
     // Book Props
+    BookId?:string;
     title?:string;
     genres?:string[];
     synopsys?:string;
     url?:string;
+    chapters?:ChapterProps[];
 }
 
-function Modals({ use, isOpen, onClose, name, age, gender, faction, bio, title, genres, synopsys, url }: ModalsProps) {
-
-    if (use === "characters") {
-        return(
-            <>
-                {isOpen && (
-                    <div className="modals center float-page">
-                        <div className={`${use}-modals modal-box center`}>
-                            <h2>{name}</h2>
-                            <div className={`${use}-modals-content`}>
-                                <p>Age: <span>{age ?? "-"}</span></p>
-                                <p>Gender: <span>{gender ?? "-"}</span></p>
-                                <p>Faction: <span>{faction ?? "-"}</span></p>
-                                <p style={{gridArea:"2/1/3/4"}}>Description: <span>{bio ?? "-"}</span></p>
-                            </div>
-                        </div>
-                        <Button onClick={onClose} type="back-button" theme="primary" w="60px" posX="20px" posY="20px"/>
+function Modals(props: ModalsProps) {
+    const isAdmin = import.meta.env.DEV
+    return(
+        <>
+            {props.isOpen && (
+                <div className="modals center float-page">
+                    <div className={`modal-box center`}>
+                        {props.use==="characters" ? (
+                            <>
+                                <h2>{props.name}</h2>
+                                <div>
+                                    <p>Age: {props.age ?? "-"}</p>
+                                    <p>Gender: {props.gender ?? "-"}</p>
+                                    <p>Faction: {props.faction ?? "-"}</p>
+                                    <p>Description: {props.bio ?? "-"}</p>
+                                </div>
+                            </>
+                        ) : props.use==="books" ? (
+                            <>
+                                <h2>{props.title}</h2>
+                                <div className="badge-group center">
+                                    {(props.genres ?? []).map((genre,index)=>(
+                                        <Badge key={index} name={genre}/>
+                                    ))}
+                                </div>
+                                <p style={{textAlign:"justify", margin:"var(--spacing) 0"}}>"{props.synopsys}"</p>
+                                <Button type="link" w="100%" theme="primary" url={props.url}>Read This Book!</Button>
+                            </>
+                        ) : ""}
                     </div>
-                )}
-            </>
-        )   
-    } else if (use === "books") {
-        return(
-            <>
-                {isOpen && (
-                    <div className="modals center float-page">
-                        <div className={`${use}-modals modal-box center`}>
-                            <h2>{title}</h2>
-                            <div className="badge-group center">
-                                {(genres ?? []).map((genre,index)=>(
-                                    <Badge key={index} name={genre}/>
-                                ))}
-                            </div>
-                            <p style={{textAlign:"justify", margin:"var(--spacing) 0"}}>"{synopsys}"</p>
-                            <Button type="link" w="100%" theme="primary" url={url}>Read This Book!</Button>
+                    {props.use==="books" && (
+                        <div className="second-modal-box">
+                            {props.chapters.map((chap,index)=>{
+                                if(chap.status) {
+                                    return <ChapterList BookId={props.BookId} index={index} name={chap.name} status={chap.status}/>
+                                } else if(isAdmin) {
+                                    return <ChapterList BookId={props.BookId} index={index} name={chap.name} status={chap.status}/>
+                                }
+                            })}
                         </div>
-                        <Button onClick={onClose} type="back-button" theme="primary" w="60px" posX="20px" posY="20px"/>
-                    </div>
-                )}
-            </>
-        )
-    }
-    return null;
+                    )}
+                    <Button onClick={props.onClose} type="back-button" theme="primary" w="60px" posX="20px" posY="20px"/>
+                </div>
+            )}
+        </>
+    )   
 }
 export default Modals;

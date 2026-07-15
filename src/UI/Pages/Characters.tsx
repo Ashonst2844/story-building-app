@@ -12,7 +12,7 @@ import { useForm } from "../../assets/hooks/useForm"
 import React from "react";
 
 interface CharactersProps {
-    id:string;
+    CharId:string;
     name:string;
     age:number;
     gender:"male"|"female";
@@ -26,7 +26,7 @@ function Characters() {
     const {data:characters, loading, error} = useFetch<CharactersProps>("characters", false);
     
     const {onSubmit} = useForm(["name","age","gender","faction","bio"])
-    const [showForm,setShowForm] = React.useState(false)
+    const [showForm,setShowForm] = React.useState<boolean>(false)
 
     const [searchQ, setSearchQ] = React.useState("")
 
@@ -45,8 +45,8 @@ function Characters() {
             }} />
             <div id="character-container" className="card-container">
                 {characters?.map(character => character.name.toLowerCase().startsWith(searchQ) && (
-                    <Cards key={character.id} use="characters" 
-                    id={character.id}
+                    <Cards key={character.CharId} use="characters" 
+                    CharId={character.CharId}
                     name={character.name}
                     age={character.age} 
                     gender={character.gender} 
@@ -54,11 +54,13 @@ function Characters() {
                     bio={character.bio}/>
                 ))}
                 {isAdmin && (
-                    <Button onClick={()=>setShowForm(true)} w="100%" h="300px" type="button" theme="secondary">
-                        <Image type="icon" name="plus" style={{
-                            width:"50%"
-                        }}/>
-                    </Button>
+                    <div className="button-group">
+                        <Button onClick={()=>setShowForm(true)} type="button" theme="secondary">
+                            <Image type="icon" name="plus" style={{
+                                width:"50%"
+                            }}/>
+                        </Button>
+                    </div>
                 )}
             </div>
             <Forms isOpen={showForm} onClose={()=>setShowForm(false)} id="create-character" onSubmit={(e)=>onSubmit(e, "http://localhost:5000/api/characters")}>

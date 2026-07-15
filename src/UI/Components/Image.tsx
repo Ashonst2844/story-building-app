@@ -30,10 +30,10 @@ function Image(props: ImageProps) {
 
     return props.type === "map" ? (
         <div className="images" style={{width:props.w, height:props.h}}>
-            <img style={{width:`calc(100% * ${scale})`}} className="maps" src={props.src} alt={props.name}/>
+            <img style={{width:`calc(100% * ${scale})`}} className="maps" src={props.src} alt={props.name} loading="lazy"/>
             
             {props.zoom && (
-                <div className="zoom-group">
+                <div className="button-group">
                     <Button onClick={zoomIn} w="50px" h="50px" type="button" theme="primary">+</Button>
                     <Button onClick={reset} w="50px" h="50px" type="button" theme="primary">R</Button>
                     <Button onClick={zoomOut} w="50px" h="50px" type="button" theme="primary">-</Button>
@@ -41,9 +41,9 @@ function Image(props: ImageProps) {
             )}
         </div>
     ) : props.type === "icon" ? (
-        <img src={`/Images/Icons/${props.name}.svg`} style={{width:"100%", ...props.style}} alt={props.name} className={props.className}/>
+        <img loading="lazy" src={`/Images/Icons/${props.name}.svg`} style={{width:"100%", ...props.style}} alt={props.name} className={props.className}/>
     ) : (
-        <img src={props.src} alt={props.name} style={props.style} onClick={props.onClick}/>
+        <img loading="lazy" src={props.src} alt={props.name} style={props.style} onClick={props.onClick}/>
     )
 }
 export default Image;

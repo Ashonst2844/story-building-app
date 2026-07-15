@@ -193,7 +193,7 @@
         ]
       },
       {
-        "era": "160-2000",
+        "era": "1600-2000",
         "map": []
       },
       {
@@ -205,27 +205,27 @@
         "map": []
       },
       {
-        "era": "3000-Sekarang",
+        "era": "3000-~",
         "map": []
       }
     ],
     "timelines": [
       {
-        "id": 1,
+        "TimeId": "1",
         "title": "Era Penciptaan",
         "description": "Zaman di mana sebuah dunia baru terbentuk, hasil dari kehancuran mutlak dunia sebelumnya. Di zaman ini, tak ada teknologi dan ilmu pengetahuan, bahkan populasi manusia di zaman ini hanya kurang dari setengah juta saja. membuat ini menjadi zaman yang sangat sepi. Oleh karena itu, kondisi alam di saat ini masih sangat terjaga, pepohonan dan hewan terlihat sangat eksotis. Di zaman ini semua orang bertahan hidup dengan cara berburu dan tinggal secara nomaden (berpindah-pindah tempat) dan perlahan mempelajari teknik dan teknologi baru untuk bertahan hidup.",
         "time_range": "0 - 300",
         "related_novel": []
       },
       {
-        "id": 2,
+        "TimeId": "2",
         "title": "Era Sihir / Mitos",
         "description": "Tujuh komet jatuh menghantam bumi ke tujuh tempat berbeda. Terdapat kekuatan magis yang menetap di dalam komet-komet itu, dan perlahan mempengaruhi seluruh alam. Membuat pohon menjadi 'hidup' dan membuat beberapa tempat menjadi tempat yang seperti di dunia mimpi, semua orang juga mulai mencoba untuk menyentuh kekuatan magis, ada yang berhasil menguasai sihir dan menggunakannya untuk suatu hal yang baik, namun naasnya lebih banyak orang yang menggunakan kekuatan besar ini untuk sesuatu yang jahat, yaitu menguasi semua sihir dari ketujuh komet itu dan menjadi seorang penguasa dunia.",
         "time_range": "300 - 900",
         "related_novel": []
       },
       {
-        "id": 3,
+        "TimeId": "3",
         "title": "Era Kerajaan",
         "description": "Di Era ini, seseorang mengalahkan kekuatan sihir itu dan mulai meghilangkan semua kekuatan itu lalu melarangnya, bahkan menghukum mati mereka yang memiliki kekuatan itu. Dia meleburkan dan merahasiakan ke tujuh inti komet yang berisi kekuatan sebesar itu. Karena sudah tak ada lagi kekuatan sihir, semua negara kini banyak yang memisahkan diri dan membuat kerajaan di berbagai  belahan negara, dan membuat milite mereka sendiri karena dengan tidak adanya sihir, tidak ada juga pertahanan yang dapat melindaungi mereka dari orang lain. Orang-orang disini juga sudah mulai berdagang sehingga membentuk kekuatan sosial yang cukup kuat.",
         "time_range": "900 - 1600",
@@ -234,37 +234,37 @@
         ]
       },
       {
-        "id": 4,
+        "TimeId": "4",
         "title": "Era Revolusi",
         "description": "Setelah tahta salah satu kerajaan di suatu negara diduduki oleh seorang tirani, seluruh dunia menjadi kacau dengan segala kebijakannya, dia mempengaruhi semua kerajaan yang lain sehingga menjadi sama seperti dirinya. Kekacauan besar sering terjadi dimana-mana, Sangat lelah ditindas dan di adu domba oleh para penguasa, akhirnya mereka bersatu untuk menggulingkan semua raja, dan merombak total sistem pemerintahannya, hal ini juga didampingi dengan kemajuan teknologi mereka, karena salah satu fondasi utama teknologi kini sudah ditemukan, yaitu listrik.",
         "time_range": "1600 - 2000",
         "related_novel": []
       },
       {
-        "id": 5,
+        "TimeId": "5",
         "title": "Era Modern",
         "description": "Sistem pemerintahan zaman ini sudah sangat rapi dan terstruktur, dan zaman juga sudah maju, listrik dan internet sudah menjadi salah satu kebutuhan pokok manusia saat ini, kemajuan teknologi sedang menjadi fokus utama untuk dikembangkan. Ini adalah zaman dimana sedikit sekali orang tidak mampu, bahkan hampir tidak ada.",
         "time_range": "2000 - 2300",
         "related_novel": []
       },
       {
-        "id": 6,
+        "TimeId": "6",
         "title": "Era Futuristik",
         "description": "Teknologi sudah sangat maju, bahkan sebuah perusahaan menemukan kembali inti komet sihir yang telah disembunyikan seribu tahun yang lalu. Para ilmuan menggabungkan  Teknologi yang sangat maju dengan kekuatan sihir yang sangat kuat, membuat zaman ini menjadi puncak dari kemajuan peradaban di bumi. Namun sayangnya orang-orang jahat masih tetaplah ada dan membuat teknologi ditambah sihir itu untuk menguasai dunia, dan menjadi bumi menjadi permainannya.",
         "time_range": "2300 - 3000",
         "related_novel": []
       },
       {
-        "id": 7,
+        "TimeId": "7",
         "title": "Era Apokaliptik",
         "description": "Kemajuan di Era sebelumnya perlahan menghancurkan seluruh alam di bumi. Kemudian Ia murka dan balik mengahncurkan peradaban manusia dengan memberi mereka ribuan bencana, penyakit menular tersebar dimana, tanaman dan hewan menjadi langka menyebabkan kelaparan dimana-mana, kini  kembali ke zaman batu namun dengan kondisi alam yang lebih jahat dari pada sebelumnya, mengharuskan mereka melawan dunia, keserakan, dan juga ego mereka masing-masing.",
-        "time_range": "3000 - Sekarang...",
+        "time_range": "3000 - ~",
         "related_novel": []
       }
     ],
     "books": [
       {
-        "id": "1783146323488",
+        "BookId": "1783146323488",
         "title": "New King Of Darkness, Book III: Sins Of Pride",
         "genres": [
           "Fiksi Sejarah",
@@ -333,7 +333,7 @@
     ],
     "characters": [
       {
-        "id": "1783079753551",
+        "CharId": "1783079753551",
         "name": "Aarthan Veill",
         "age": 17,
         "gender": "male",
@@ -341,7 +341,7 @@
         "bio": "Karakter utama, Kakak Leill, Pemberani, Selalu penasaran"
       },
       {
-        "id": "1783079787423",
+        "CharId": "1783079787423",
         "name": "Leilly Veill",
         "age": 13,
         "gender": "female",
@@ -349,7 +349,7 @@
         "bio": "Karakter Kedua, Adik Aarth, Lugu"
       },
       {
-        "id": "1783079812515",
+        "CharId": "1783079812515",
         "name": "Joseph Veill",
         "age": 35,
         "gender": "male",
@@ -357,7 +357,7 @@
         "bio": "Ayah Aarth dan Leill, Pekerja Keras"
       },
       {
-        "id": "1783079849412",
+        "CharId": "1783079849412",
         "name": "Tiana Rey Veill",
         "age": 30,
         "gender": "female",
@@ -365,7 +365,7 @@
         "bio": "Ibu Aarth dan Leill, Lembut, Penyayang"
       },
       {
-        "id": "1783079882069",
+        "CharId": "1783079882069",
         "name": "Marcus Feyn",
         "age": 50,
         "gender": "male",
@@ -373,7 +373,7 @@
         "bio": "Raja Negara Sallemn, Egois, Munafik, Sombong"
       },
       {
-        "id": "1783079910248",
+        "CharId": "1783079910248",
         "name": "Julien",
         "age": 22,
         "gender": "male",
@@ -381,7 +381,7 @@
         "bio": "Prajurit Kerajaan Feyn, Ambisius, Angkuh,"
       },
       {
-        "id": "1783697262084",
+        "CharId": "1783697262084",
         "name": "George",
         "age": 47,
         "gender": "male",
@@ -389,7 +389,7 @@
         "bio": "Bos Aarth dan Ayahnya, Ramah, Pemberani, Dermawan, Suka menolong"
       },
       {
-        "id": "1783774182492",
+        "CharId": "1783774182492",
         "name": "Hector Lane",
         "age": 30,
         "gender": "male",
@@ -397,7 +397,7 @@
         "bio": "Jendral terbaik kerajaan Feyn di Sallemn, Dingin, Sadis, Sangat Loyal"
       },
       {
-        "id": "1783786332982",
+        "CharId": "1783786332982",
         "name": "Sam",
         "age": 28,
         "gender": "male",
@@ -405,7 +405,7 @@
         "bio": "Prajurti Penjaga Orimburg, Sangat patuh"
       },
       {
-        "id": "1783786381300",
+        "CharId": "1783786381300",
         "name": "Carter",
         "age": 31,
         "gender": "male",
@@ -415,25 +415,25 @@
     ],
     "wikis": [
       {
-        "id": 1784641999836,
+        "WikiId": "1784641999836",
         "head": "Seven Deadly Sins",
         "type": "list",
         "body": "Envy (Iri Dengki) \n Greed (Keserakahan) \n Pride (Kesombongan) \n Gluttony (Kerakusan) \n Lust (Hawa Nafsu) \n Sloth (Kemalasan) \n Wrath (Kemarahan)"
       },
       {
-        "id": 1783847799836,
+        "WikiId": "1783847799836",
         "head": "Ten God Commandement",
         "type": "list",
         "body": "Thou shalt have no other gods before me (Jangan ada allah lain di hadapan-Ku) \n Thou shalt not take the name of the Lord thy God in vain (Jangan menyebut nama Tuhan Allahmu dengan sembarangan) \n Thou shalt not make unto thee any graven image (Jangan membuat bagimu patung yang menyerupai apa pun) \n Remember the sabbath day, to keep it holy (Kuduskanlah hari Sabat (Ingatlah dan kuduskanlah hari suci)) \n Honour thy father and thy mother. (Hormatilah ayahmu dan ibumu) \n Thou shalt not kill (Jangan membunuh) \n Thou shalt not commit adultery (Jangan berzina) \n Thou shalt not steal (Jangan mencuri) \n Thou shalt not bear false witness against thy neighbour (Jangan mengucapkan saksi dusta tentang sesamamu) \n Thou shalt not covet thy neighbour's house / anything that is thy neighbour's (Jangan mengingini milik sesamamu (Jangan mengingini hak orang lain))"
       },
       {
-        "id": 1783898999836,
+        "WikiId": "1783898999836",
         "head": "Festival",
         "type": "desc",
         "body": "Acara besar, seperti pertunjukkan dan Bazzar yang dilakukan oleh kerajaan sebagai simbol kemenangan jika mereka memenangkan sebuah perang."
       },
       {
-        "id": 1783841999836,
+        "WikiId": "1783841999836",
         "head": "Feyn's Lineage",
         "type": "desc",
         "body": "Keluarga Feyn adalah bangsawan yang pertama kali memperkenalkan sistem pemerintahan berbentuk Kerajaan ke seluruh dunia. Keluarga ini dikenal dan dihormati oleh seluruh kerajaan karena pada sekitar abad ke-9 keluarga ini bersama sekutunya mengubah zaman, dari yang sebelumnya Zaman Sihir menjadi Zaman Kerajaan, oleh karena itu, kerajaan yang dikuasai oleh keluarga sangat melarang keras praktik ilmu sihir, kecuali satu Raja."

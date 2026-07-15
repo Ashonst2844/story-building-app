@@ -33,9 +33,7 @@ function World() {
     return <div id="world" className="full-page pages">
         <div id="world-tab" className="tab-group center">
             {worlds?.map((world, i)=> (
-                <Button link={`/world/`+world.era.toString()} key={i} theme="primary" type="link" w="130px" h="100%">
-                    {world.era}
-                </Button>
+                <Button link={`/world/`+world.era.toString()} key={i} theme="primary" type="link" w="130px" h="100%">{world.era}</Button>
             ))}
         </div>
         <ReactDOM.Routes>

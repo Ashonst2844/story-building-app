@@ -2,20 +2,21 @@ import { useState } from "react";
 import Button from "./Button";
 
 interface ChapterListProps {
-    bookId: string | number;
+    BookId: string;
     index: number;
     name: string;
     status: boolean;
 }
 
 function ChapterList(props: ChapterListProps) {
+    const isAdmin = import.meta.env.DEV
     const [state, setState] = useState<boolean>(props.status);
 
     const handleState = async () => {
         const nextState = !state;
 
         try {
-            const response = await fetch(`http://localhost:5000/api/books/${props.bookId}/chapters/${props.index}`, {
+            const response = await fetch(`http://localhost:5000/api/books/${props.BookId}/chapters/${props.index}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ status: nextState })
@@ -27,6 +28,7 @@ function ChapterList(props: ChapterListProps) {
             }
 
             setState(nextState);
+            location.reload()
         } catch (error) {
             const message = error instanceof Error ? error.message : "Terjadi kesalahan saat memperbarui chapter.";
             alert(message);
@@ -35,7 +37,7 @@ function ChapterList(props: ChapterListProps) {
 
     return (
         <div className="chapter-list" title={props.name}>
-            <Button onClick={handleState} style={{ color: "white" }} type="button" w="60px" theme="primary" className={state ? "done" : "undone"}>
+            <Button onClick={isAdmin?handleState:null} style={{ color: "white" }} type="button" h="100%" theme="primary" className={state ? "primary-button" : "secondary-button"}>
                 Chp.{props.index}
             </Button>
         </div>

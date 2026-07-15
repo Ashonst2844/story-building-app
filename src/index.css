@@ -6,11 +6,11 @@
   --accent: #e9c318;
   --warning: #ff2f2f;
 
-  --spacing: 12px;
+  --spacing: 14px;
   --transition: all 0.3s ease-in-out;
   --shadow: 5px 5px 15px rgba(0,0,0,0.8);
 
-  font-size: 12px;
+  font-size: 14px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color-scheme: light dark;
   background: var(--bg);
@@ -76,11 +76,6 @@ h2 {
   justify-content: center;
   align-items: center;
 }
-.button:hover {
-  transition: var(--transition);
-  scale: 0.98;
-  filter: brightness(115%);
-}
 input, textarea, select {
   width: 100%;
   height: 50px;
@@ -88,12 +83,6 @@ input, textarea, select {
 }
 textarea {
   resize: none;
-}
-.button-group {
-  width: 100%;
-  height: auto;
-  gap: calc(var(--spacing)/4);
-  padding: calc(var(--spacing)/4);
 }
 .badge-group {
   width: 100%;
@@ -130,12 +119,6 @@ textarea {
   display: block;
   text-align: center;
 }
-.done {
-  background-color: var(--accent) !important;
-}
-.undone {
-  border:2px solid var(--accent);
-}
 
 .maps {
   transition: var(--spacing);
@@ -149,4 +132,59 @@ textarea {
 }
 .desktop-mode {
   display: block;
+}
+
+/** TIMELINE */
+#timeline div {
+  overflow-y: scroll;
+  height: 100%;
+  padding: var(--spacing);
+}
+#timeline-button-container {
+  width: 30%;
+  background-color: var(--primary);
+  padding: var(--spacing);
+}
+#timeline-content-container {
+  width: 70%;
+}
+
+/** WORLD */
+#world {
+  gap: calc(var(--spacing)/2);
+  display: flex;
+  flex-wrap: wrap;
+}
+.tab-group {
+  width: 100%;
+  height: 60px;
+  background-color: var(--primary);
+  gap: var(--primary);
+  padding: calc(var(--spacing)/2);
+  justify-content: space-around;
+}
+.world-box {
+  width: 100%;
+  height: calc(100% - 60px);
+  display: flex;
+  position: relative;
+}
+#continent-button-container {
+  width: 30%;
+  height: 100%;
+  background-color: var(--primary);
+  padding: var(--spacing);
+  overflow-y: scroll;
+}
+.continent-box {
+  width: 70%;
+  height: 100%;
+  padding: var(--spacing);
+  overflow-y: scroll;
+}
+.continent-header {
+  width: 100%;
+  height: 20%;
+  overflow: hidden;
+  margin: var(--spacing) 0;
 }

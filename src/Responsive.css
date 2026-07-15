@@ -1,4 +1,4 @@
-/* Tablet */
+/* ? TABLET */
 @media (max-width:1023px) {
     .phone-mode {
         display: block;
@@ -23,28 +23,23 @@
     }
     #nav-container {
         height: 100%;
-        width: 200% !important;
         flex-direction: row !important;
         gap: 0 !important;
     }
     #nav-container .button {
-        width: 10% !important;
+        min-width: 20%;
     }
     #page {
         width: 100% !important;
     }
     .card-container {
         grid-template-columns: repeat(2,1fr) !important;
-        grid-template-rows: 600px !important;
     }
-    .characters-card {
+    .cards {
         height: 600px !important;
     }
-    .modal-box {
-        padding: var(--spacing) !important;
-    }
-    .characters-modals {
-        width: 90% !important;
+    .button-group {
+        bottom: 80px !important;
     }
     .form-container {
         width: 90% !important;
@@ -52,17 +47,26 @@
     #world-tab {
         padding: 0px;
     }
+    .modals {
+        flex-direction: column !important;
+    }
+    .modal-box {
+        width: 90% !important;
+    }
+    .second-modal-box {
+        width: 90% !important;
+        height: 30% !important;  
+    }
 }
-/* Mobile */
+/* ? MOBILE */
 @media (max-width:768px) {
-    :root {
-        font-size: 10px;
-        --spacing: 5px;
+    h1 {
+        font-size: 2rem;
     }
-    .card-container {
-        grid-template-rows: 300px !important;
+    h2 {
+        font-size: 1.5rem;
     }
-    .characters-card {
+    .cards   {
         height: 300px !important;
     }
     #world {

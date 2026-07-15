@@ -69,6 +69,6 @@ export function useForm(inputs:string[], defaultValues?: Record<string,unknown>)
         } finally {
             isLoading(false)
         }
-    } 
+    }
     return {onSubmit, input, uploadLoading};
 }

@@ -58,7 +58,7 @@ function Forms({id,onSubmit,onClose,isOpen,children}:FormProps) {
                     <h2>{id.toUpperCase()}</h2>
                     <form onSubmit={onSubmit} method="post" className="center form-container">
                         {children}
-                        <Button type="submit" w="100%" theme="primary"><p>Create</p></Button>
+                        <Button type="submit" w="100%" theme="primary">Create</Button>
                     </form>
                     <Button onClick={onClose} type="back-button" theme="primary" w="60px" posX="20px" posY="20px"/>
                 </div>

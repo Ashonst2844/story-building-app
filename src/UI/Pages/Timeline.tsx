@@ -6,7 +6,7 @@ import { useFetch } from "../../assets/hooks/useFetch"
 import * as ReactDOM from "react-router-dom"
 
 interface TimelineProps {
-    id:number;
+    TimeId:string;
     title:string;
     description:string;
     time_range:string;
@@ -25,8 +25,8 @@ function Timeline() {
         <div id="timeline" className="full-page pages center">
             <div id="timeline-button-container">
                 {(timelines ?? []).map((time)=>(
-                    <Button link={`/timeline/`+time.id.toString()} key={time.id} type="link" w="100%" h="150px" forNav>
-                        <h3 style={{fontSize:"0.9rem"}}>{time.title}</h3>
+                    <Button link={`/timeline/`+time.TimeId.toString()} key={time.TimeId} type="link" w="100%" h="150px" forNav>
+                        <h3 style={{fontSize:"0.9rem", textAlign:"center"}}>{time.title}</h3>
                         <p className="desktop-mode">{time.time_range}</p>
                     </Button>
                 ))}
@@ -34,7 +34,7 @@ function Timeline() {
             <div id="timeline-content-container">
                 <ReactDOM.Routes>
                     {(timelines ?? []).map((time)=>(
-                        <ReactDOM.Route key={time.id} path={`/${time.id.toString()}`} element={
+                        <ReactDOM.Route key={time.TimeId} path={`/${time.TimeId}`} element={
                             <div className="times-content">
                                 <h1>{time.title}</h1>
                                 <hr style={{border:"1px solid var(--accent)"}}/>

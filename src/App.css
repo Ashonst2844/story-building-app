@@ -1,3 +1,4 @@
+/** Animations */
 @keyframes loading {
   0% {
     width: 0%;
@@ -6,21 +7,23 @@
   }
 }
 
+/** Main */
 #main {
   width: 100vw;
   height: 100vh;
 }
+#page {
+  width: 75%;
+  height: 100vh;
+}
 
+/** Navigation */
 #nav {
   width: 25%;
   height: 100vh;
   padding: calc(var(--spacing)*2);
   background-color: var(--primary);
   overflow: scroll;
-}
-#page {
-  width: 75%;
-  height: 100vh;
 }
 
 #nav-container {
@@ -30,6 +33,7 @@
   gap: var(--spacing);
 }
 
+/** Loading */
 #loading-page {
   flex-direction: column;
   z-index: 1000;
@@ -60,16 +64,50 @@
   animation-delay: 0.2s;
 }
 
-.main-button {
-  background-color: var(--accent);
-  font-weight: 500;
+/** Cards */
+.card-container {
+  display: grid;
+  gap: var(--spacing);
+  width: 100%;
+  height: 80%;
+  grid-template-columns: repeat(5,1fr);
+  overflow-y: scroll;
 }
-.main-button * {
-  color: var(--bg);
+.cards {
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--primary);
+  height: 300px;
+}
+
+/** Button */
+.button-group {
+  display: flex;
+  gap: var(--spacing);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 998;
+  width: auto;
+  height: auto;
+}
+.button-group .button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.button {
+  width: 100%;
+}
+.button:hover {
+  transition: var(--transition);
+  scale: 0.98;
+  filter: brightness(115%);
 }
 .primary-button {
-  background-color: var(--bg);
-  border-bottom: 2px solid var(--accent);
+  background-color: var(--accent);
+  font-weight: 500;
+  color: var(--primary);
 }
 .secondary-button {
   background-color: var(--primary);
@@ -86,88 +124,62 @@
 .warning-button {
   background-color: var(--warning);
 }
-
-.card-container {
-  display: grid;
-  gap: var(--spacing);
-  width: 100%;
-  height: 80%;
-  grid-template-columns: repeat(5,1fr);
-  grid-template-rows: 300px;
-  overflow-y: scroll;
-}
-.accordion-container {
-  overflow-y: scroll;
-}
-.characters-card {
-  padding: calc(var(--spacing)/2);
+.navs-button {
+  border-left: 4px solid var(--accent);
+  position: relative;
+  display: flex;
+  justify-content: space-around;
   flex-direction: column;
-  justify-content: space-between;
-  background-color: var(--primary);
-  height: 300px;
-}
-.books-card {
   transition: var(--transition);
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-}
-.books-card img {
-  transition: var(--transition);
-  width: 100% !important;
-}
-.books-card img:hover {
-  scale: 1.2;
 }
 
+/** Modals */
 .modals {
   z-index: 999;
+  flex-direction: row;
+  gap: var(--spacing);
 }
 .modal-box {
   background-color: var(--primary);
   box-shadow: var(--shadow);
   flex-direction: column;
+  justify-content: space-around;
   padding: calc(var(--spacing)*2);
+  width: 50%;
+  height: 50%;
 }
-.characters-modals {
-  width: 70%;
-  height: 300px;
-}
-.characters-modals-content {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-template-rows: repeat(2,1fr);
-  gap: calc(var(--spacing)/2);
-}
-.characters-modals-content p {
-  font-weight: 500;
-  text-align: center;
-}
-.characters-modals-content span {
-  text-transform: uppercase;
-  color: var(--accent);
-}
-.books-modals {
-  width: 60%;
-  height: 400px;
+.second-modal-box {
+  background-color: var(--primary);
+  box-shadow: var(--shadow);
+  width: 30%;
+  height: 50%;
+  flex-direction: column;
+  gap: var(--spacing);
+  display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
+  padding: var(--spacing);
 }
 
+/** Forms */
 .form-container {
   width: 40%;
-  height: 60%;
+  height: auto;
   background-color: var(--primary);
   flex-direction: column;
   justify-content: space-around;
   padding: var(--spacing);
+  gap: var(--spacing);
 }
 
+/** Accordions */
 .accordion-container {
   width: 100%;
   height: 90%;
   display: flex;
   flex-direction: column;
   gap: var(--spacing);
+  overflow-y: scroll;
 }
 .accordion {
   width: 100%;
@@ -189,89 +201,10 @@
   margin: 0 0 calc(var(--spacing)/2);
 }
 
-#timeline div {
-  overflow-y: scroll;
-  height: 100%;
-  padding: var(--spacing);
-}
-#timeline-button-container {
-  width: 30%;
-  background-color: var(--primary);
-  padding: var(--spacing);
-}
-#timeline-content-container {
-  width: 70%;
-}
-.navs-button {
-  border-left: 4px solid var(--accent);
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  transition: var(--transition);
-}
-.navs-button:hover * {
-  font-size: 1.2em;
-  color: var(--accent);
-}
-.navs-button::before {
-  position: absolute;
-  content: "";
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  transform: translateY(-50%);
-  top: 50%;
-  left: -10px;
-  background-color: var(--accent);
-}
-
-#world {
-  gap: calc(var(--spacing)/2);
-  display: flex;
-  flex-wrap: wrap;
-}
-.tab-group {
-  width: 100%;
-  height: 60px;
-  background-color: var(--primary);
-  gap: var(--primary);
-  padding: calc(var(--spacing)/2);
-  justify-content: space-around;
-}
-.world-box {
-  width: 100%;
-  height: calc(100% - 60px);
-  display: flex;
-  position: relative;
-}
-#continent-button-container {
-  width: 30%;
-  height: 100%;
-  background-color: var(--primary);
-  padding: var(--spacing);
-  overflow-y: scroll;
-}
-.zoom-group {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  gap: calc(var(--spacing)/2);
-}
-.continent-box {
-  width: 70%;
-  height: 100%;
-  padding: var(--spacing);
-  overflow-y: scroll;
-}
-.continent-header {
-  width: 100%;
+.chapter-list {
+  min-width: 20%;
   height: 20%;
-  overflow: hidden;
-  margin: var(--spacing) 0;
 }
-
 .chapter-box {
   display: flex;
   justify-content: center;

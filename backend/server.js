@@ -82,7 +82,7 @@ app.get('/api/worlds', (req, res) => {
 app.post('/api/characters', (req, res) => {
     const db = readAPI();
     const newCharacter = {
-        id: Date.now().toString(),
+        CharId: Date.now().toString(),
         ...req.body
     };
     
@@ -96,7 +96,7 @@ app.post('/api/characters', (req, res) => {
 app.post('/api/books', (req, res) => {
     const db = readAPI();
     const newBook = {
-        id: Date.now(),
+        BookId: Date.now(),
         ...req.body
     };
 
@@ -110,7 +110,7 @@ app.post('/api/books', (req, res) => {
 app.post('/api/wikis', (req, res) => {
     const db = readAPI();
     const newWikis = {
-        id: Date.now(),
+        WikiId: Date.now(),
         ...req.body
     };
 
@@ -124,7 +124,7 @@ app.post('/api/wikis', (req, res) => {
 app.post('/api/notes', (req, res) => {
     const db = readAPI();
     const newNote = {
-        id: Date.now(),
+        NoteId: Date.now(),
         ...req.body
     };
 
@@ -134,11 +134,11 @@ app.post('/api/notes', (req, res) => {
     res.status(201).json({ message: 'Adding Note Successfully!', data: newNote });
 });
 
-// ADD CHAPTERS
-app.post('/api/books/:id/chapters', (req, res) => {
+// CREATE CHAPTERS
+app.post('/api/books/:BookId/chapters', (req, res) => {
     const db = readAPI();
-    const { id } = req.params;
-    const book = db.result.books.find(b => b.id && b.id.toString() === id.toString());
+    const { BookId } = req.params;
+    const book = db.result.books.find(b => b.BookId && b.BookId === BookId);
 
     if (!book) {
         return res.status(404).json({ message: 'Book Not Found!' });
@@ -153,10 +153,10 @@ app.post('/api/books/:id/chapters', (req, res) => {
 });
 
 // UPDATE CHAPTER STATUS
-app.put('/api/books/:bookId/chapters/:chapterIndex', (req, res) => {
+app.put('/api/books/:BookId/chapters/:chapterIndex', (req, res) => {
     const db = readAPI();
-    const { bookId, chapterIndex } = req.params;
-    const book = db.result.books.find(b => b.id && b.id.toString() === bookId.toString());
+    const { BookId, chapterIndex } = req.params;
+    const book = db.result.books.find(b => b.BookId && b.BookId === BookId);
 
     if (!book) {
         return res.status(404).json({ message: 'Book Not Found!' });
@@ -181,12 +181,12 @@ app.put('/api/books/:bookId/chapters/:chapterIndex', (req, res) => {
 });
 
 // DELETE CHARACTER
-app.delete('/api/characters/:id', (req, res) => {
+app.delete('/api/characters/:CharId', (req, res) => {
     const db = readAPI();
-    const { id } = req.params;
+    const { CharId } = req.params;
     const initialLength = db.result.characters.length;
 
-    db.result.characters = db.result.characters.filter(char => char.id.toString() !== id.toString());
+    db.result.characters = db.result.characters.filter(char => char.CharId !== CharId);
 
     if (db.result.characters.length === initialLength) {
         return res.status(404).json({ message: 'Character Not Found!' });

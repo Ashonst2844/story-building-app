@@ -41,12 +41,14 @@ function Notes() {
                         <Accordion key={index} use="notes" type={note.type} head={note.head} body={note.body}/>
                     ))}
                     {isAdmin && (
-                    <Button onClick={()=>setShowForm(true)} w="100%" h="80px" type="button" theme="secondary">
-                        <Image type="icon" name="plus" style={{
-                            width:"5%"
-                        }}/>
-                    </Button>
-                )}
+                        <div className="button-group">
+                            <Button onClick={()=>setShowForm(true)} type="button" theme="secondary">
+                                <Image type="icon" name="plus" style={{
+                                    width:"50%"
+                                }}/>
+                            </Button>
+                        </div>
+                    )}
                 </div>
             </div>
             <Forms isOpen={showForm} onClose={()=>setShowForm(false)} id="create-notes" onSubmit={(e)=>onSubmit(e, "http://localhost:5000/api/notes")}>

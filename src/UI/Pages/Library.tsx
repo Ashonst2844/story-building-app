@@ -11,14 +11,20 @@ import { useForm } from "../../assets/hooks/useForm";
 
 import React from "react";
 
+interface ChapterProps {
+    name:string;
+    status:boolean;
+}
+
 interface BooksProps {
-    id:number;
+    BookId:string;
     title:string;
     cover:string;
     link:string;
     series:number;
     genres:string[];
     synopsys:string;
+    chapters:ChapterProps[];
 }
 
 function Library() {
@@ -48,20 +54,23 @@ function Library() {
             }} />
             <div id="book-container" className="card-container">
                 {books?.map(book=>book.title.toLowerCase().startsWith(searchQ) && (
-                    <Cards key={book.id} use="books" 
+                    <Cards key={book.BookId} use="books" 
+                    BookId={book.BookId}
                     title={book.title} 
                     cover={book.cover} 
                     link={book.link} 
                     genres={book.genres}
-                    synopsys={book.synopsys}/>
-                    
+                    synopsys={book.synopsys}
+                    chapters={book.chapters}/>
                 ))}
                 {isAdmin && (
-                    <Button onClick={()=>setShowForm(true)} w="100%" h="300px" type="button" theme="secondary">
-                        <Image type="icon" name="plus" style={{
-                            width:"50%"
-                        }}/>
-                    </Button>
+                    <div className="button-group">
+                        <Button onClick={()=>setShowForm(true)} type="button" theme="secondary">
+                            <Image type="icon" name="plus" style={{
+                                width:"50%"
+                            }}/>
+                        </Button>
+                    </div>
                 )}
             </div>
             <Forms isOpen={showForm} onClose={()=>setShowForm(false)} id="create-book" onSubmit={(e)=>onSubmit(e, "http://localhost:5000/api/books", image)}>

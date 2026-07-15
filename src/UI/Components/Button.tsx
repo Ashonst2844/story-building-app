@@ -6,7 +6,7 @@ interface ButtonProps {
     //Global Button Props
     type: "link" | "button" | "submit" | "back-button";
     link?:string;
-    theme?: "main" | "primary" | "secondary" | "warning";
+    theme?: "primary" | "secondary" | "warning";
     w?:string;
     h?:string;
     children?:React.ReactNode;
@@ -31,8 +31,8 @@ function Button(props: ButtonProps) {
         const target = props.url ? "_blank" : "_self";
         return(
             <ReactDOM.Link target={target} to={to}
-            style={{width:props.w ,height: props.h ? props.h : "60px", ...props.style}} className={`center button ${
-                props.forNav ? "navs-button" : props.theme == "main" ? "main-button" : props.theme == "primary" ? "primary-button" : "secondary-button" 
+            style={{width:props.w ,height: props.h ? props.h : "50px", ...props.style}} className={`center button ${
+                props.forNav ? "navs-button" : props.theme == "primary" ? "primary-button" : "secondary-button" 
             } ${props.className}`}>{props.children}</ReactDOM.Link>
         )
     } else if (props.type=="back-button") {
@@ -52,4 +52,5 @@ function Button(props: ButtonProps) {
         )
     }
 }
+
 export default Button;

@@ -34,11 +34,13 @@ function Wiki() {
                     <Accordion key={index} use="wiki" type={wiki.type} head={wiki.head} body={wiki.body}/>
                 ))}
                 {isAdmin && (
-                    <Button onClick={()=>setShowForm(true)} w="100%" h="80px" type="button" theme="secondary">
-                        <Image type="icon" name="plus" style={{
-                            width:"5%"
-                        }}/>
-                    </Button>
+                    <div className="button-group">
+                        <Button onClick={()=>setShowForm(true)} type="button" theme="secondary">
+                            <Image type="icon" name="plus" style={{
+                                width:"50%"
+                            }}/>
+                        </Button>
+                    </div>
                 )}
             </div>
             <Forms isOpen={showForm} onClose={()=>setShowForm(false)} id="create-wikis" onSubmit={(e)=>onSubmit(e, "http://localhost:5000/api/wikis")}>

@@ -93,7 +93,7 @@ function Modals(props: ModalsProps) {
             )}
             <Forms isOpen={showForm} onClose={()=>setShowForm(false)} id="create-chapter" onSubmit={(e)=>onSubmit(e, `http://localhost:5000/api/books/${props.BookId}/chapters`)}>
                 <Forms.Input type="text" name="name" placeholder="Name:" required/>
-                <Forms.Input type="switch" name="status" lists={[props.BookId]} required/>
+                <Forms.Input type="switch" name="status" required/>
             </Forms>
         </>
     )   

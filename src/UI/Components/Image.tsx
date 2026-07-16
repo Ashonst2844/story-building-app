@@ -43,7 +43,7 @@ function Image(props: ImageProps) {
     ) : props.type === "icon" ? (
         <img loading="lazy" src={`/Images/Icons/${props.name}.svg`} style={{width:"100%", ...props.style}} alt={props.name} className={props.className}/>
     ) : (
-        <img loading="lazy" src={props.src} alt={props.name} style={props.style} onClick={props.onClick}/>
+        <img loading="lazy" src={props.src} alt={props.name} style={props.style} onClick={props.onClick} className={props.className}/>
     )
 }
 export default Image;

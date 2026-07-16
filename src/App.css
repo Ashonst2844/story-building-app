@@ -1,12 +1,3 @@
-/** Animations */
-@keyframes loading {
-  0% {
-    width: 0%;
-  } 100% {
-    width: 100%;
-  }
-}
-
 /** Main */
 #main {
   width: 100vw;
@@ -153,10 +144,9 @@
   box-shadow: var(--shadow);
   width: 30%;
   height: 50%;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 100%;
   gap: var(--spacing);
-  display: flex;
-  flex-wrap: wrap;
   overflow: scroll;
   padding: var(--spacing);
 }
@@ -201,13 +191,29 @@
   margin: 0 0 calc(var(--spacing)/2);
 }
 
-.chapter-list {
-  min-width: 20%;
-  height: 20%;
-}
-.chapter-box {
+/** Chapters */
+
+/** Badges */
+.badge-group {
+  width: 100%;
+  height: auto;
   display: flex;
-  justify-content: center;
-  padding: var(--spacing);
-  gap: var(--spacing);
+  gap: calc(var(--spacing)/2);
+  margin: var(--spacing) 0;
+}
+.badges {
+  width: auto;
+  height: 40px;
+  padding: calc(var(--spacing)/4) calc(var(--spacing)/2);
+  background-color: var(--accent);
+  border-radius: 20px;
+}
+.badges:hover {
+  scale: 1.1;
+  filter: brightness(115%);
+  box-shadow: var(--shadow);
+}
+.badges * {
+  color: black;
+  font-weight: 500;
 }

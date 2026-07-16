@@ -4,7 +4,7 @@ import React from "react";
 
 interface InputProps {
     //MainProperty
-    type:"text"|"number"|"list"|"textarea"|"file";
+    type:"text"|"number"|"list"|"textarea"|"file"|"switch";
     required:boolean;
     placeholder?:string;
     name:string
@@ -36,6 +36,13 @@ function Input({type,required,placeholder,name,lists,onChange,onFileChange}:Inpu
         return(
             <textarea name={name} placeholder={placeholder} required={required}/>
         )
+    } else if(type==="switch"){
+        return(
+            <>
+                <input style={{display:"none"}} type="checkbox" name={name} id={name}/>
+                <label className="switch" htmlFor={name} title={name.toUpperCase()}></label>
+            </>
+        )
     }
     return(
         <input min={0} type={type} name={name} placeholder={placeholder} accept="image/*" required={required} onChange={
@@ -54,7 +61,7 @@ function Forms({id,onSubmit,onClose,isOpen,children}:FormProps) {
     return (
         <>
             {isOpen &&
-                <div id={`${id}-form`} className="float-page center" style={{flexDirection:"column"}}>
+                <div id={`${id}-form`} className="float-page center" style={{flexDirection:"column",zIndex:"2000"}}>
                     <h2>{id.toUpperCase()}</h2>
                     <form onSubmit={onSubmit} method="post" className="center form-container">
                         {children}

@@ -76,7 +76,7 @@ function Cards(props: CardsProps) {
                 </>
             ) : props.use==="books" ? (
                 <>
-                    <Image type="normal" name={props.cover ?? ""} src={props.cover ? `Images/Cover/${props.cover}` : ""} style={{
+                    <Image className="cover" type="normal" name={props.cover ?? ""} src={props.cover ? `Images/Cover/${props.cover}` : ""} style={{
                         width:"100%",
                         margin:"auto"
                     }} onClick={()=>setState(true)}/>

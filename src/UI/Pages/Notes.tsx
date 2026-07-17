@@ -37,7 +37,7 @@ function Notes() {
                 <h2 className="page-header" >ADMIN NOTES</h2>
                 <div id="note-container" className="accordion-container">
                     {(notes ?? []).map((note,index)=>(
-                        <Accordion key={index} use="notes" head={note.head} body={note.body}/>
+                        <Accordion key={index} head={note.head} body={note.body}/>
                     ))}
                     {isAdmin && (
                         <div className="button-group">

@@ -65,6 +65,9 @@ h2 {
   text-decoration: underline var(--accent);
   text-align: center;
 }
+p {
+  opacity: 0.75;
+}
 
 /** PAGING */
 .full-page {

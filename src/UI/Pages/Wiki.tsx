@@ -11,14 +11,13 @@ import { useState } from "react"
 
 interface WikiProps {
     head:string;
-    type:"list"|"desc"
     body:string;
 }
 
 function Wiki() {
     const isAdmin = import.meta.env.DEV
     const [showForm, setShowForm] = useState<boolean>(false)
-    const {onSubmit} = useForm(["head","type","body"])
+    const {onSubmit} = useForm(["head","body"])
 
     const {data:wikis, loading, error} = useFetch<WikiProps>("wikis",false)
     if(loading){
@@ -31,7 +30,7 @@ function Wiki() {
             <h2 className="page-header">SINS SAGA WIKI / ENCYCLOPEDIA</h2>
             <div id="wiki-container" className="accordion-container">
                 {(wikis ?? []).map((wiki,index)=>(
-                    <Accordion key={index} use="wiki" type={wiki.type} head={wiki.head} body={wiki.body}/>
+                    <Accordion key={index} head={wiki.head} body={wiki.body}/>
                 ))}
                 {isAdmin && (
                     <div className="button-group">
@@ -45,7 +44,6 @@ function Wiki() {
             </div>
             <Forms isOpen={showForm} onClose={()=>setShowForm(false)} id="create-wikis" onSubmit={(e)=>onSubmit(e, "http://localhost:5000/api/wikis")}>
                 <Forms.Input type="text" name="title" placeholder="Title:" required/>
-                <Forms.Input type="list" name="title" placeholder="Title:" lists={["desc","list"]} required/>
                 <Forms.Input type="textarea" name="content" placeholder="Content:" required/>
             </Forms>
         </div>

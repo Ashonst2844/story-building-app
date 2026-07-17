@@ -61,7 +61,7 @@ function Modals(props: ModalsProps) {
                                     ))}
                                 </div>
                                 <p style={{textAlign:"justify", margin:"var(--spacing) 0"}}>{`"${props.synopsys ?? ""}"`}</p>
-                                <Button type="link" w="100%" theme="primary" url={props.url ?? ""}>Read This Book!</Button>
+                                <Button type="link" w="100%" h="80px" theme="primary" url={props.url ?? ""}>Read This Book!</Button>
                             </>
                         ) : ""}
                     </div>

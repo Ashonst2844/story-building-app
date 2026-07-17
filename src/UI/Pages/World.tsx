@@ -22,7 +22,7 @@ interface CountryProps {
 }
 
 function World() {
-    const {data:worlds, loading, error} = useFetch<WorldProps>("worlds", false);
+    const {data:worlds, loading, error} = useFetch<WorldProps>("timelines", false);
     console.log(worlds)
     
     if(loading) {

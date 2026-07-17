@@ -171,7 +171,7 @@
   gap: var(--spacing);
   overflow-y: scroll;
 }
-.accordion {
+.accordions {
   width: 100%;
   height: auto;
   background-color: var(--primary);
@@ -184,14 +184,6 @@
   align-items: center;
   justify-content: space-between;
 }
-.accordion-head p {
-  font-size: 1.5rem;
-}
-.accordion-body ul li {
-  margin: 0 0 calc(var(--spacing)/2);
-}
-
-/** Chapters */
 
 /** Badges */
 .badge-group {
@@ -199,7 +191,7 @@
   height: auto;
   display: flex;
   gap: calc(var(--spacing)/2);
-  margin: var(--spacing) 0;
+  margin: calc(var(--spacing)/2);
 }
 .badges {
   width: auto;

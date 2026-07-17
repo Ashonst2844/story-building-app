@@ -6,6 +6,25 @@
     width: 100%;
   }
 }
+@keyframes glowing-text {
+  0% {
+    text-shadow: none;
+  } 50% {
+    text-shadow: 0 0 20px var(--accent);
+  } 100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes glowing-box {
+  0% {
+    box-shadow: none;
+  } 50% {
+    box-shadow: 0 0 20px var(--accent);
+  } 100% {
+    box-shadow: none;
+  }
+}
 
 /** FONT FAMILY */
 @font-face {
@@ -54,7 +73,14 @@
 body {
   width: 100vw;
 }
-
+#main-title {
+  font: 3rem "BlackLetters";
+  color: var(--accent);
+  display: inline-block;
+  will-change: transform, text-shadow;
+  white-space: nowrap;
+  animation: infinite glowing-text 2s ease-out
+}
 h1 {
   font-size: 3rem;
   margin: calc(var(--spacing)*2) 0;
@@ -145,7 +171,7 @@ input[type="checkbox"]:checked + .switch {
   text-align: center;
 }
 .maps {
-  transition: var(--spacing);
+  transition: var(--transition);
   display: inline-block;
   vertical-align: center;
   max-width: none;

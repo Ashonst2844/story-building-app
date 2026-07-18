@@ -22,7 +22,7 @@ function Timeline() {
         return <Error message={error.message}/>
     }
     return(
-        <div id="timeline" className="full-page pages center">
+        <section id="timeline" className="center">
             <div id="timeline-button-container">
                 {(timelines ?? []).map((time)=>(
                     <Button link={`/timeline/`+time.TimeId.toString()} key={time.TimeId} type="link" w="100%" h="150px" forNav>
@@ -51,7 +51,7 @@ function Timeline() {
                     ))}
                 </ReactDOM.Routes>
             </div>
-        </div>
+        </section>
     )
 }
 export default Timeline

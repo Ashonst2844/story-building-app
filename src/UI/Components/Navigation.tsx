@@ -15,7 +15,7 @@ function Navigation() {
     const isAdmin = import.meta.env.DEV
 
     return(
-        <div id="nav">
+        <nav>
             <h2>THE SINS UNIVERSE</h2>
             <div id="nav-container">
                 {content.map((page, index) => {
@@ -32,7 +32,7 @@ function Navigation() {
                     } 
                 })}
             </div>
-        </div>
+        </nav>
     )
 }
 export default Navigation

@@ -45,7 +45,7 @@ function Library() {
         return <Error message={error.message}/>
     }
     return(
-        <div id="library" className="full-page pages">
+        <section id="library">
             <Heading use="books" value={searchQ} 
             onChange={(e)=>setSearchQ(e.target.value)} 
             onSubmit={(e)=>{
@@ -81,7 +81,7 @@ function Library() {
                 <Forms.Input type="textarea" name="synopsys" placeholder="Synopsys :" required/>
                 <Forms.Input type="file" name="cover" onFileChange={(image)=>setImage(image)} required/>
             </Forms>
-        </div>
+        </section>
     )
 }
 export default Library;

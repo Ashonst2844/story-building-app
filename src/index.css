@@ -73,6 +73,18 @@
 body {
   width: 100vw;
 }
+main {
+  width: 100vw;
+  height: 100vh;
+}
+section {
+  width: 100%;
+  height: 100%;
+  padding: var(--spacing);
+}
+header {
+  height: 20%;
+}
 #main-title {
   font: 3rem "BlackLetters";
   color: var(--accent);
@@ -96,10 +108,6 @@ p {
 }
 
 /** PAGING */
-.full-page {
-  width: 100%;
-  height: 100%;
-}
 .float-page {
   width: 100vw;
   height: 100vh;
@@ -107,12 +115,6 @@ p {
   top: 0;
   left: 0;
   background-color: rgba(0,0,0,0.8);
-}
-.pages {
-  padding: var(--spacing);
-}
-.header {
-  height: 20%;
 }
 .center {
   display: flex;

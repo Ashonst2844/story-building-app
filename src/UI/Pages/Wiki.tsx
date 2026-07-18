@@ -26,7 +26,7 @@ function Wiki() {
         return <Error message={error.message}/>
     }
     return(
-        <div id="wiki" className="full-page pages">
+        <section id="wiki">
             <h2 className="page-header">SINS SAGA WIKI / ENCYCLOPEDIA</h2>
             <div id="wiki-container" className="accordion-container">
                 {(wikis ?? []).map((wiki,index)=>(
@@ -46,7 +46,7 @@ function Wiki() {
                 <Forms.Input type="text" name="title" placeholder="Title:" required/>
                 <Forms.Input type="textarea" name="content" placeholder="Content:" required/>
             </Forms>
-        </div>
+        </section>
     )
 }
 export default Wiki

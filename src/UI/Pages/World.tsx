@@ -30,7 +30,7 @@ function World() {
     } else if(error) {
         return <Error message={error.message}/>
     }
-    return <div id="world" className="full-page pages">
+    return <section id="world">
         <div id="world-tab" className="tab-group center">
             {worlds?.map((world, i)=> (
                 <Button link={`/world/`+world.era.toString()} key={i} theme="primary" type="link" w="130px" h="100%">{world.era}</Button>
@@ -81,6 +81,6 @@ function World() {
                 }/>
             ))}
         </ReactDOM.Routes>
-    </div>
+    </section>
 }
 export default World;

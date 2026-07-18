@@ -12,7 +12,7 @@ import * as ReactDOM from "react-router-dom"
 function Main() {
 
     return(
-        <div id="main" className="center">
+        <main className="center">
             <Navigation/>
             <div id="page">
                 <ReactDOM.Routes>
@@ -25,7 +25,7 @@ function Main() {
                     <ReactDOM.Route path="notes" element={<Notes/>}/>
                 </ReactDOM.Routes>
             </div>
-        </div>
+        </main>
     )
 }
 export default Main;

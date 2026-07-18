@@ -36,7 +36,7 @@ function Characters() {
         return <Error message={error.message}/>
     }
     return(
-        <div id="characters" className="full-page pages">
+        <section id="characters">
             <Heading use="character" value={searchQ} 
             onChange={(e)=>setSearchQ(e.target.value)} 
             onSubmit={(e)=>{
@@ -70,7 +70,7 @@ function Characters() {
                 <Forms.Input type="list" name="faction" lists={["good","neutral","evil"]} required/>
                 <Forms.Input type="textarea" name="bio" placeholder="Biograph:" required/>
             </Forms>
-        </div>
+        </section>
     )
 }
 export default Characters;

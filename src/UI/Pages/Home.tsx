@@ -3,7 +3,7 @@ import Image from "../Components/Image";
 
 function Home() {
     return(
-        <div id="home" className="full-page pages center" style={{flexDirection:"column"}}>
+        <section id="home" className="center" style={{flexDirection:"column"}}>
             <h1 id="main-title" >THE SINS SAGA</h1>
             <p style={{fontStyle:"italic", textAlign:"center"}}>"Tujuh dosa, Tujuh manusia, dan tujuh kisah tragis dalam dunia fantasi <br /> yang dibungkus dengan kelam nya moralitas manusia."</p>
             <p style={{margin:"calc(var(--spacing)*2) 0", color:"var(--accent)", fontWeight:"600"}}>- Masagus Ahmad Ramadhan -</p>
@@ -18,7 +18,7 @@ function Home() {
                     }}/>
                 </Button>
             </div>
-        </div>
+        </section>
     )
 }
 export default Home;

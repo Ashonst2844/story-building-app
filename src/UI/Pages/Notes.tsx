@@ -33,7 +33,7 @@ function Notes() {
                     <h1>Developers Only!</h1>
                 </div>
             )}
-            <div id="notes" className="full-page pages" style={{display:isAdmin?"block":"none"}}>
+            <section id="notes" style={{display:isAdmin?"block":"none"}}>
                 <h2 className="page-header" >ADMIN NOTES</h2>
                 <div id="note-container" className="accordion-container">
                     {(notes ?? []).map((note,index)=>(
@@ -49,7 +49,7 @@ function Notes() {
                         </div>
                     )}
                 </div>
-            </div>
+            </section>
             <Forms isOpen={showForm} onClose={()=>setShowForm(false)} id="create-notes" onSubmit={(e)=>onSubmit(e, "http://localhost:5000/api/notes")}>
                 <Forms.Input type="text" name="title" placeholder="Title:" required/>
                 <Forms.Input type="textarea" name="content" placeholder="Content:" required/>

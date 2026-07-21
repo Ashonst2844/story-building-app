@@ -209,8 +209,8 @@
       {
         "TimeId": "4",
         "title": "Era Revolusi",
-        "description": "Setelah tahta salah satu kerajaan di suatu negara diduduki oleh seorang tirani, seluruh dunia menjadi kacau dengan segala kebijakannya, dia mempengaruhi semua kerajaan yang lain sehingga menjadi sama seperti dirinya. Kekacauan besar sering terjadi dimana-mana, Sangat lelah ditindas dan di adu domba oleh para penguasa, akhirnya mereka bersatu untuk menggulingkan semua raja, dan merombak total sistem pemerintahannya, hal ini juga didampingi dengan kemajuan teknologi mereka, karena salah satu fondasi utama teknologi kini sudah ditemukan, yaitu listrik.",
         "era": "1600-2000",
+        "description": "Setelah tahta salah satu kerajaan di suatu negara diduduki oleh seorang tirani, seluruh dunia menjadi kacau dengan segala kebijakannya, dia mempengaruhi semua kerajaan yang lain sehingga menjadi sama seperti dirinya. Kekacauan besar sering terjadi dimana-mana, Sangat lelah ditindas dan di adu domba oleh para penguasa, akhirnya mereka bersatu untuk menggulingkan semua raja, dan merombak total sistem pemerintahannya, hal ini juga didampingi dengan kemajuan teknologi mereka, karena salah satu fondasi utama teknologi kini sudah ditemukan, yaitu listrik.",
         "related_novel": [],
         "map": []
       },
@@ -219,7 +219,6 @@
         "title": "Era Modern",
         "era": "2000-2300",
         "description": "Sistem pemerintahan zaman ini sudah sangat rapi dan terstruktur, dan zaman juga sudah maju, listrik dan internet sudah menjadi salah satu kebutuhan pokok manusia saat ini, kemajuan teknologi sedang menjadi fokus utama untuk dikembangkan. Ini adalah zaman dimana sedikit sekali orang tidak mampu, bahkan hampir tidak ada.",
-        "time_range": "2000 - 2300",
         "related_novel": [],
         "map": []
       },

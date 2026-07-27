@@ -6,7 +6,7 @@ import { useFetch } from "../../assets/hooks/useFetch"
 import * as ReactDOM from "react-router-dom"
 
 interface TimelineProps {
-    TimeId:string;
+    TimeId:number;
     title:string;
     description:string;
     era:string;

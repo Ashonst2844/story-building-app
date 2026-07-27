@@ -43,8 +43,8 @@ function Wiki() {
                 )}
             </div>
             <Forms isOpen={showForm} onClose={()=>setShowForm(false)} id="create-wikis" onSubmit={(e)=>onSubmit(e, "http://localhost:5000/api/wikis")}>
-                <Forms.Input type="text" name="title" placeholder="Title:" required/>
-                <Forms.Input type="textarea" name="content" placeholder="Content:" required/>
+                <Forms.Input type="text" name="head" placeholder="Title:" required/>
+                <Forms.Input type="textarea" name="body" placeholder="Content:" required/>
             </Forms>
         </section>
     )

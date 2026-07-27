@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "./Button";
 
 interface ChapterListProps {
-    BookId: string;
+    BookId: number;
     index: number;
     name: string;
     status: boolean;
@@ -16,7 +16,7 @@ function ChapterList(props: ChapterListProps) {
         const nextState = !state;
 
         try {
-            const response = await fetch(`http://localhost:5000/api/books/${props.BookId}/chapters/${props.index}`, {
+            const response = await fetch(`http://localhost:5000/api/books/${props.BookId.toString()}/chapters/${props.index}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ status: nextState })

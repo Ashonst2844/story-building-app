@@ -25,7 +25,7 @@ interface ModalsProps{
     bio?:string;
 
     // Book Props
-    BookId?:string;
+    BookId?:number;
     title?:string;
     genres?:string[];
     synopsys?:string;
@@ -35,67 +35,60 @@ interface ModalsProps{
 
 function Modals(props: ModalsProps) {
     const isAdmin = import.meta.env.DEV
-    const {onSubmit} = useForm(["name","status"])
+    const {onSubmit} = useForm(["name"])
     const [showForm,setShowForm] = React.useState<boolean>(false)
-    return(
-        <>
-            {props.isOpen && (
-                <div className="modals center float-page">
-                    <div className={`modal-box center`}>
-                        {props.use==="characters" ? (
-                            <>
-                                <h2>{props.name}</h2>
-                                <div>
-                                    <p>Age: {props.age ?? "-"}</p>
-                                    <p>Gender: {props.gender ?? "-"}</p>
-                                    <p>Faction: {props.faction ?? "-"}</p>
-                                    <p>Description: {props.bio ?? "-"}</p>
-                                </div>
-                            </>
-                        ) : props.use==="books" ? (
-                            <>
-                                <h2>{props.title ?? ""}</h2>
-                                <div className="badge-group center">
-                                    {(props.genres ?? []).map((genre,index)=>(
-                                        <Badge key={index} name={genre}/>
-                                    ))}
-                                </div>
-                                <p style={{textAlign:"justify", margin:"var(--spacing) 0"}}>{`"${props.synopsys ?? ""}"`}</p>
-                                <Button type="link" w="100%" h="80px" theme="primary" url={props.url ?? ""}>Read This Book!</Button>
-                            </>
-                        ) : ""}
-                    </div>
-                    {props.use==="books" && (
-                        <div className="second-modal-box">
-                            <>
-                                {(props.chapters ?? []).map((chap,index)=>{
-                                    if(chap.status) {
-                                        return <ChapterList BookId={props.BookId ?? ""} index={index} name={chap.name} status={chap.status}/>
-                                    } else if(isAdmin) {
-                                        return(
-                                            <>
-                                                <ChapterList BookId={props.BookId ?? ""} index={index} name={chap.name} status={chap.status}/>
-                                            </>
-                                        )
-                                    }
-                                    return null;
-                                })}
-                                {isAdmin && (
-                                    <Button type="button" h="80px" theme="secondary" onClick={()=>setShowForm(true)}>
-                                        <Image type="icon" name="plus" style={{width:"25%"}}/>
-                                    </Button>
-                                )}
-                            </>
-                        </div>
-                    )}
-                    <Button onClick={props.onClose} type="back-button" theme="primary" w="60px" posX="20px" posY="20px"/>
+    return <>
+        {props.isOpen && <div className="modals center float-page">
+                <div className={`modal-box center`}>
+                    {props.use==="characters" ? (
+                        <>
+                            <h2>{props.name}</h2>
+                            <div>
+                                <p>Age: {props.age ?? "-"}</p>
+                                <p>Gender: {props.gender ?? "-"}</p>
+                                <p>Faction: {props.faction ?? "-"}</p>
+                                <p>Description: {props.bio ?? "-"}</p>
+                            </div>
+                        </>
+                    ) : props.use==="books" ? (
+                        <>
+                            <h2>{props.title ?? ""}</h2>
+                            <div className="badge-group center">
+                                {(props.genres ?? []).map((genre,index)=>(
+                                    <Badge key={index} name={genre}/>
+                                ))}
+                            </div>
+                            <p style={{textAlign:"justify", margin:"var(--spacing) 0"}}>{`"${props.synopsys ?? ""}"`}</p>
+                            <Button type="link" w="100%" h="80px" theme="primary" url={props.url ?? ""}>Read This Book!</Button>
+                        </>
+                    ) : ""}
                 </div>
-            )}
-            <Forms isOpen={showForm} onClose={()=>setShowForm(false)} id="create-chapter" onSubmit={(e)=>onSubmit(e, `http://localhost:5000/api/books/${props.BookId}/chapters`)}>
-                <Forms.Input type="text" name="name" placeholder="Name:" required/>
-                <Forms.Input type="switch" name="status" required/>
-            </Forms>
-        </>
-    )   
+            {props.use==="books" && <div className="second-modal-box">
+                <>
+                    {(props.chapters ?? []).map((chap,index)=>{
+                        if(chap.status) {
+                            return <ChapterList BookId={props.BookId ?? null} index={index} name={chap.name} status={chap.status}/>
+                        } else if(isAdmin) {
+                            return(
+                                <>
+                                    <ChapterList BookId={props.BookId ?? null} index={index} name={chap.name} status={chap.status}/>
+                                </>
+                            )
+                        }
+                        return null;
+                    })}
+                    {isAdmin && props.BookId && (
+                        <Button type="button" h="80px" theme="secondary" onClick={()=>setShowForm(true)}>
+                            <Image type="icon" name="plus" style={{width:"25%"}}/>
+                        </Button>
+                    )}
+                </>
+            </div>}
+            <Button onClick={props.onClose} type="back-button" theme="primary" w="60px" posX="20px" posY="20px"/>
+        </div>}
+        {props.BookId && <Forms isOpen={showForm} onClose={()=>setShowForm(false)} id="create-chapter" onSubmit={(e)=>onSubmit(e, `http://localhost:5000/api/books/${props.BookId.toString()}/chapters`)}>
+            <Forms.Input type="text" name="name" placeholder="Name:" required/>
+        </Forms>}
+    </>
 }
 export default Modals;

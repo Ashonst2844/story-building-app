@@ -18,10 +18,10 @@ app.use(express.json());
 app.use('/upload', express.static(uploadPath));
 
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => cb(null, uploadPath),
-  filename: (req, file, cb) => {
+    destination: (req, file, cb) => cb(null, uploadPath),
+    filename: (req, file, cb) => {
     cb(null, Date.now() + '-' + file.originalname);
-  }
+    }
 });
 const upload = multer({ storage });
 
@@ -38,8 +38,8 @@ const writeAPI = (data) => {
 
 // UPLOAD FILE
 app.post('/api/upload', upload.single('image'), (req, res) => {
-  const fileUrl = req.file ? `http://localhost:${PORT}/upload/${req.file.filename}` : ""
-  res.status(200).json({ message: 'Sukses!', url: fileUrl });
+    const fileUrl = req.file ? `http://localhost:${PORT}/upload/${req.file.filename}` : ""
+    res.status(200).json({ message: 'Sukses!', url: fileUrl });
 });
 
 // READ CHARACTERS
@@ -76,7 +76,7 @@ app.get('/api/timelines', (req, res) => {
 app.post('/api/characters', (req, res) => {
     const db = readAPI();
     const newCharacter = {
-        CharId: Date.now().toString(),
+        CharId: Date.now(),
         ...req.body
     };
     
@@ -132,13 +132,19 @@ app.post('/api/notes', (req, res) => {
 app.post('/api/books/:BookId/chapters', (req, res) => {
     const db = readAPI();
     const { BookId } = req.params;
-    const book = db.result.books.find(b => b.BookId && b.BookId === BookId);
+    const bookId = Number(BookId);
+    
+    if (isNaN(bookId)) {
+        return res.status(400).json({ message: 'Invalid Book ID!' });
+    }
+    
+    const book = db.result.books.find(b => b.BookId && b.BookId === bookId);
 
     if (!book) {
         return res.status(404).json({ message: 'Book Not Found!' });
     }
 
-    const newChapter = { ...req.body };
+    const newChapter = { ...req.body, status: false };
     if (!Array.isArray(book.chapters)) book.chapters = [];
     book.chapters.push(newChapter);
     writeAPI(db);
@@ -150,7 +156,13 @@ app.post('/api/books/:BookId/chapters', (req, res) => {
 app.put('/api/books/:BookId/chapters/:chapterIndex', (req, res) => {
     const db = readAPI();
     const { BookId, chapterIndex } = req.params;
-    const book = db.result.books.find(b => b.BookId && b.BookId === BookId);
+    const bookId = Number(BookId);
+    
+    if (isNaN(bookId)) {
+        return res.status(400).json({ message: 'Invalid Book ID!' });
+    }
+    
+    const book = db.result.books.find(b => b.BookId && b.BookId === bookId);
 
     if (!book) {
         return res.status(404).json({ message: 'Book Not Found!' });

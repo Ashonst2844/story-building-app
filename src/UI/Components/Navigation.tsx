@@ -16,17 +16,17 @@ function Navigation() {
 
     return(
         <nav>
-            <h2>THE SINS UNIVERSE</h2>
+            <h2 className="desktop-mode">THE SINS UNIVERSE</h2>
             <div id="nav-container">
                 {content.map((page, index) => {
                     if(page.type==="all") {
                         return <Button key={index} theme="primary" type="link" link={`/${page.path}`}>
-                            <Image className="phone-mode" style={{width:"25%"}} type="icon" name={page.title.replace(/\s+/g, "")}/>
+                        <Image className="phone-mode" style={{width:"25%"}} type="icon" name={page.title.replace(/\s+/g, "")}/>
                             <p style={{color:"var(--primary)"}} className="desktop-mode">{page.title.toUpperCase()}</p>
                         </Button>
                     } else if(isAdmin) { 
                         return <Button key={index} theme="primary" type="link" link={`/${page.path}`}>
-                            <Image className="phone-mode" style={{width:"25%"}} type="icon" name={page.title.replace(/\s+/g, "")}/>
+                        <Image className="phone-mode" style={{width:"25%"}} type="icon" name={page.title.replace(/\s+/g, "")}/>
                             <p style={{color:"var(--primary)"}} className="desktop-mode">{page.title.toUpperCase()}</p>
                         </Button>
                     } 

@@ -51,8 +51,8 @@ function Notes() {
                 </div>
             </section>
             <Forms isOpen={showForm} onClose={()=>setShowForm(false)} id="create-notes" onSubmit={(e)=>onSubmit(e, "http://localhost:5000/api/notes")}>
-                <Forms.Input type="text" name="title" placeholder="Title:" required/>
-                <Forms.Input type="textarea" name="content" placeholder="Content:" required/>
+                <Forms.Input type="text" name="head" placeholder="Title:" required/>
+                <Forms.Input type="textarea" name="body" placeholder="Content:" required/>
             </Forms>
         </>
     )

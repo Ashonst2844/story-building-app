@@ -23,7 +23,7 @@ interface FormProps {
     children:React.ReactNode;
 }
 
-function Input({type,required,placeholder,name,lists,onChange,onFileChange}:InputProps) {      
+function Input({type,required,placeholder,name,lists,onChange,onFileChange}:InputProps) {
     if(type==="list") {
         return(
             <select name={name} required={required}>

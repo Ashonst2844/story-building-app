@@ -14,14 +14,14 @@ interface CardsProps {
     use: "characters"|"books";
     onClick?:()=>void;
     //Character Props
-    CharId?:string;
+    CharId?:number;
     name?:string;
     age?:number;
     gender?:string;
     faction?:string;
     bio?:string;
     //Book Props
-    BookId?:string;
+    BookId?:number;
     cover?:string;
     link?:string;
     title?:string;

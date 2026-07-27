@@ -12,7 +12,7 @@ import { useForm } from "../../assets/hooks/useForm"
 import React from "react";
 
 interface CharactersProps {
-    CharId:string;
+    CharId:number;
     name:string;
     age:number;
     gender:"male"|"female";

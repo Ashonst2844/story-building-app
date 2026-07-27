@@ -1,5 +1,5 @@
 /* ? TABLET */
-@media (max-width:1023px) {
+@media (max-width:1024px) {
     .phone-mode {
         display: block;
     }
@@ -9,7 +9,7 @@
     .full-page {
         height: calc(100% - 60px);
     }
-    #nav {
+    nav {
         position: fixed;
         bottom: 0;
         left: 0;
@@ -18,7 +18,7 @@
         padding: 0 !important;
         z-index: 500;
     }
-    #nav h2 {
+    nav h2 {
         display: none;
     }
     #nav-container {

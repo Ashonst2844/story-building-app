@@ -17,7 +17,7 @@ interface ChapterProps {
 }
 
 interface BooksProps {
-    BookId:string;
+    BookId:number;
     title:string;
     cover:string;
     link:string;

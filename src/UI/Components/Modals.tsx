@@ -86,7 +86,7 @@ function Modals(props: ModalsProps) {
             </div>}
             <Button onClick={props.onClose} type="back-button" theme="primary" w="60px" posX="20px" posY="20px"/>
         </div>}
-        {props?.BookId && <Forms isOpen={showForm} onClose={()=>setShowForm(false)} id="create-chapter" onSubmit={(e)=>onSubmit(e, `http://localhost:5000/api/books/${props.BookId.toString()}/chapters`)}>
+        {props.BookId!=undefined && <Forms isOpen={showForm} onClose={()=>setShowForm(false)} id="create-chapter" onSubmit={(e)=>onSubmit(e, `http://localhost:5000/api/books/${props.BookId.toString()}/chapters`)}>
             <Forms.Input type="text" name="name" placeholder="Name:" required/>
         </Forms>}
     </>

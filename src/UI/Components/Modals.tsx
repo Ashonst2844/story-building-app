@@ -67,11 +67,11 @@ function Modals(props: ModalsProps) {
                 <>
                     {(props.chapters ?? []).map((chap,index)=>{
                         if(chap.status) {
-                            return <ChapterList BookId={props.BookId} index={index} name={chap.name} status={chap.status}/>
+                            return <ChapterList BookId={props.BookId || NaN } index={index} name={chap.name} status={chap.status}/>
                         } else if(isAdmin) {
                             return(
                                 <>
-                                    <ChapterList BookId={props.BookId} index={index} name={chap.name} status={chap.status}/>
+                                    <ChapterList BookId={props.BookId || NaN} index={index} name={chap.name} status={chap.status}/>
                                 </>
                             )
                         }
@@ -86,7 +86,7 @@ function Modals(props: ModalsProps) {
             </div>}
             <Button onClick={props.onClose} type="back-button" theme="primary" w="60px" posX="20px" posY="20px"/>
         </div>}
-        {props.BookId || props.BookId != undefined && <Forms isOpen={showForm} onClose={()=>setShowForm(false)} id="create-chapter" onSubmit={(e)=>onSubmit(e, `http://localhost:5000/api/books/${props.BookId.toString()}/chapters`)}>
+        {props?.BookId && <Forms isOpen={showForm} onClose={()=>setShowForm(false)} id="create-chapter" onSubmit={(e)=>onSubmit(e, `http://localhost:5000/api/books/${props.BookId.toString()}/chapters`)}>
             <Forms.Input type="text" name="name" placeholder="Name:" required/>
         </Forms>}
     </>

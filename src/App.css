@@ -143,9 +143,7 @@ nav {
   height: 50%;
   display: grid;
   grid-template-columns: repeat(2, 50%);
-  gap: var(--spacing);
   overflow: scroll;
-  padding: var(--spacing);
 }
 
 /** Forms */

@@ -37,11 +37,13 @@ function Modals(props: ModalsProps) {
     const isAdmin = import.meta.env.DEV
     const {onSubmit} = useForm(["name"])
     const [showForm,setShowForm] = React.useState<boolean>(false)
+    const isOpen = props.isOpen
     const bookId = props.BookId
     const hasBookId = bookId != null
     return <> 
-        {props.isOpen && <div className="modals center float-page">
+        {isOpen && <div className="modals center float-page">
             <div className={`modal-box center`}>
+            <Button type="back-button" w="60px" onClick={props.onClose} posX="20px" posY="20px"></Button>
                 {props.use==="characters" ? <>
                         <h2>{props.name}</h2>
                         <div>
@@ -63,23 +65,23 @@ function Modals(props: ModalsProps) {
                     </>
                 :""}
             </div>
-        </div>}
-        {props.use==="books" && hasBookId && <div className="second-modal-box">
-            <>
-                {(props.chapters ?? []).map((chap,index)=>{
-                    if(chap.status) {
-                        return <ChapterList BookId={bookId!} index={index} name={chap.name} status={chap.status}/>
-                    } else if(isAdmin) {
-                        return <ChapterList BookId={bookId!} index={index} name={chap.name} status={chap.status}/>
-                    }
-                    return null;
-                })}
-                {isAdmin && (
-                    <Button type="button" h="80px" theme="secondary" onClick={()=>setShowForm(true)}>
-                        <Image type="icon" name="plus" style={{width:"25%"}}/>
-                    </Button>
-                )}
-            </>
+            {props.use==="books" && hasBookId && <div className="second-modal-box">
+                <>
+                    {(props.chapters ?? []).map((chap,index)=>{
+                        if(chap.status) {
+                            return <ChapterList BookId={bookId!} index={index} name={chap.name} status={chap.status}/>
+                        } else if(isAdmin) {
+                            return <ChapterList BookId={bookId!} index={index} name={chap.name} status={chap.status}/>
+                        }
+                        return null;
+                    })}
+                    {isAdmin && (
+                        <Button type="button" h="80px" theme="secondary" onClick={()=>setShowForm(true)}>
+                            <Image type="icon" name="plus" style={{width:"25%"}}/>
+                        </Button>
+                    )}
+                </>
+            </div>}
         </div>}
         {hasBookId && <Forms isOpen={showForm} onClose={()=>setShowForm(false)} id="create-chapter" onSubmit={(e)=>onSubmit(e, `http://localhost:5000/api/books/${bookId!}/chapters`)}>
             <Forms.Input type="text" name="name" placeholder="Name:" required/>

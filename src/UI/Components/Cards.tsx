@@ -36,7 +36,7 @@ function Cards(props: CardsProps) {
 
     const handleDelete = async () => {
         const resource = props.use==="characters"?"characters":"books"
-        const id = props.use==="characters"?props.CharId.toString():props.BookId.toString()
+        const id = props.use==="characters"?props.CharId:props.BookId
         const name = props.use==="characters"?props.name:props.title
 
         if (window.confirm(`Delete "${name}"?`)) {

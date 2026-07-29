@@ -190,9 +190,15 @@ app.put('/api/books/:BookId/chapters/:chapterIndex', (req, res) => {
 app.delete('/api/characters/:CharId', (req, res) => {
     const db = readAPI();
     const { CharId } = req.params;
+    const characterId = Number(CharId);
+
+    if (Number.isNaN(characterId)) {
+        return res.status(400).json({ message: 'Invalid Character ID!' });
+    }
+
     const initialLength = db.result.characters.length;
 
-    db.result.characters = db.result.characters.filter(char => char.CharId !== CharId);
+    db.result.characters = db.result.characters.filter(char => char.CharId !== characterId);
 
     if (db.result.characters.length === initialLength) {
         return res.status(404).json({ message: 'Character Not Found!' });

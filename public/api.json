@@ -408,6 +408,14 @@
         "gender": "male",
         "faction": "evil",
         "bio": "Kakak Julien, Sangat sayang dengan adiknya, pedendam"
+      },
+      {
+        "CharId": 1785334960574,
+        "name": "Arthur",
+        "age": 35,
+        "gender": "male",
+        "faction": "good",
+        "bio": "Seorang yang menyimpan dendam kepada kerajaan, namun tak bisa berbuat banyak untuk membalaskannya, dia orang yang sangat cerdas, dan juga ramah"
       }
     ],
     "wikis": [

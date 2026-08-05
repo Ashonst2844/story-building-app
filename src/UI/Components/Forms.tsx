@@ -57,21 +57,14 @@ function Input({type,required,placeholder,name,lists,onChange,onFileChange}:Inpu
 }
 
 function Forms({id,onSubmit,onClose,isOpen,children}:FormProps) {
-
-    return (
-        <>
-            {isOpen &&
-                <div id={`${id}-form`} className="float-page center" style={{flexDirection:"column",zIndex:"2000"}}>
-                    <h2>{id.toUpperCase()}</h2>
-                    <form onSubmit={onSubmit} method="post" className="center form-container">
-                        {children}
-                        <Button type="submit" w="100%" theme="primary">Create</Button>
-                    </form>
-                    <Button onClick={onClose} type="back-button" theme="primary" w="60px" posX="20px" posY="20px"/>
-                </div>
-            }
-        </>
-    )
+    return isOpen && <div id={`${id}-form`} className="center w-screen h-screen absolute top-0 left-0 bg-black/75 z-30" style={{flexDirection:"column",zIndex:"2000"}}>
+        <h2 className="text-2xl">{id.toUpperCase()}</h2>
+        <form onSubmit={onSubmit} method="post" className="flex w-[90%] h-auto lg:w-[50%] bg-(--primary) p-4 z-40 flex-col gap-4" style={{zIndex:"2000"}} id={id}>
+            {children}
+            <Button type="submit" w="100%" h="64px" theme="primary">Create</Button>
+        </form>
+        <Button onClick={onClose} type="back-button" theme="primary" w="60px" posX="20px" posY="20px"/>
+    </div>
 }
 
 Forms.Input = Input;

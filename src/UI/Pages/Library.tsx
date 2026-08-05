@@ -33,9 +33,7 @@ function Library() {
 
     const {data:books, loading, error} = useFetch<BooksProps>("books", true);
 
-    const {onSubmit,uploadLoading} = useForm(["title","series","cover"], {
-        chapters:[]
-    })
+    const {onSubmit,uploadLoading} = useForm(["title","series","cover"], {chapters:[]})
     const [showForm,setShowForm] = React.useState(false)
     const [searchQ, setSearchQ] = React.useState("")
 
@@ -44,44 +42,35 @@ function Library() {
     } else if(error) {
         return <Error message={error.message}/>
     }
-    return(
-        <section id="library">
-            <Heading use="books" value={searchQ} 
-            onChange={(e)=>setSearchQ(e.target.value)} 
-            onSubmit={(e)=>{
-                e.preventDefault() 
-                setSearchQ(searchQ)
-            }} />
-            <div id="book-container" className="card-container">
-                {books?.map(book=>book.title.toLowerCase().startsWith(searchQ) && (
-                    <Cards key={book.BookId} use="books" 
-                    BookId={book.BookId}
-                    title={book.title} 
-                    cover={book.cover} 
-                    link={book.link} 
-                    genres={book.genres}
-                    synopsys={book.synopsys}
-                    chapters={book.chapters}/>
-                ))}
-                {isAdmin && (
-                    <div className="button-group">
-                        <Button onClick={()=>setShowForm(true)} type="button" theme="secondary">
-                            <Image type="icon" name="plus" style={{
-                                width:"50%"
-                            }}/>
-                        </Button>
-                    </div>
-                )}
-            </div>
-            <Forms isOpen={showForm} onClose={()=>setShowForm(false)} id="create-book" onSubmit={(e)=>onSubmit(e, "http://localhost:5000/api/books", image)}>
-                <Forms.Input type="text" name="title" placeholder="Title:" required/>
-                <Forms.Input type="number" name="series" placeholder="Series:" required/>
-                <Forms.Input type="text" name="link" placeholder="Link (https://www.wattpad.com/story/) :" required/>
-                <Forms.Input type="text" name="genres" placeholder="Genres (Separate With Commas (,)) :" required/>
-                <Forms.Input type="textarea" name="synopsys" placeholder="Synopsys :" required/>
-                <Forms.Input type="file" name="cover" onFileChange={(image)=>setImage(image)} required/>
-            </Forms>
-        </section>
-    )
+    return <section className="flex flex-col">
+        <Heading use="books" value={searchQ} 
+        onChange={(e)=>setSearchQ(e.target.value)} 
+        onSubmit={(e)=>{e.preventDefault(); setSearchQ(searchQ)}}/>
+        <div className="w-full grid grid-cols-2 overflow-y-scroll h-[80%] lg:grid-cols-5 gap-2 p-2">
+            {books?.map(book=>book.title.toLowerCase().startsWith(searchQ) && (
+                <Cards key={book.BookId} use="books" hasModal
+                BookId={book.BookId}
+                title={book.title} 
+                cover={book.cover} 
+                link={book.link} 
+                genres={book.genres}
+                synopsys={book.synopsys}
+                chapters={book.chapters}>
+                    <Image type="normal" name={book.cover ?? ""} src={book.cover ? `Images/Cover/${book.cover}` : ""} className="w-[calc(100%-1rem)] m-auto"/>
+                </Cards>
+            ))}
+            {isAdmin && <Button onClick={()=>setShowForm(true)} w="4rem" h="4rem" className="rounded-full absolute m-4 right-0 bottom-16 lg:bottom-0" type="button" theme="secondary">
+                <Image type="icon" name="plus" className="scale-50"/>
+            </Button>}
+        </div>
+        <Forms isOpen={showForm} onClose={()=>setShowForm(false)} id="create-book" onSubmit={(e)=>onSubmit(e, "http://localhost:5000/api/books", image)}>
+            <Forms.Input type="text" name="title" placeholder="Title:" required/>
+            <Forms.Input type="number" name="series" placeholder="Series:" required/>
+            <Forms.Input type="text" name="link" placeholder="Link (https://www.wattpad.com/story/) :" required/>
+            <Forms.Input type="text" name="genres" placeholder="Genres (Separate With Commas (,)) :" required/>
+            <Forms.Input type="textarea" name="synopsys" placeholder="Synopsys :" required/>
+            <Forms.Input type="file" name="cover" onFileChange={(image)=>setImage(image)} required/>
+        </Forms>
+    </section>
 }
 export default Library;

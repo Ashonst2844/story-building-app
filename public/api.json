@@ -299,11 +299,11 @@
           },
           {
             "name": "Bayangan Tuhan",
-            "status": false
+            "status": true
           },
           {
             "name": "Bertaruh Di Balik Bayangan",
-            "status": false
+            "status": true
           },
           {
             "name": "Penyusup Dalam Gelap",
@@ -323,6 +323,22 @@
           },
           {
             "name": "Terjun Menuju Kebebasan",
+            "status": false
+          },
+          {
+            "name": "Lunturnya Luka Lara",
+            "status": false
+          },
+          {
+            "name": "Mimpi Seorang Penjaga",
+            "status": false
+          },
+          {
+            "name": "Pertolongan Pertama",
+            "status": false
+          },
+          {
+            "name": "Menuju Rumah",
             "status": false
           }
         ]
@@ -465,6 +481,16 @@
         "NoteId": 1785076406129,
         "head": "Sacrifices Execution",
         "body": "1. Seseorang akan dikurung di penjara Orimburg untuk menghindari kecurigaan umum \n 2. lalu menunggu keputusan sang raja untuk dihukum mati \n 3. JIka hukum mati dia akan dibawa ke kamar di goa bawah tanah untuk dipesiapkan, seperti: \n - Menjahit mulutnya \n - Membutakan matanya \n - Dan membuat telinganya tuli \n Sebagai simbol kesengsaraan, rasa sakit, dan kehampaan \n 4. Orang itun akan di diamkan selama 3 hari diruangan itu \n 5. Lalu, setelah 3 hari, orang itu akan diseret ketempat ritual \n 6. Dan Terakhir, Raja harus memenggal kepala anak itu diatas mimbar pengorbanan \n 7. Maka Raja akan dijanjikan tahta, umur, dan kekuatas yang abadi"
+      },
+      {
+        "NoteId": 1785403682610,
+        "head": "Timeline untuk (Our Mother Arc)",
+        "body": "# Arc Our Mother \n 1. Dihutan Aarth dan Leill beranjak pergi,  mencari jalan keluar, karena mereka tersesat dan tak tahu berada dimana \n 2. Mereka bertahan hidup di hutan setidaknya selama dua hari \n 3. Prajurit kerajaan mencari Aarth dan Leill dihutan selama dua hari semenjak Aarth dan Leill kabur, namun mereka berhasil bersembunyi dan tidak ketahuan, hingga akhirnya prajurit membagi dua kelompok besar, satu masih mencari di hutan, dan yang yang satu lagi mencari di desa terdekat yaitu Vearland yang sekaligus merupakan kampung halaman Aarth dan Leill \n 4. Aarth dan Leill bertemu dengan paman yang membantunya di permainan catch the fox di festival, yaitu paman Arthur \n 5. Lalu Arthur mengantarkan Aarth dan Leill pulang, perjalanan cukup jauh, sekitar dua hari. \n 6. Di desa Vearland para prajurit mencari informasi tentang Aarth dan Leill bahkan menyandra ibu mereka yang tak berdaya dengan membunuh bos Aarth yang sedang menjaganya \n 7. Lalu saat Aarth dan Leill sudah kembali ke rumahnya, tetangganya bilang kalau ibu mereka sedang di sekap dan menginginkan Aarth dan Leill untuk datang menghadap sang raja untuk membebaskan ibunya \n 8. Aarth datang kembali ke Benteng Orimburg namun di saat Aarth dan Leill datang ibunya sudah dipersiapkan untuk menjadi tumbal untuk ritual sesat itu, matanya dibutakan, mulutnya dijahit dan telinganya di buat tuli"
+      },
+      {
+        "NoteId": 1785512617640,
+        "head": "Arthur Development (Spin-off)",
+        "body": "1. Dahulu, saat Arthur berumur sekitar 22 tahun, dia adalah seorang Ayah yang juga merupakan seorang prajurit yang loyal terhadap raja Marcus di kerajaan feyn. \n 2. Dia mempunyai seorang anak, yang tinggal di dalam Negara Feyn Kingdom, tempat istana pusat berdiri. \n 3. Saat anaknya yang masih sangat kecil sedang bermain-main di dalam istana menemani Arthur berkerja, tanpa sengaja dia bermain-main hingga masuk keruangan ritual Raja yang ada di dalam istana feyn. \n 4. Lalu raja marah dan mengurung dia ke penjara, dan Arthur dilarang untuk menemui anaknya, karena alasan keamanan. \n 5. Arthur sedih anaknya ditahan, apalagi dia tak bisa melihatnya entah sampai kapan \n 6. Raja bilang anaknya akan dihukum dengan cara dilatih dengan keras agar menjadi prajurit. \n 7. Namun ternyata anaknya malah dijadikan tumbal tanpa sepengetahuan Arthur. \n 8. Arthur terus menuntut untuk bertemu dengan anaknya, namun raja tetap melarang karena anaknya sudah mati. \n 9. Arthur mencoba membantah dengan cara menerobos masuk ke ruang penjara dengan diam-diam \n 10. Lalu ketahuan dan dia diusir dari negara feyn dan di putus gelarnya sebagai prajurit tanpa mengetahui bagaimana nasib anaknya. \n 11. Lalu Arthur bersembunyi di dalam hutan di desa vaerland sambil menyusun rencana dan waktu yang tepat untuk menggulingkan kerajaan, agar dapat bertemu dengan anak kesayangannya. \n 12. Hingga dia bertemu dengan Aarth dan Leill, Arthur masih belum mengetahui kebenaran tentang anaknya"
       }
     ]
   }

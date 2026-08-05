@@ -22,33 +22,27 @@ function Timeline() {
         return <Error message={error.message}/>
     }
     return(
-        <section id="timeline" className="center">
-            <div id="timeline-button-container">
-                {(timelines ?? []).map((time)=>(
-                    <Button link={`/timeline/`+time.TimeId.toString()} key={time.TimeId} type="link" w="100%" h="150px" forNav>
-                        <h3 style={{fontSize:"0.9rem", textAlign:"center"}}>{time.title}</h3>
-                        <p className="desktop-mode">{time.era}</p>
-                    </Button>
-                ))}
+        <section className="w-full h-full flex flex-col gap-2 overflow-scroll lg:flex-row lg:h-[calc(100%-64px)]">
+            <div className="flex flex-row w-full bg-(--primary) h-16 gap-2 lg:h-full lg:flex-col lg:p-2 lg:w-[30%] overflow-y-scroll">
+                {(timelines ?? []).map((time)=><Button link={`/timeline/`+time.TimeId.toString()} key={time.TimeId} type="link" className="h-auto flex flex-col min-w-[35%] lg:min-h-36 lg:w-full">
+                    <h3 className="desktop-mode">{time.title}</h3>
+                    <p>{time.era}</p>
+                </Button>)}
             </div>
-            <div id="timeline-content-container">
+            <div className="p-4 w-full lg:w-[70%]">
                 <ReactDOM.Routes>
-                    {(timelines ?? []).map((time)=>(
-                        <ReactDOM.Route key={time.TimeId} path={`/${time.TimeId}`} element={
-                            <div className="times-content">
-                                <h1>{time.title}</h1>
-                                <hr style={{border:"1px solid var(--accent)"}}/>
-                                <h3 style={{margin:"var(--spacing) 0"}}>{time.era}</h3>
-                                <p style={{textAlign:"justify"}}>{time.description}</p>
-                                <h3 style={{margin:"var(--spacing) 0"}}>Novel yang terkait:</h3>
-                                <ul>
-                                    {time.related_novel.map((novel, index) => (
-                                        <li key={index}>{novel}</li>
-                                    ))}
-                                </ul>
-                            </div>
-                        }/>
-                    ))}
+                    {(timelines ?? []).map((time)=><ReactDOM.Route key={time.TimeId} path={`/${time.TimeId}`} element={
+                        <div className="flex flex-col gap-4">
+                            <h1 className="text-3xl font-black">{time.title}</h1>
+                            <hr className="border-2 border-(--accent)"/>
+                            <h3 className="font-bold">{time.era}</h3>
+                            <p className="text-justify">{time.description}</p>
+                            <h3>Novel yang terkait:</h3>
+                            <ul>
+                                {time.related_novel.map((novel, index) => <li key={index}>{novel}</li>)}
+                            </ul>
+                        </div>
+                    }/>)}
                 </ReactDOM.Routes>
             </div>
         </section>

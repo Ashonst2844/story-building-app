@@ -35,33 +35,25 @@ function Characters() {
     } else if (error) {
         return <Error message={error.message}/>
     }
+
     return(
-        <section id="characters">
+        <section className="flex flex-col">
             <Heading use="character" value={searchQ} 
             onChange={(e)=>setSearchQ(e.target.value)} 
-            onSubmit={(e)=>{
-                e.preventDefault() 
-                setSearchQ(searchQ)
-            }} />
-            <div id="character-container" className="card-container">
-                {characters?.map(character => character.name.toLowerCase().startsWith(searchQ) && (
-                    <Cards key={character.CharId} use="characters" 
-                    CharId={character.CharId}
-                    name={character.name}
-                    age={character.age} 
-                    gender={character.gender} 
-                    faction={character.faction} 
-                    bio={character.bio}/>
-                ))}
-                {isAdmin && (
-                    <div className="button-group">
-                        <Button onClick={()=>setShowForm(true)} type="button" theme="secondary">
-                            <Image type="icon" name="plus" style={{
-                                width:"50%"
-                            }}/>
-                        </Button>
-                    </div>
-                )}
+            onSubmit={(e)=>{e.preventDefault(); setSearchQ(searchQ)}}/>
+            <div className="w-full grid grid-cols-2 overflow-y-scroll h-[80%] lg:grid-cols-5 gap-2 p-2">
+                {characters?.map(character => character.name.toLowerCase().startsWith(searchQ) && <Cards key={character.CharId} use="characters" hasModal 
+                name={character.name} 
+                age={character.age} 
+                gender={character.gender}
+                faction={character.faction}
+                bio={character.bio}>
+                    <h3>{character.name}</h3>
+                    <Image type="icon" name="human"/>
+                </Cards>)}
+                {isAdmin && <Button onClick={()=>setShowForm(true)} w="4rem" h="4rem" className="rounded-full absolute m-4 right-0 bottom-16 lg:bottom-0" type="button" theme="secondary">
+                    <Image type="icon" name="plus" className="scale-50"/>
+                </Button>}
             </div>
             <Forms isOpen={showForm} onClose={()=>setShowForm(false)} id="create-character" onSubmit={(e)=>onSubmit(e, "http://localhost:5000/api/characters")}>
                 <Forms.Input type="text" name="name" placeholder="Name:" required/>

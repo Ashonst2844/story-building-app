@@ -5,11 +5,9 @@ interface ErrorProps {
 }
 function Error({message}:ErrorProps) {
     return(
-        <section className="center" style={{flexDirection:"column"}}>
-            <Image type="icon" name="sad" style={{
-                width:"200px"
-            }}/>
-            <p style={{letterSpacing:"10px", fontSize:"3rem", fontWeight:"700", color:"var(--accent)"}}>{message}</p>
+        <section className="center flex-col">
+            <Image type="icon" name="sad" className="w-50"/>
+            <p className="text-5xl font-black text-(--accent) tracking-wider">{message}</p>
         </section>
     )
 }

@@ -14,25 +14,23 @@ const content = [
 function Navigation() {
     const isAdmin = import.meta.env.DEV
 
-    return(
-        <nav>
-            <h2 className="desktop-mode">THE SINS UNIVERSE</h2>
-            <div id="nav-container">
-                {content.map((page, index) => {
-                    if(page.type==="all") {
-                        return <Button key={index} theme="primary" type="link" link={`/${page.path}`}>
-                        <Image className="phone-mode" style={{width:"25%"}} type="icon" name={page.title.replace(/\s+/g, "")}/>
-                            <p style={{color:"var(--primary)"}} className="desktop-mode">{page.title.toUpperCase()}</p>
-                        </Button>
-                    } else if(isAdmin) { 
-                        return <Button key={index} theme="primary" type="link" link={`/${page.path}`}>
-                        <Image className="phone-mode" style={{width:"25%"}} type="icon" name={page.title.replace(/\s+/g, "")}/>
-                            <p style={{color:"var(--primary)"}} className="desktop-mode">{page.title.toUpperCase()}</p>
-                        </Button>
-                    } 
-                })}
-            </div>
-        </nav>
-    )
+    return <nav className="w-full h-16 bg-(--primary) overflow-x-scroll flex flex-col gap-1 z-20 bottom-0 fixed lg:p-2 lg:relative lg:w-[30%] lg:h-screen lg:overflow-y-scroll">
+        <h2 className="desktop-mode text-2xl">THE SINS UNIVERSE</h2>
+        <div className="flex lg:flex-col gap-2 h-full">
+            {content.map((page, index) => {
+                if(page.type==="all") {
+                    return <Button key={index} theme="primary" type="link" link={`/${page.path}`} className="h-full min-w-[20%] lg:w-full lg:h-16">
+                        <Image className="phone-mode scale-25" type="icon" name={page.title.replace(/\s+/g, "")}/>
+                        <p className="desktop-mode">{page.title.toUpperCase()}</p>
+                    </Button>
+                } else if(isAdmin) { 
+                    return <Button key={index} theme="primary" type="link" link={`/${page.path}`} className="h-full min-w-[20%] lg:w-full lg:h-16">
+                        <Image className="phone-mode scale-25" type="icon" name={page.title.replace(/\s+/g, "")}/>
+                        <p className="desktop-mode">{page.title.toUpperCase()}</p>
+                    </Button>
+                } 
+            })}
+        </div>
+    </nav>
 }
 export default Navigation

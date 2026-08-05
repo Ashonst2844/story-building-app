@@ -9,6 +9,8 @@ interface ChapterListProps {
 }
 
 function ChapterList(props: ChapterListProps) {
+    const primaryButton = "text-(--primary) bg-(--accent) font-bold"
+    const secondaryButton = "text-(--text) bg-(--primary) border border-(--accent) font-bold"
     const isAdmin = import.meta.env.DEV
     const [state, setState] = useState<boolean>(props.status);
 
@@ -36,8 +38,8 @@ function ChapterList(props: ChapterListProps) {
     };
 
     return (
-        <div className="chapter-list" title={props.name}>
-            <Button onClick={isAdmin ? () => { void handleState(); } : undefined} type="button" h="80px" theme="primary" className={state ? "primary-button" : "secondary-button"}>
+        <div title={props.name}>
+            <Button onClick={isAdmin ? () => { void handleState(); } : undefined}  w="100%" h="64px" type="button" theme="primary" className={`${state ? primaryButton : secondaryButton}, text-xs`}>
                 BAB-{props.index} <br />
                 {props.name}
             </Button>

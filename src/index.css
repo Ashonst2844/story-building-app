@@ -1,30 +1,4 @@
-/** ANIMATION */
-@keyframes loading {
-  0% {
-    width: 0%;
-  } 100% {
-    width: 100%;
-  }
-}
-@keyframes glowing-text {
-  0% {
-    text-shadow: none;
-  } 50% {
-    text-shadow: 0 0 20px var(--accent);
-  } 100% {
-    text-shadow: none;
-  }
-}
-
-@keyframes glowing-box {
-  0% {
-    box-shadow: none;
-  } 50% {
-    box-shadow: 0 0 20px var(--accent);
-  } 100% {
-    box-shadow: none;
-  }
-}
+@import "tailwindcss";
 
 /** FONT FAMILY */
 @font-face {
@@ -35,7 +9,6 @@
   font-style: normal;
 }
 
-/** RESET */
 :root {
   /* COLOR */
   --text: #c5c5c5;
@@ -44,88 +17,42 @@
   --accent: #e9c318;
   --warning: #ff2f2f;
 
-  --spacing: 14px;
   --transition: all 0.3s ease-in-out;
   --shadow: 5px 5px 15px rgba(0,0,0,0.8);
+  --main-font: url("/src/assets/fonts/blackletter_ds/Blacklettersh.ttf");
 
-  font-size: 14px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color-scheme: light dark;
   background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: var(--text);
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  border: none;
-  outline: none;
-  color: var(--text);
   scrollbar-width: none;
 }
 
+.desktop-mode {display: none;}
+.phone-mode {display: block;}
+@media (width >= 64rem /* 1024px */) {
+    .desktop-mode {display: block;}
+    .phone-mode {display: none;}
+}
+
 /** MAIN */
-body {
-  width: 100vw;
-}
-main {
-  width: 100vw;
-  height: 100vh;
-}
 section {
   width: 100%;
   height: 100%;
   padding: var(--spacing);
 }
-header {
-  height: 20%;
-}
-#main-title {
-  font: 3rem "BlackLetters";
-  color: var(--accent);
-  display: inline-block;
-  will-change: transform, text-shadow;
-  white-space: nowrap;
-  animation: infinite glowing-text 2s ease-out
-}
-h1 {
-  font-size: 3rem;
-  margin: calc(var(--spacing)*2) 0;
-}
 h2 {
-  font-size: 2rem;
   margin: 0 0 calc(var(--spacing)*2);
   text-decoration: underline var(--accent);
   text-align: center;
-}
-p {
-  opacity: 0.75;
-}
-
-/** PAGING */
-.float-page {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0,0,0,0.8);
+  color: var(--text);
 }
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.search-bar {
-  width: 100%;
-  height: 40px;
-  gap: calc(var(--spacing)/2);
-  margin: var(--spacing) 0;
 }
 
 /** INPUT */
@@ -136,115 +63,4 @@ input, textarea, select {
 }
 textarea {
   resize: none;
-}
-.switch {
-  width: 100px;
-  height: 40px;
-  border-radius: 30px;
-  background: var(--bg);
-  border: 2px solid var(--accent);
-  position: relative;
-  display: block;
-  cursor: pointer;
-}
-.switch::after {
-  content: "";
-  position: absolute;
-  top: 3px;
-  left: 5px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: var(--accent);
-  transition: 0.3s;
-}
-input[type="checkbox"]:checked + .switch::after {
-  left: 65px;
-  background-color: var(--bg);
-}
-input[type="checkbox"]:checked + .switch {
-  background: var(--accent);
-}
-
-/** IMAGES */
-.images {
-  overflow: auto;
-  display: block;
-  text-align: center;
-}
-.maps {
-  transition: var(--transition);
-  display: inline-block;
-  vertical-align: center;
-  max-width: none;
-}
-.cover {
-  transition: var(--transition);
-  scale: 1;
-}
-.cover:hover {
-  scale: 1.1;
-}
-
-/** TIMELINE */
-#timeline div {
-  overflow-y: scroll;
-  height: 100%;
-  padding: var(--spacing);
-}
-#timeline-button-container {
-  width: 30%;
-  background-color: var(--primary);
-  padding: var(--spacing);
-}
-#timeline-content-container {
-  width: 70%;
-}
-
-/** WORLD */
-#world {
-  gap: calc(var(--spacing)/2);
-  display: flex;
-  flex-wrap: wrap;
-}
-.tab-group {
-  width: 100%;
-  height: 60px;
-  background-color: var(--primary);
-  gap: var(--primary);
-  padding: calc(var(--spacing)/2);
-  justify-content: space-around;
-}
-.world-box {
-  width: 100%;
-  height: calc(100% - 60px);
-  display: flex;
-  position: relative;
-}
-#continent-button-container {
-  width: 30%;
-  height: 100%;
-  background-color: var(--primary);
-  padding: var(--spacing);
-  overflow-y: scroll;
-}
-.continent-box {
-  width: 70%;
-  height: 100%;
-  padding: var(--spacing);
-  overflow-y: scroll;
-}
-.continent-header {
-  width: 100%;
-  height: 20%;
-  overflow: hidden;
-  margin: var(--spacing) 0;
-}
-
-/** MISC */
-.phone-mode {
-  display: none;
-}
-.desktop-mode {
-  display: block;
 }
